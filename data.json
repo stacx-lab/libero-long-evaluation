@@ -1,0 +1,1898 @@
+{
+  "updated_at": "2026-09-16T19:38:40.802295+00:00",
+  "tasks": [
+    {
+      "id": "long-t00-s00",
+      "task_id": 0,
+      "instruction": "put both the alphabet soup and the tomato sauce in the basket",
+      "title_zh": "将字母汤罐和番茄酱放进篮子",
+      "completed": true,
+      "edited": true,
+      "native_success": true,
+      "valid": true,
+      "action_frames": 2988,
+      "action_limit": null,
+      "model_loop_limit": null,
+      "timeout_s": 1200,
+      "model_turns": 45,
+      "provider_requests": 45,
+      "successful_image_requests": 42,
+      "tool_calls": 44,
+      "tool_errors": 4,
+      "reset_requests": 0,
+      "execution_passed": true,
+      "execution_error": null,
+      "trial_exception": null,
+      "trial": "long-t00-s00__YY5yiUS",
+      "native_initialization": {
+        "bddl_sha256": "2e661058917f683a25bce480015197f0a2c1911bcbc2b9dd9d947199069c9618",
+        "control_frequency_hz": 20,
+        "controller": "JOINT_POSITION/set_qpos",
+        "init_state_index": 0,
+        "init_state_sha256": "1899fe54c51e24a41d5f9e32254730d6777f4894ab68e0e873f1fa7ae2062030",
+        "initialization_frames": 5,
+        "loaded_state_sha256": "747b653b2ca1feeae8f3bd994880ce743730993ea5ce4bd003623e877f26b3bd",
+        "max_steps": null,
+        "realtime": false,
+        "seed": 0,
+        "suite": "libero_10",
+        "task_id": 0,
+        "task_order_index": 0
+      },
+      "tokens": {
+        "input": 1187955,
+        "output": 4774
+      },
+      "recording": {
+        "id": "rec_00mu4fq9c500001t",
+        "kind": "stream",
+        "name": "put-both-the-alphabet-soup",
+        "task": "put both the alphabet soup and the tomato sauce in the basket\n\nThe simulation service is already running. In Python, use `env = roboenv.connect(os.environ['ROBOENV_ENDPOINT'])`, then inspect `env.task`, `env.devices()`, and `env.device(name).profile`. Read sensors and command devices through their declared basic interfaces. Physics pauses between actions. Each write advances one native control interval and then pauses again; reads and stop do not advance time. There is no simulation horizon. Reads and IK/FK do not request extra steps. Camera reads return client-accessible image files. Live profiles and thin drivers are in /run/roboenv/robot/devices. Build perception and control tools in /app. The verifier checks final state and budget after you finish.\n\n\nLIBERO gripper writes select a persistent direction: +1 closes, -1 opens, and 0\nretains the accumulated actuator target. Gripper stop instead resets that target\nto the measured finger positions; it can reduce gripping force and is not a\ngrasp-preserving cleanup operation. Arm stop affects only the arm. A write being\naccepted does not establish arrival or a grasp: check measured motion and finger\naperture, then use a small lift and fresh images to check that the object follows.\n\nBefore contact, check the measured tool pose and finger-pad geometry, allowing\nclearance for the whole gripper and arm around articulated fixtures. If motion\nstalls, re-observe and revise the approach before closing the fingers. After an\nobject or fixture moves, refresh its observed location. For wrist-camera geometry,\nhold the arm still while reading the image and pose; do not pair an old image\nwith a later arm pose.\n\n\nBefore ending the task or claiming success, define concrete, task-specific checks\nfor every requested outcome and verify all of them using fresh public sensor\nobservations, including the object's final relation to its target and any required\ndrawer, door, or switch state. Use multiple views or measured feedback when one\nview is ambiguous. Tool acceptance, a completed todo, and absence of errors do not\nprove task completion. If a check fails or remains uncertain and time is available,\ndiagnose it and attempt a safe correction; do not end solely because one grasp or\nmotion failed. If further progress is blocked or the run limit is reached, report\nthe task as incomplete and state which checks failed. Do not access private\nverifier state or change the benchmark success rules.\n\nEvaluation execution policy: You have 20 minutes of wall-clock execution time. There is no action-step or model-loop limit. This is one episode: do not reset, restore, checkpoint, or request a new initial state. The agent cameras have native 256 x 256 resolution. Complete all requested subgoals and verify them before ending.\n",
+        "robotID": "libero-panda-living-room",
+        "sessionID": "ses_00mu4fq8190000oj",
+        "started": "2026-09-16T18:29:24.303Z",
+        "status": "stopped",
+        "sampling": {
+          "devices": {
+            "camera": {
+              "rate": 10,
+              "source": "harness"
+            },
+            "camera_wrist": {
+              "rate": 10,
+              "source": "harness"
+            }
+          }
+        },
+        "wallMs": 536606,
+        "devices": {
+          "camera": {
+            "type": "rgb",
+            "events": 5263,
+            "frames": 2,
+            "bytes": 183643,
+            "skipped": 104,
+            "samples": 5261,
+            "readErrors": 0,
+            "effectiveHz": 9.8,
+            "stream": {
+              "status": "stopped",
+              "bytes": 3403284,
+              "fps": 15,
+              "frames": 8045,
+              "samples": 5261,
+              "repeated": 2794,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 9,
+              "video": "devices/camera/stream/video.mp4",
+              "timestamps": "devices/camera/stream/frames.jsonl",
+              "started_ns": 1789583364554000000,
+              "ended_ns": 1789583900830913500
+            },
+            "warning": "camera: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          },
+          "camera_wrist": {
+            "type": "rgb",
+            "events": 5235,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 128,
+            "samples": 5235,
+            "readErrors": 0,
+            "effectiveHz": 9.8,
+            "stream": {
+              "status": "stopped",
+              "bytes": 5423511,
+              "fps": 15,
+              "frames": 8043,
+              "samples": 5235,
+              "repeated": 2815,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 7,
+              "video": "devices/camera_wrist/stream/video.mp4",
+              "timestamps": "devices/camera_wrist/stream/frames.jsonl",
+              "started_ns": 1789583364651000000,
+              "ended_ns": 1789583900830257000
+            },
+            "warning": "camera_wrist: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          }
+        },
+        "passive": {
+          "arm": {
+            "type": "joint",
+            "events": 2,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 0,
+            "samples": 0,
+            "readErrors": 0
+          }
+        },
+        "bytes": 11861989,
+        "messageRange": {
+          "first": "msg_00mu4fq9ja0000w5",
+          "last": "msg_00mu4g1ndc00005l"
+        },
+        "notes": 0,
+        "ended": "2026-09-16T18:38:20.909Z",
+        "endedBy": "stop"
+      },
+      "final_agent_text": "Placed both the alphabet soup and tomato sauce in the basket. Fresh camera views confirmed both remain inside after release, with the gripper open and the arm clear.",
+      "wall_minutes": 8.94,
+      "predicates": [
+        {
+          "goal": [
+            "in",
+            "alphabet_soup_1",
+            "basket_1_contain_region"
+          ],
+          "satisfied": true
+        },
+        {
+          "goal": [
+            "in",
+            "tomato_sauce_1",
+            "basket_1_contain_region"
+          ],
+          "satisfied": true
+        }
+      ],
+      "analysis": {
+        "root_cause": "任务成功。两只罐子先后完成抓取、搬运和释放，最终两个原生 in predicate 均成立。抓取下降和篮口放置中的受阻被观察与调整化解。",
+        "evidence": [
+          "Session 消息 15–20：首次下降没有到达所要求的高度；agent 停止后重新观察，微调抓取高度，再检查物体是否随小幅抬升移动。",
+          "Session 消息 26–29：携带第一只罐子下降时在篮口附近受阻；停止机械臂后改为从篮内上方释放，随后用新视角确认落点。",
+          "Session 消息 35–45 与末段双视角视频：第二只罐子进入剩余空间，两只罐子释放后仍位于篮内；最终原生 in(alphabet_soup, basket) 和 in(tomato_sauce, basket) 均为真。",
+          "共 2,988 个原生控制帧、45 次模型请求、0 次 reset。期间的 API 参数误用和 record 权限错误没有阻止任务完成。"
+        ],
+        "termination": "Agent 在撤开机械臂、检查两只罐子的最终位置后主动结束；未触及 20 分钟时钟。",
+        "confidence": "高：session 中的动作与检查、完整双视角回放、原生判定一致；回放终态误差为 0。"
+      }
+    },
+    {
+      "id": "long-t01-s00",
+      "task_id": 1,
+      "instruction": "put both the cream cheese box and the butter in the basket",
+      "title_zh": "将奶油奶酪盒和黄油放进篮子",
+      "completed": true,
+      "edited": true,
+      "native_success": true,
+      "valid": true,
+      "action_frames": 1137,
+      "action_limit": null,
+      "model_loop_limit": null,
+      "timeout_s": 1200,
+      "model_turns": 55,
+      "provider_requests": 55,
+      "successful_image_requests": 52,
+      "tool_calls": 54,
+      "tool_errors": 4,
+      "reset_requests": 0,
+      "execution_passed": true,
+      "execution_error": null,
+      "trial_exception": null,
+      "trial": "long-t01-s00__bjcX3Kn",
+      "native_initialization": {
+        "bddl_sha256": "3f552805c7ab34c44debcf38a48b8131d6fee3011dd86c039650b84e0f77d058",
+        "control_frequency_hz": 20,
+        "controller": "JOINT_POSITION/set_qpos",
+        "init_state_index": 0,
+        "init_state_sha256": "f8ac06ea8f43bb328d40cba1e6a9767da2f8f5386fd7ff3f845c64a96bf6d2ce",
+        "initialization_frames": 5,
+        "loaded_state_sha256": "5abdf8f466f490901dee9f931b32eb181b2928eaa17bb6379742f988581d564a",
+        "max_steps": null,
+        "realtime": false,
+        "seed": 0,
+        "suite": "libero_10",
+        "task_id": 1,
+        "task_order_index": 0
+      },
+      "tokens": {
+        "input": 1620896,
+        "output": 4337
+      },
+      "recording": {
+        "id": "rec_00mu4fqcxv000044",
+        "kind": "stream",
+        "name": "put-both-the-cream-cheese",
+        "task": "put both the cream cheese box and the butter in the basket\n\nThe simulation service is already running. In Python, use `env = roboenv.connect(os.environ['ROBOENV_ENDPOINT'])`, then inspect `env.task`, `env.devices()`, and `env.device(name).profile`. Read sensors and command devices through their declared basic interfaces. Physics pauses between actions. Each write advances one native control interval and then pauses again; reads and stop do not advance time. There is no simulation horizon. Reads and IK/FK do not request extra steps. Camera reads return client-accessible image files. Live profiles and thin drivers are in /run/roboenv/robot/devices. Build perception and control tools in /app. The verifier checks final state and budget after you finish.\n\n\nLIBERO gripper writes select a persistent direction: +1 closes, -1 opens, and 0\nretains the accumulated actuator target. Gripper stop instead resets that target\nto the measured finger positions; it can reduce gripping force and is not a\ngrasp-preserving cleanup operation. Arm stop affects only the arm. A write being\naccepted does not establish arrival or a grasp: check measured motion and finger\naperture, then use a small lift and fresh images to check that the object follows.\n\nBefore contact, check the measured tool pose and finger-pad geometry, allowing\nclearance for the whole gripper and arm around articulated fixtures. If motion\nstalls, re-observe and revise the approach before closing the fingers. After an\nobject or fixture moves, refresh its observed location. For wrist-camera geometry,\nhold the arm still while reading the image and pose; do not pair an old image\nwith a later arm pose.\n\n\nBefore ending the task or claiming success, define concrete, task-specific checks\nfor every requested outcome and verify all of them using fresh public sensor\nobservations, including the object's final relation to its target and any required\ndrawer, door, or switch state. Use multiple views or measured feedback when one\nview is ambiguous. Tool acceptance, a completed todo, and absence of errors do not\nprove task completion. If a check fails or remains uncertain and time is available,\ndiagnose it and attempt a safe correction; do not end solely because one grasp or\nmotion failed. If further progress is blocked or the run limit is reached, report\nthe task as incomplete and state which checks failed. Do not access private\nverifier state or change the benchmark success rules.\n\nEvaluation execution policy: You have 20 minutes of wall-clock execution time. There is no action-step or model-loop limit. This is one episode: do not reset, restore, checkpoint, or request a new initial state. The agent cameras have native 256 x 256 resolution. Complete all requested subgoals and verify them before ending.\n",
+        "robotID": "libero-panda-living-room",
+        "sessionID": "ses_00mu4fqbph0000bq",
+        "started": "2026-09-16T18:29:28.972Z",
+        "status": "stopped",
+        "sampling": {
+          "devices": {
+            "camera": {
+              "rate": 10,
+              "source": "harness"
+            },
+            "camera_wrist": {
+              "rate": 10,
+              "source": "harness"
+            }
+          }
+        },
+        "wallMs": 430709,
+        "devices": {
+          "camera": {
+            "type": "rgb",
+            "events": 4235,
+            "frames": 1,
+            "bytes": 91419,
+            "skipped": 72,
+            "samples": 4234,
+            "readErrors": 0,
+            "effectiveHz": 9.8,
+            "stream": {
+              "status": "stopped",
+              "bytes": 2448597,
+              "fps": 15,
+              "frames": 6456,
+              "samples": 4234,
+              "repeated": 2236,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 13,
+              "video": "devices/camera/stream/video.mp4",
+              "timestamps": "devices/camera/stream/frames.jsonl",
+              "started_ns": 1789583369256000000,
+              "ended_ns": 1789583799634452200
+            },
+            "warning": "camera: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          },
+          "camera_wrist": {
+            "type": "rgb",
+            "events": 4227,
+            "frames": 1,
+            "bytes": 93172,
+            "skipped": 79,
+            "samples": 4226,
+            "readErrors": 0,
+            "effectiveHz": 9.8,
+            "stream": {
+              "status": "stopped",
+              "bytes": 3253790,
+              "fps": 15,
+              "frames": 6456,
+              "samples": 4226,
+              "repeated": 2239,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 8,
+              "started_ns": 1789583369292000000,
+              "video": "devices/camera_wrist/stream/video.mp4",
+              "timestamps": "devices/camera_wrist/stream/frames.jsonl",
+              "ended_ns": 1789583799634554600
+            },
+            "warning": "camera_wrist: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          }
+        },
+        "passive": {
+          "arm": {
+            "type": "joint",
+            "events": 3,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 0,
+            "samples": 0,
+            "readErrors": 0
+          }
+        },
+        "bytes": 8130175,
+        "messageRange": {
+          "first": "msg_00mu4fqd4k0000dr",
+          "last": "msg_00mu4fzhhf00005o"
+        },
+        "notes": 0,
+        "ended": "2026-09-16T18:36:39.681Z",
+        "endedBy": "stop"
+      },
+      "final_agent_text": "Both the cream cheese box and the butter are in the basket. Fresh camera views confirmed both are released inside, below the rim. The gripper is open and the arm is stopped clear of them.",
+      "wall_minutes": 7.18,
+      "predicates": [
+        {
+          "goal": [
+            "in",
+            "cream_cheese_1",
+            "basket_1_contain_region"
+          ],
+          "satisfied": true
+        },
+        {
+          "goal": [
+            "in",
+            "butter_1",
+            "basket_1_contain_region"
+          ],
+          "satisfied": true
+        }
+      ],
+      "analysis": {
+        "root_cause": "任务成功。两次独立放置均满足原生 in predicate；奶酪盒一次滑落后，通过重新观察、重新定位和更深的抓取完成恢复。",
+        "evidence": [
+          "最终原生检查：cream_cheese_1 和 butter_1 均处于 basket_1_contain_region；双视角终态画面可见两个包装均已释放在篮内。",
+          "Session 消息 19–23：带黄油下降时未到达目标、触发 motion stalled；agent 停止机械臂，调整到篮口上方释放，随后确认黄油在篮内。",
+          "Session 消息 33–36 与中段视频：奶酪盒短距离试抬后，在进一步抬升时滑落；agent 更新物体位置并加深抓取，完成第二次搬运。",
+          "共 1,137 个原生控制帧、55 次模型请求、0 次 reset。记录中的语法错误和最后一次 record 权限错误均已与任务结果分开，未阻止成功。"
+        ],
+        "termination": "Agent 检查两个子目标后主动结束；未触及 20 分钟时钟。",
+        "confidence": "高：完整 session、双视角实际运动、两个原生 predicate 与精确回放终态一致。"
+      }
+    },
+    {
+      "id": "long-t02-s00",
+      "task_id": 2,
+      "instruction": "turn on the stove and put the moka pot on it",
+      "title_zh": "打开炉灶并将摩卡壶放上去",
+      "completed": true,
+      "edited": true,
+      "native_success": true,
+      "valid": true,
+      "action_frames": 1597,
+      "action_limit": null,
+      "model_loop_limit": null,
+      "timeout_s": 1200,
+      "model_turns": 49,
+      "provider_requests": 49,
+      "successful_image_requests": 45,
+      "tool_calls": 48,
+      "tool_errors": 3,
+      "reset_requests": 0,
+      "execution_passed": true,
+      "execution_error": null,
+      "trial_exception": null,
+      "trial": "long-t02-s00__Ygmibk7",
+      "native_initialization": {
+        "bddl_sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+        "control_frequency_hz": 20,
+        "controller": "JOINT_POSITION/set_qpos",
+        "init_state_index": 0,
+        "init_state_sha256": "02a8401f8d59f5447fc8c5a16f4c158dd8c426c3eaed6779927a2a53e9abf3c5",
+        "initialization_frames": 5,
+        "loaded_state_sha256": "9ae67aa7e7dd9987ecd1f2930e2b061fb66a414dd94e4b575417356a556cbd90",
+        "max_steps": null,
+        "realtime": false,
+        "seed": 0,
+        "suite": "libero_10",
+        "task_id": 2,
+        "task_order_index": 0
+      },
+      "tokens": {
+        "input": 1284806,
+        "output": 4929
+      },
+      "recording": {
+        "id": "rec_00mu4g0xf30000yq",
+        "kind": "stream",
+        "name": "turn-on-the-stove-and",
+        "task": "turn on the stove and put the moka pot on it\n\nThe simulation service is already running. In Python, use `env = roboenv.connect(os.environ['ROBOENV_ENDPOINT'])`, then inspect `env.task`, `env.devices()`, and `env.device(name).profile`. Read sensors and command devices through their declared basic interfaces. Physics pauses between actions. Each write advances one native control interval and then pauses again; reads and stop do not advance time. There is no simulation horizon. Reads and IK/FK do not request extra steps. Camera reads return client-accessible image files. Live profiles and thin drivers are in /run/roboenv/robot/devices. Build perception and control tools in /app. The verifier checks final state and budget after you finish.\n\n\nLIBERO gripper writes select a persistent direction: +1 closes, -1 opens, and 0\nretains the accumulated actuator target. Gripper stop instead resets that target\nto the measured finger positions; it can reduce gripping force and is not a\ngrasp-preserving cleanup operation. Arm stop affects only the arm. A write being\naccepted does not establish arrival or a grasp: check measured motion and finger\naperture, then use a small lift and fresh images to check that the object follows.\n\nBefore contact, check the measured tool pose and finger-pad geometry, allowing\nclearance for the whole gripper and arm around articulated fixtures. If motion\nstalls, re-observe and revise the approach before closing the fingers. After an\nobject or fixture moves, refresh its observed location. For wrist-camera geometry,\nhold the arm still while reading the image and pose; do not pair an old image\nwith a later arm pose.\n\n\nBefore ending the task or claiming success, define concrete, task-specific checks\nfor every requested outcome and verify all of them using fresh public sensor\nobservations, including the object's final relation to its target and any required\ndrawer, door, or switch state. Use multiple views or measured feedback when one\nview is ambiguous. Tool acceptance, a completed todo, and absence of errors do not\nprove task completion. If a check fails or remains uncertain and time is available,\ndiagnose it and attempt a safe correction; do not end solely because one grasp or\nmotion failed. If further progress is blocked or the run limit is reached, report\nthe task as incomplete and state which checks failed. Do not access private\nverifier state or change the benchmark success rules.\n\nEvaluation execution policy: You have 20 minutes of wall-clock execution time. There is no action-step or model-loop limit. This is one episode: do not reset, restore, checkpoint, or request a new initial state. The agent cameras have native 256 x 256 resolution. Complete all requested subgoals and verify them before ending.\n",
+        "robotID": "libero-panda-kitchen",
+        "sessionID": "ses_00mu4g0wmv00003k",
+        "started": "2026-09-16T18:37:42.073Z",
+        "status": "stopped",
+        "sampling": {
+          "devices": {
+            "camera": {
+              "rate": 10,
+              "source": "harness"
+            },
+            "camera_wrist": {
+              "rate": 10,
+              "source": "harness"
+            }
+          }
+        },
+        "wallMs": 438191,
+        "devices": {
+          "camera": {
+            "type": "rgb",
+            "events": 4314,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 66,
+            "samples": 4314,
+            "readErrors": 0,
+            "effectiveHz": 9.8,
+            "stream": {
+              "status": "stopped",
+              "bytes": 2650635,
+              "fps": 15,
+              "frames": 6568,
+              "samples": 4314,
+              "repeated": 2270,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 16,
+              "video": "devices/camera/stream/video.mp4",
+              "timestamps": "devices/camera/stream/frames.jsonl",
+              "started_ns": 1789583862356000000,
+              "ended_ns": 1789584300179995400
+            },
+            "warning": "camera: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          },
+          "camera_wrist": {
+            "type": "rgb",
+            "events": 4305,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 74,
+            "samples": 4305,
+            "readErrors": 0,
+            "effectiveHz": 9.8,
+            "stream": {
+              "status": "stopped",
+              "bytes": 3595221,
+              "fps": 15,
+              "frames": 6567,
+              "samples": 4305,
+              "repeated": 2273,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 10,
+              "video": "devices/camera_wrist/stream/video.mp4",
+              "timestamps": "devices/camera_wrist/stream/frames.jsonl",
+              "started_ns": 1789583862384000000,
+              "ended_ns": 1789584300180043500
+            },
+            "warning": "camera_wrist: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          }
+        },
+        "passive": {
+          "arm": {
+            "type": "joint",
+            "events": 3,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 0,
+            "samples": 0,
+            "readErrors": 0
+          }
+        },
+        "bytes": 8541700,
+        "messageRange": {
+          "first": "msg_00mu4g0xly0000il",
+          "last": "msg_00mu4ga7pe0000h8"
+        },
+        "notes": 0,
+        "ended": "2026-09-16T18:45:00.264Z",
+        "endedBy": "stop"
+      },
+      "final_agent_text": "The stove is on, and the moka pot is resting upright on the burner.\n\nVerified with fresh front and overhead camera views: the burner is glowing red, the pot remains in place after release, and the gripper is clear.",
+      "wall_minutes": 7.3,
+      "predicates": [
+        {
+          "goal": [
+            "turnon",
+            "flat_stove_1"
+          ],
+          "satisfied": true
+        },
+        {
+          "goal": [
+            "on",
+            "moka_pot_1",
+            "flat_stove_1_cook_region"
+          ],
+          "satisfied": true
+        }
+      ],
+      "analysis": {
+        "root_cause": "任务成功。先操作炉灶控制件，确认炉圈变红且松手后保持开启，再抓住摩卡壶把手，将壶直立放在炉面上。",
+        "evidence": [
+          "Session 消息 16–25 与视频前段：夹持并逐步转动控制件，炉圈从灰色变为红色；释放控制件后重新观察，确认开启状态仍保持。",
+          "Session 消息 28–32：接近壶把手时出现约 7.6 mm 的残余位置误差并停滞；agent 没有直接闭合夹爪，而是抬高、向外调整接近路线后再抓取。",
+          "视频后半段显示摩卡壶随试抬移动、被运到炉面并释放，之后机械臂退开。最终 turnon(flat_stove_1) 和 on(moka_pot_1, cook_region) 均为真。",
+          "1,597 个原生控制帧、49 次模型请求、0 次 reset；双视角高清回放的终态误差为 0。"
+        ],
+        "termination": "完成炉灶状态和壶的放置检查后，agent 主动结束；未触及时钟上限。",
+        "confidence": "高：开关颜色变化、实际搬运视频、session 工具输出和两个原生 predicate 相互一致。"
+      }
+    },
+    {
+      "id": "long-t03-s00",
+      "task_id": 3,
+      "instruction": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "title_zh": "把黑碗放入柜子底层抽屉并关上",
+      "completed": true,
+      "edited": true,
+      "native_success": true,
+      "valid": true,
+      "action_frames": 6585,
+      "action_limit": null,
+      "model_loop_limit": null,
+      "timeout_s": 1200,
+      "model_turns": 73,
+      "provider_requests": 73,
+      "successful_image_requests": 69,
+      "tool_calls": 72,
+      "tool_errors": 12,
+      "reset_requests": 0,
+      "execution_passed": true,
+      "execution_error": null,
+      "trial_exception": null,
+      "trial": "long-t03-s00__roRDpDA",
+      "native_initialization": {
+        "bddl_sha256": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8",
+        "control_frequency_hz": 20,
+        "controller": "JOINT_POSITION/set_qpos",
+        "init_state_index": 0,
+        "init_state_sha256": "e98ded151f64a036c74c872336dd09b968c379f3c9db7bc333aba37e7c235b86",
+        "initialization_frames": 5,
+        "loaded_state_sha256": "ea2ad0a67ceabe915bc4744e8231bf7fe71bddb74ff8c67eae6c821ff82078a4",
+        "max_steps": null,
+        "realtime": false,
+        "seed": 0,
+        "suite": "libero_10",
+        "task_id": 3,
+        "task_order_index": 0
+      },
+      "tokens": {
+        "input": 2202100,
+        "output": 7813
+      },
+      "recording": {
+        "id": "rec_00mu4g31y70000w4",
+        "kind": "stream",
+        "name": "put-the-black-bowl-in",
+        "task": "put the black bowl in the bottom drawer of the cabinet and close it\n\nThe simulation service is already running. In Python, use `env = roboenv.connect(os.environ['ROBOENV_ENDPOINT'])`, then inspect `env.task`, `env.devices()`, and `env.device(name).profile`. Read sensors and command devices through their declared basic interfaces. Physics pauses between actions. Each write advances one native control interval and then pauses again; reads and stop do not advance time. There is no simulation horizon. Reads and IK/FK do not request extra steps. Camera reads return client-accessible image files. Live profiles and thin drivers are in /run/roboenv/robot/devices. Build perception and control tools in /app. The verifier checks final state and budget after you finish.\n\n\nLIBERO gripper writes select a persistent direction: +1 closes, -1 opens, and 0\nretains the accumulated actuator target. Gripper stop instead resets that target\nto the measured finger positions; it can reduce gripping force and is not a\ngrasp-preserving cleanup operation. Arm stop affects only the arm. A write being\naccepted does not establish arrival or a grasp: check measured motion and finger\naperture, then use a small lift and fresh images to check that the object follows.\n\nBefore contact, check the measured tool pose and finger-pad geometry, allowing\nclearance for the whole gripper and arm around articulated fixtures. If motion\nstalls, re-observe and revise the approach before closing the fingers. After an\nobject or fixture moves, refresh its observed location. For wrist-camera geometry,\nhold the arm still while reading the image and pose; do not pair an old image\nwith a later arm pose.\n\n\nBefore ending the task or claiming success, define concrete, task-specific checks\nfor every requested outcome and verify all of them using fresh public sensor\nobservations, including the object's final relation to its target and any required\ndrawer, door, or switch state. Use multiple views or measured feedback when one\nview is ambiguous. Tool acceptance, a completed todo, and absence of errors do not\nprove task completion. If a check fails or remains uncertain and time is available,\ndiagnose it and attempt a safe correction; do not end solely because one grasp or\nmotion failed. If further progress is blocked or the run limit is reached, report\nthe task as incomplete and state which checks failed. Do not access private\nverifier state or change the benchmark success rules.\n\nEvaluation execution policy: You have 20 minutes of wall-clock execution time. There is no action-step or model-loop limit. This is one episode: do not reset, restore, checkpoint, or request a new initial state. The agent cameras have native 256 x 256 resolution. Complete all requested subgoals and verify them before ending.\n",
+        "robotID": "libero-panda-kitchen",
+        "sessionID": "ses_00mu4g31770000x8",
+        "started": "2026-09-16T18:39:21.256Z",
+        "status": "stopped",
+        "sampling": {
+          "devices": {
+            "camera": {
+              "rate": 10,
+              "source": "harness"
+            },
+            "camera_wrist": {
+              "rate": 10,
+              "source": "harness"
+            }
+          }
+        },
+        "wallMs": 917045,
+        "devices": {
+          "camera": {
+            "type": "rgb",
+            "events": 9058,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 111,
+            "samples": 9058,
+            "readErrors": 0,
+            "effectiveHz": 9.9,
+            "stream": {
+              "status": "stopped",
+              "bytes": 7554643,
+              "fps": 15,
+              "frames": 13752,
+              "samples": 9058,
+              "repeated": 4725,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 31,
+              "video": "devices/camera/stream/video.mp4",
+              "timestamps": "devices/camera/stream/frames.jsonl",
+              "started_ns": 1789583961476000000,
+              "ended_ns": 1789584878224794400
+            },
+            "warning": "camera: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          },
+          "camera_wrist": {
+            "type": "rgb",
+            "events": 9022,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 146,
+            "samples": 9022,
+            "readErrors": 0,
+            "effectiveHz": 9.8,
+            "stream": {
+              "status": "stopped",
+              "bytes": 8395898,
+              "fps": 15,
+              "frames": 13751,
+              "samples": 9022,
+              "repeated": 4738,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 8,
+              "video": "devices/camera_wrist/stream/video.mp4",
+              "timestamps": "devices/camera_wrist/stream/frames.jsonl",
+              "started_ns": 1789583961511000000,
+              "ended_ns": 1789584878224823000
+            },
+            "warning": "camera_wrist: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          }
+        },
+        "passive": {},
+        "bytes": 20863258,
+        "messageRange": {
+          "first": "msg_00mu4g324q00003o",
+          "last": "msg_00mu4gmlgv0000yc"
+        },
+        "notes": 0,
+        "ended": "2026-09-16T18:54:38.301Z",
+        "endedBy": "stop"
+      },
+      "final_agent_text": "Placed the black bowl inside the bottom drawer and closed it. Fresh camera views confirmed the bowl resting inside before closure and the drawer flush with the cabinet afterward. The arm is withdrawn and stopped.",
+      "wall_minutes": 15.28,
+      "predicates": [
+        {
+          "goal": [
+            "close",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": true
+        },
+        {
+          "goal": [
+            "in",
+            "akita_black_bowl_1",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": true
+        }
+      ],
+      "analysis": {
+        "root_cause": "任务成功，但经历了两类实际困难：碗沿接近时受阻，以及关底层抽屉时夹爪本体撞到上方柜体。Agent 通过调整碗沿抓取、倾斜手腕、反复重新接近并继续推入，最终完成。",
+        "evidence": [
+          "Session 消息 11–25：第一次下降在目标上方约 20 mm 处停滞；停止并重新观察后完成碗沿夹持，短距离试抬确认碗随夹爪移动，再放入抽屉。",
+          "Session 消息 44–47 与原生接触回放：在 frame 2638，gripper0_hand_collision 与中层抽屉柜体发生接触，底层抽屉仍伸出约 82.5 mm；不是单纯的指尖目标点偏差。",
+          "倾斜手腕后抽屉继续向内移动。frame 3500–5800 之间仍剩约 12.5 mm 行程；期间多次换姿态，并出现一次 IK 无解。后续重新接近后完成最后一段推入。",
+          "最终底层抽屉关节位置约 +1.66 mm，原生 close 和 bowl-in-drawer 两个 predicate 同时满足；完整高清回放及独立接触回放的终态误差均为 0。",
+          "6,585 个原生控制帧、73 次模型请求、0 次 reset。12 条工具错误中包括 10 次显式运动停滞、1 次 IK 无解和 1 次 record 权限拒绝；任务在恢复后成功。"
+        ],
+        "termination": "Agent 确认碗在抽屉内、抽屉关闭并撤开机械臂后主动结束；没有触及 20 分钟时钟。",
+        "confidence": "高：完整 session、双视角视频、柜体接触记录、关节位置和原生 predicate 相互印证。",
+        "chapters": [
+          {
+            "message": 11,
+            "native_frame": 200,
+            "time": 10.8,
+            "label": "碗沿接近受阻 · 0:11"
+          },
+          {
+            "message": 25,
+            "native_frame": 899,
+            "time": 45.8,
+            "label": "抓碗后放入抽屉 · 0:46"
+          },
+          {
+            "message": 44,
+            "native_frame": 2504,
+            "time": 126.0,
+            "label": "关抽屉时受阻 · 2:06"
+          },
+          {
+            "message": 47,
+            "native_frame": 2640,
+            "time": 132.8,
+            "label": "倾斜手腕重新接近 · 2:13"
+          },
+          {
+            "message": 66,
+            "native_frame": 5800,
+            "time": 290.8,
+            "label": "最后推入与验证 · 4:51"
+          }
+        ],
+        "contact_audit": "evidence/long-t03-s00/contact-audit.json"
+      }
+    },
+    {
+      "id": "long-t04-s00",
+      "task_id": 4,
+      "instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+      "title_zh": "白杯放左盘，黄白杯放右盘",
+      "completed": true,
+      "edited": true,
+      "native_success": true,
+      "valid": true,
+      "action_frames": 1799,
+      "action_limit": null,
+      "model_loop_limit": null,
+      "timeout_s": 1200,
+      "model_turns": 36,
+      "provider_requests": 36,
+      "successful_image_requests": 31,
+      "tool_calls": 35,
+      "tool_errors": 3,
+      "reset_requests": 0,
+      "execution_passed": true,
+      "execution_error": null,
+      "trial_exception": null,
+      "trial": "long-t04-s00__fUq5nJ2",
+      "native_initialization": {
+        "bddl_sha256": "0c6749b920bff1e1efe47ffb0e0b801a3e6959a650e710f376dd2b812c74e865",
+        "control_frequency_hz": 20,
+        "controller": "JOINT_POSITION/set_qpos",
+        "init_state_index": 0,
+        "init_state_sha256": "b6f20784b381c75d715f4fdaadda1fb460cbe24adcbad76f381a009419b8474e",
+        "initialization_frames": 5,
+        "loaded_state_sha256": "4365b3c5a82da7f8818c11ef5fd494c4890c17c4c3e27948dc290a9ac2f08131",
+        "max_steps": null,
+        "realtime": false,
+        "seed": 0,
+        "suite": "libero_10",
+        "task_id": 4,
+        "task_order_index": 0
+      },
+      "tokens": {
+        "input": 930281,
+        "output": 4454
+      },
+      "recording": {
+        "id": "rec_00mu4gbnr30000k6",
+        "kind": "stream",
+        "name": "put-the-white-mug-on",
+        "task": "put the white mug on the left plate and put the yellow and white mug on the right plate\n\nThe simulation service is already running. In Python, use `env = roboenv.connect(os.environ['ROBOENV_ENDPOINT'])`, then inspect `env.task`, `env.devices()`, and `env.device(name).profile`. Read sensors and command devices through their declared basic interfaces. Physics pauses between actions. Each write advances one native control interval and then pauses again; reads and stop do not advance time. There is no simulation horizon. Reads and IK/FK do not request extra steps. Camera reads return client-accessible image files. Live profiles and thin drivers are in /run/roboenv/robot/devices. Build perception and control tools in /app. The verifier checks final state and budget after you finish.\n\n\nLIBERO gripper writes select a persistent direction: +1 closes, -1 opens, and 0\nretains the accumulated actuator target. Gripper stop instead resets that target\nto the measured finger positions; it can reduce gripping force and is not a\ngrasp-preserving cleanup operation. Arm stop affects only the arm. A write being\naccepted does not establish arrival or a grasp: check measured motion and finger\naperture, then use a small lift and fresh images to check that the object follows.\n\nBefore contact, check the measured tool pose and finger-pad geometry, allowing\nclearance for the whole gripper and arm around articulated fixtures. If motion\nstalls, re-observe and revise the approach before closing the fingers. After an\nobject or fixture moves, refresh its observed location. For wrist-camera geometry,\nhold the arm still while reading the image and pose; do not pair an old image\nwith a later arm pose.\n\n\nBefore ending the task or claiming success, define concrete, task-specific checks\nfor every requested outcome and verify all of them using fresh public sensor\nobservations, including the object's final relation to its target and any required\ndrawer, door, or switch state. Use multiple views or measured feedback when one\nview is ambiguous. Tool acceptance, a completed todo, and absence of errors do not\nprove task completion. If a check fails or remains uncertain and time is available,\ndiagnose it and attempt a safe correction; do not end solely because one grasp or\nmotion failed. If further progress is blocked or the run limit is reached, report\nthe task as incomplete and state which checks failed. Do not access private\nverifier state or change the benchmark success rules.\n\nEvaluation execution policy: You have 20 minutes of wall-clock execution time. There is no action-step or model-loop limit. This is one episode: do not reset, restore, checkpoint, or request a new initial state. The agent cameras have native 256 x 256 resolution. Complete all requested subgoals and verify them before ending.\n",
+        "robotID": "libero-panda-living-room",
+        "sessionID": "ses_00mu4gbn0d0000k8",
+        "started": "2026-09-16T18:46:02.763Z",
+        "status": "stopped",
+        "sampling": {
+          "devices": {
+            "camera": {
+              "rate": 10,
+              "source": "harness"
+            },
+            "camera_wrist": {
+              "rate": 10,
+              "source": "harness"
+            }
+          }
+        },
+        "wallMs": 463553,
+        "devices": {
+          "camera": {
+            "type": "rgb",
+            "events": 4599,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 35,
+            "samples": 4599,
+            "readErrors": 0,
+            "effectiveHz": 9.9,
+            "stream": {
+              "status": "stopped",
+              "bytes": 2640037,
+              "fps": 15,
+              "frames": 6949,
+              "samples": 4599,
+              "repeated": 2362,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 11,
+              "video": "devices/camera/stream/video.mp4",
+              "timestamps": "devices/camera/stream/frames.jsonl",
+              "started_ns": 1789584362990000000,
+              "ended_ns": 1789584826229662700
+            },
+            "warning": "camera: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          },
+          "camera_wrist": {
+            "type": "rgb",
+            "events": 4579,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 54,
+            "samples": 4579,
+            "readErrors": 0,
+            "effectiveHz": 9.9,
+            "stream": {
+              "status": "stopped",
+              "bytes": 5169320,
+              "fps": 15,
+              "frames": 6949,
+              "samples": 4579,
+              "repeated": 2380,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 9,
+              "video": "devices/camera_wrist/stream/video.mp4",
+              "timestamps": "devices/camera_wrist/stream/frames.jsonl",
+              "started_ns": 1789584363028000000,
+              "ended_ns": 1789584826231395800
+            },
+            "warning": "camera_wrist: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          }
+        },
+        "passive": {
+          "arm": {
+            "type": "joint",
+            "events": 1,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 0,
+            "samples": 0,
+            "readErrors": 0
+          }
+        },
+        "bytes": 10323683,
+        "messageRange": {
+          "first": "msg_00mu4gbnxv000005",
+          "last": "msg_00mu4glhlv0000zq"
+        },
+        "notes": 0,
+        "ended": "2026-09-16T18:53:46.316Z",
+        "endedBy": "stop"
+      },
+      "final_agent_text": "Done. The white mug is on the left plate, and the yellow-and-white mug is on the right plate. Fresh overhead views confirmed both are upright and centered on their plates, with the gripper released and clear.",
+      "wall_minutes": 7.73,
+      "predicates": [
+        {
+          "goal": [
+            "on",
+            "porcelain_mug_1",
+            "plate_1"
+          ],
+          "satisfied": true
+        },
+        {
+          "goal": [
+            "on",
+            "white_yellow_mug_1",
+            "plate_2"
+          ],
+          "satisfied": true
+        }
+      ],
+      "analysis": {
+        "root_cause": "任务成功。白杯的杯口宽于夹爪最大开口，最初从正上方包住杯身的接近方式受阻；agent 改为一指在杯内、一指在杯外夹住杯沿，再分别完成两只杯子的放置。",
+        "evidence": [
+          "Session 消息 13–17：白杯下降时残余误差约 32.5 mm 并停滞；agent 停止后重新判断杯口与夹爪开口的关系，改用杯沿夹持。",
+          "双视角视频显示白杯随夹爪抬起并移到左盘，随后黄白杯被放到右盘；两次放置后均释放并撤开夹爪。",
+          "固定相机看不到全部盘面。Session 消息 30–36 使用新的腕部俯视图检查两个杯子；最终 on(porcelain_mug_1, plate_1) 和 on(white_yellow_mug_1, plate_2) 同时为真。",
+          "1,799 个原生控制帧、36 次模型请求、0 次 reset；高清回放终态误差为 0。"
+        ],
+        "termination": "Agent 完成两个杯子的位置、直立和释放检查后主动结束。",
+        "confidence": "高：杯沿抓取策略变化有 session 和视频证据，两个最终放置关系经过原生 predicate 验证。"
+      }
+    },
+    {
+      "id": "long-t05-s00",
+      "task_id": 5,
+      "instruction": "pick up the book and place it in the back compartment of the caddy",
+      "title_zh": "把书放进收纳盒后侧隔间",
+      "completed": true,
+      "edited": true,
+      "native_success": false,
+      "valid": true,
+      "action_frames": 2351,
+      "action_limit": null,
+      "model_loop_limit": null,
+      "timeout_s": 1200,
+      "model_turns": 71,
+      "provider_requests": 71,
+      "successful_image_requests": 68,
+      "tool_calls": 70,
+      "tool_errors": 2,
+      "reset_requests": 0,
+      "execution_passed": true,
+      "execution_error": null,
+      "trial_exception": null,
+      "trial": "long-t05-s00__YnVrzed",
+      "native_initialization": {
+        "bddl_sha256": "07ca32c940d70c065e870452ef9c63e6dfa1d8506e6a86cf9b3763f652ba2d9f",
+        "control_frequency_hz": 20,
+        "controller": "JOINT_POSITION/set_qpos",
+        "init_state_index": 0,
+        "init_state_sha256": "6cd3937ba18d64e72223222af36888d26ea201840415adbc4dae590454d0a5a8",
+        "initialization_frames": 5,
+        "loaded_state_sha256": "407c3d5eb11fd5b33bd2a6dea73a37415a99d7e72f0cc291074de29b1c63c37c",
+        "max_steps": null,
+        "realtime": false,
+        "seed": 0,
+        "suite": "libero_10",
+        "task_id": 5,
+        "task_order_index": 0
+      },
+      "tokens": {
+        "input": 2326167,
+        "output": 9004
+      },
+      "recording": {
+        "id": "rec_00mu4gmut90000k6",
+        "kind": "stream",
+        "name": "pick-up-the-book-and",
+        "task": "pick up the book and place it in the back compartment of the caddy\n\nThe simulation service is already running. In Python, use `env = roboenv.connect(os.environ['ROBOENV_ENDPOINT'])`, then inspect `env.task`, `env.devices()`, and `env.device(name).profile`. Read sensors and command devices through their declared basic interfaces. Physics pauses between actions. Each write advances one native control interval and then pauses again; reads and stop do not advance time. There is no simulation horizon. Reads and IK/FK do not request extra steps. Camera reads return client-accessible image files. Live profiles and thin drivers are in /run/roboenv/robot/devices. Build perception and control tools in /app. The verifier checks final state and budget after you finish.\n\n\nLIBERO gripper writes select a persistent direction: +1 closes, -1 opens, and 0\nretains the accumulated actuator target. Gripper stop instead resets that target\nto the measured finger positions; it can reduce gripping force and is not a\ngrasp-preserving cleanup operation. Arm stop affects only the arm. A write being\naccepted does not establish arrival or a grasp: check measured motion and finger\naperture, then use a small lift and fresh images to check that the object follows.\n\nBefore contact, check the measured tool pose and finger-pad geometry, allowing\nclearance for the whole gripper and arm around articulated fixtures. If motion\nstalls, re-observe and revise the approach before closing the fingers. After an\nobject or fixture moves, refresh its observed location. For wrist-camera geometry,\nhold the arm still while reading the image and pose; do not pair an old image\nwith a later arm pose.\n\n\nBefore ending the task or claiming success, define concrete, task-specific checks\nfor every requested outcome and verify all of them using fresh public sensor\nobservations, including the object's final relation to its target and any required\ndrawer, door, or switch state. Use multiple views or measured feedback when one\nview is ambiguous. Tool acceptance, a completed todo, and absence of errors do not\nprove task completion. If a check fails or remains uncertain and time is available,\ndiagnose it and attempt a safe correction; do not end solely because one grasp or\nmotion failed. If further progress is blocked or the run limit is reached, report\nthe task as incomplete and state which checks failed. Do not access private\nverifier state or change the benchmark success rules.\n\nEvaluation execution policy: You have 20 minutes of wall-clock execution time. There is no action-step or model-loop limit. This is one episode: do not reset, restore, checkpoint, or request a new initial state. The agent cameras have native 256 x 256 resolution. Complete all requested subgoals and verify them before ending.\n",
+        "robotID": "libero-panda-study",
+        "sessionID": "ses_00mu4gmtyh000010",
+        "started": "2026-09-16T18:54:45.131Z",
+        "status": "stopped",
+        "sampling": {
+          "devices": {
+            "camera": {
+              "rate": 10,
+              "source": "harness"
+            },
+            "camera_wrist": {
+              "rate": 10,
+              "source": "harness"
+            }
+          }
+        },
+        "wallMs": 730012,
+        "devices": {
+          "camera": {
+            "type": "rgb",
+            "events": 7189,
+            "frames": 1,
+            "bytes": 80341,
+            "skipped": 110,
+            "samples": 7188,
+            "readErrors": 0,
+            "effectiveHz": 9.8,
+            "stream": {
+              "status": "stopped",
+              "bytes": 3321151,
+              "fps": 15,
+              "frames": 10946,
+              "samples": 7188,
+              "repeated": 3775,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 17,
+              "video": "devices/camera/stream/video.mp4",
+              "timestamps": "devices/camera/stream/frames.jsonl",
+              "started_ns": 1789584885371000000,
+              "ended_ns": 1789585615056669200
+            },
+            "warning": "camera: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          },
+          "camera_wrist": {
+            "type": "rgb",
+            "events": 7197,
+            "frames": 1,
+            "bytes": 64652,
+            "skipped": 101,
+            "samples": 7196,
+            "readErrors": 0,
+            "effectiveHz": 9.9,
+            "stream": {
+              "status": "stopped",
+              "bytes": 4378462,
+              "fps": 15,
+              "frames": 10945,
+              "samples": 7196,
+              "repeated": 3787,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 38,
+              "video": "devices/camera_wrist/stream/video.mp4",
+              "timestamps": "devices/camera_wrist/stream/frames.jsonl",
+              "started_ns": 1789584885432000000,
+              "ended_ns": 1789585615056728600
+            },
+            "warning": "camera_wrist: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          }
+        },
+        "passive": {
+          "arm": {
+            "type": "joint",
+            "events": 4,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 0,
+            "samples": 0,
+            "readErrors": 0
+          }
+        },
+        "bytes": 11638884,
+        "messageRange": {
+          "first": "msg_00mu4gmv1h0000ce",
+          "last": "msg_00mu4h2efl0000qc"
+        },
+        "notes": 0,
+        "ended": "2026-09-16T19:06:55.143Z",
+        "endedBy": "stop"
+      },
+      "final_agent_text": "Placed the book in the caddy’s back compartment. Fresh fixed-camera and overhead views confirm it is released and resting inside the compartment. The gripper is open and the arm is clear.",
+      "wall_minutes": 12.17,
+      "predicates": [
+        {
+          "goal": [
+            "in",
+            "black_book_1",
+            "desk_caddy_1_back_contain_region"
+          ],
+          "satisfied": false
+        }
+      ],
+      "analysis": {
+        "root_cause": "失败根因是后侧隔间识别错误。书本已被抓起并搬到收纳盒，但进入了侧边大格；后续重新抓取和调整仍发生在同一错误隔间，最终将“已放进收纳盒”误认为满足“后侧隔间”。",
+        "evidence": [
+          "Session 消息 26 与视频：书本随夹爪试抬约 9 cm，抓取已经建立。消息 39 选择的搬运目标为 TCP [-0.39,-0.29,1.28] m，水平位置指向侧边格。",
+          "消息 41 下降时出现约 30.9 mm 的残余误差并停滞；agent 撤回并重新定位。消息 59 发现书倾斜靠在边缘后再次抓取，但消息 62 的调整目标仍为 [-0.396,-0.282,1.10] m，没有转移到后侧目标格。",
+          "终态书本中心约 [-0.37758,-0.29250,0.90587] m；原生后侧隔间要求 x∈(-0.45212,-0.39662) m、y∈(-0.20385,-0.07953) m。分别越过 x 边界 19.04 mm、y 边界 88.65 mm，z 在允许范围内。",
+          "末段固定和腕部视频显示书已释放在侧边格。消息 67–71 又做了观察及静置动作，但仍声称已在 back compartment；最终 in(black_book_1, back_contain_region)=false。",
+          "2,351 个原生控制帧、71 次模型请求、0 次 reset；约 12.17 分钟后主动结束。全部模型请求成功返回，原生精确回放的终态误差为 0，失败不来自时间或步数限制。"
+        ],
+        "termination": "Agent 主动结束并声称完成；终态放置隔间错误。",
+        "confidence": "高：完整 session 的目标位置、实际搬运和修正视频、终态坐标与原生区域边界一致。",
+        "chapters": [
+          {
+            "message": 26,
+            "native_frame": 410,
+            "time": 21.3,
+            "label": "书本试抬成功 · 0:21"
+          },
+          {
+            "message": 39,
+            "native_frame": 671,
+            "time": 34.4,
+            "label": "选择了错误隔间 · 0:34"
+          },
+          {
+            "message": 41,
+            "native_frame": 824,
+            "time": 42.0,
+            "label": "下降受阻 · 0:42"
+          },
+          {
+            "message": 59,
+            "native_frame": 1774,
+            "time": 89.5,
+            "label": "仍在错误隔间内调整 · 1:30"
+          },
+          {
+            "message": 64,
+            "native_frame": 2087,
+            "time": 105.2,
+            "label": "释放并撤开 · 1:45"
+          },
+          {
+            "message": 67,
+            "native_frame": 2307,
+            "time": 116.2,
+            "label": "多视角检查后误判完成 · 1:56"
+          }
+        ],
+        "diagnostic_image": "evidence/long-t05-s00/camera-region-audit.png",
+        "diagnostic_caption": "评测后的原生区域投影：绿色线框是后侧隔间的判定体积，红点是书本中心投影（中心被盒壁遮挡）。诊断信息未提供给 agent。",
+        "diagnostic_evidence": "evidence/long-t05-s00/region-audit.json",
+        "diagnostic_plot": "evidence/long-t05-s00/region-audit.png"
+      }
+    },
+    {
+      "id": "long-t06-s00",
+      "task_id": 6,
+      "instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+      "title_zh": "白杯放上盘子，巧克力布丁放盘子右侧",
+      "completed": true,
+      "edited": true,
+      "native_success": false,
+      "valid": true,
+      "action_frames": 1773,
+      "action_limit": null,
+      "model_loop_limit": null,
+      "timeout_s": 1200,
+      "model_turns": 60,
+      "provider_requests": 60,
+      "successful_image_requests": 55,
+      "tool_calls": 65,
+      "tool_errors": 7,
+      "reset_requests": 0,
+      "execution_passed": true,
+      "execution_error": null,
+      "trial_exception": null,
+      "trial": "long-t06-s00__sSYB7MV",
+      "native_initialization": {
+        "bddl_sha256": "dbc9464b424cdc9b771b92d0b8a8c185b1b539f6a4133b323dc858bcf8f6a9c2",
+        "control_frequency_hz": 20,
+        "controller": "JOINT_POSITION/set_qpos",
+        "init_state_index": 0,
+        "init_state_sha256": "6e811394c4ff9a43ae23515d8512e9b657c04344b94dd5baed121b595490514f",
+        "initialization_frames": 5,
+        "loaded_state_sha256": "533340bd717874417ec05cd3d626b05c9464795440da917ce21e8a0a6fc50f72",
+        "max_steps": null,
+        "realtime": false,
+        "seed": 0,
+        "suite": "libero_10",
+        "task_id": 6,
+        "task_order_index": 0
+      },
+      "tokens": {
+        "input": 1703252,
+        "output": 5724
+      },
+      "recording": {
+        "id": "rec_00mu4go5nd0000fb",
+        "kind": "stream",
+        "name": "put-the-white-mug-on",
+        "task": "put the white mug on the plate and put the chocolate pudding to the right of the plate\n\nThe simulation service is already running. In Python, use `env = roboenv.connect(os.environ['ROBOENV_ENDPOINT'])`, then inspect `env.task`, `env.devices()`, and `env.device(name).profile`. Read sensors and command devices through their declared basic interfaces. Physics pauses between actions. Each write advances one native control interval and then pauses again; reads and stop do not advance time. There is no simulation horizon. Reads and IK/FK do not request extra steps. Camera reads return client-accessible image files. Live profiles and thin drivers are in /run/roboenv/robot/devices. Build perception and control tools in /app. The verifier checks final state and budget after you finish.\n\n\nLIBERO gripper writes select a persistent direction: +1 closes, -1 opens, and 0\nretains the accumulated actuator target. Gripper stop instead resets that target\nto the measured finger positions; it can reduce gripping force and is not a\ngrasp-preserving cleanup operation. Arm stop affects only the arm. A write being\naccepted does not establish arrival or a grasp: check measured motion and finger\naperture, then use a small lift and fresh images to check that the object follows.\n\nBefore contact, check the measured tool pose and finger-pad geometry, allowing\nclearance for the whole gripper and arm around articulated fixtures. If motion\nstalls, re-observe and revise the approach before closing the fingers. After an\nobject or fixture moves, refresh its observed location. For wrist-camera geometry,\nhold the arm still while reading the image and pose; do not pair an old image\nwith a later arm pose.\n\n\nBefore ending the task or claiming success, define concrete, task-specific checks\nfor every requested outcome and verify all of them using fresh public sensor\nobservations, including the object's final relation to its target and any required\ndrawer, door, or switch state. Use multiple views or measured feedback when one\nview is ambiguous. Tool acceptance, a completed todo, and absence of errors do not\nprove task completion. If a check fails or remains uncertain and time is available,\ndiagnose it and attempt a safe correction; do not end solely because one grasp or\nmotion failed. If further progress is blocked or the run limit is reached, report\nthe task as incomplete and state which checks failed. Do not access private\nverifier state or change the benchmark success rules.\n\nEvaluation execution policy: You have 20 minutes of wall-clock execution time. There is no action-step or model-loop limit. This is one episode: do not reset, restore, checkpoint, or request a new initial state. The agent cameras have native 256 x 256 resolution. Complete all requested subgoals and verify them before ending.\n",
+        "robotID": "libero-panda-living-room",
+        "sessionID": "ses_00mu4go4sx0000ml",
+        "started": "2026-09-16T18:55:45.835Z",
+        "status": "stopped",
+        "sampling": {
+          "devices": {
+            "camera": {
+              "rate": 10,
+              "source": "harness"
+            },
+            "camera_wrist": {
+              "rate": 10,
+              "source": "harness"
+            }
+          }
+        },
+        "wallMs": 514444,
+        "devices": {
+          "camera": {
+            "type": "rgb",
+            "events": 5066,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 77,
+            "samples": 5066,
+            "readErrors": 0,
+            "effectiveHz": 9.9,
+            "stream": {
+              "status": "stopped",
+              "bytes": 2949496,
+              "fps": 15,
+              "frames": 7713,
+              "samples": 5066,
+              "repeated": 2653,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 5,
+              "started_ns": 1789584946025000000,
+              "video": "devices/camera/stream/video.mp4",
+              "timestamps": "devices/camera/stream/frames.jsonl",
+              "ended_ns": 1789585460200752400
+            },
+            "warning": "camera: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          },
+          "camera_wrist": {
+            "type": "rgb",
+            "events": 5094,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 48,
+            "samples": 5094,
+            "readErrors": 0,
+            "effectiveHz": 9.9,
+            "stream": {
+              "status": "stopped",
+              "bytes": 3513194,
+              "fps": 15,
+              "frames": 7712,
+              "samples": 5094,
+              "repeated": 2636,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 17,
+              "video": "devices/camera_wrist/stream/video.mp4",
+              "timestamps": "devices/camera_wrist/stream/frames.jsonl",
+              "started_ns": 1789584946081000000,
+              "ended_ns": 1789585460200679400
+            },
+            "warning": "camera_wrist: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          }
+        },
+        "passive": {
+          "arm": {
+            "type": "joint",
+            "events": 6,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 0,
+            "samples": 0,
+            "readErrors": 0
+          }
+        },
+        "bytes": 9159152,
+        "messageRange": {
+          "first": "msg_00mu4go5ub00000q",
+          "last": "msg_00mu4gz23100002i"
+        },
+        "notes": 0,
+        "ended": "2026-09-16T19:04:20.279Z",
+        "endedBy": "stop"
+      },
+      "final_agent_text": "Done. Verified with fresh front and wrist camera views:\n- The white mug is upright on the plate.\n- The chocolate pudding is on the table to the right of the plate.\n\nBoth objects are released, and the gripper is retracted.",
+      "wall_minutes": 8.57,
+      "predicates": [
+        {
+          "goal": [
+            "on",
+            "porcelain_mug_1",
+            "plate_1"
+          ],
+          "satisfied": true
+        },
+        {
+          "goal": [
+            "on",
+            "chocolate_pudding_1",
+            "living_room_table_plate_right_region"
+          ],
+          "satisfied": false
+        }
+      ],
+      "analysis": {
+        "root_cause": "失败根因是布丁放置目标与原生“盘子右侧区域”不一致。Agent 把“在右边且有明显间隔”当作验收标准，主动选择了过远的目标位置；运动执行到位，杯子子目标也已恢复成功，但布丁落在指定区域外。",
+        "evidence": [
+          "最终原生检查：on(porcelain_mug_1, plate_1)=true；on(chocolate_pudding_1, plate_right_region)=false。杯子先前的滑落不是最终失败原因。",
+          "Session 消息 55 明确命令将布丁放到 [x=0.15, y=0.20, z=0.458] m；最终物体中心约为 [0.1473, 0.20023, 0.44984] m，与所选水平位置接近。",
+          "原生目标区域为 x∈(0.10,0.20) m、y∈(0.05,0.15) m。布丁的 y 坐标超出上界 50.23 mm；事后原生区域检查确认仅该水平方向越界。",
+          "Session 消息 57–60 确实重新查看了两路相机，但据此确认的是较宽泛的“右侧、有间隔”，没有发现目标区域越界。视频中的布丁已释放在桌上，没有发生最后一次搬运掉落。",
+          "1,773 个原生控制帧、60 次模型请求、0 次 reset；约 8.57 分钟后主动声称完成。请求均成功返回，未触发时钟、action 或 model-loop 上限，精确回放保持相同失败判定。"
+        ],
+        "termination": "Agent 主动结束并声称完成；属于最终空间关系误判，不是预算耗尽。",
+        "confidence": "高：放置命令、终态坐标、原生区域范围、两项 predicate 与实际视频形成直接证据链。",
+        "chapters": [
+          {
+            "message": 39,
+            "native_frame": 1034,
+            "time": 52.5,
+            "label": "杯子滑落后重抓 · 0:52"
+          },
+          {
+            "message": 45,
+            "native_frame": 1284,
+            "time": 65.0,
+            "label": "杯子子目标已恢复 · 1:05"
+          },
+          {
+            "message": 55,
+            "native_frame": 1554,
+            "time": 78.5,
+            "label": "布丁目标点选择 · 1:18"
+          },
+          {
+            "message": 58,
+            "native_frame": 1773,
+            "time": 89.5,
+            "label": "最终误判完成 · 1:30"
+          }
+        ],
+        "diagnostic_image": "evidence/long-t06-s00/region-audit.png",
+        "diagnostic_caption": "评测后的坐标诊断图：绿色框为原生右侧区域，布丁中心落在框外。该信息未提供给 agent。",
+        "diagnostic_evidence": "evidence/long-t06-s00/region-audit.json"
+      }
+    },
+    {
+      "id": "long-t07-s00",
+      "task_id": 7,
+      "instruction": "put both the alphabet soup and the cream cheese box in the basket",
+      "title_zh": "将字母汤罐和奶油奶酪盒放进篮子",
+      "completed": true,
+      "edited": true,
+      "native_success": true,
+      "valid": true,
+      "action_frames": 1237,
+      "action_limit": null,
+      "model_loop_limit": null,
+      "timeout_s": 1200,
+      "model_turns": 40,
+      "provider_requests": 40,
+      "successful_image_requests": 36,
+      "tool_calls": 39,
+      "tool_errors": 2,
+      "reset_requests": 0,
+      "execution_passed": true,
+      "execution_error": null,
+      "trial_exception": null,
+      "trial": "long-t07-s00__2cR9hi3",
+      "native_initialization": {
+        "bddl_sha256": "e27ab37f512fe42e35771d6130f531e6a9656929e7b4c60b348b81360cf5675d",
+        "control_frequency_hz": 20,
+        "controller": "JOINT_POSITION/set_qpos",
+        "init_state_index": 0,
+        "init_state_sha256": "2113ea5923fcbbe1b57b428383934496072f062729d0b72d3021573d55d25abc",
+        "initialization_frames": 5,
+        "loaded_state_sha256": "d02d4d5533fbcab414bfc49e4896182cd40e173dfa6316e39a2b418e902ae826",
+        "max_steps": null,
+        "realtime": false,
+        "seed": 0,
+        "suite": "libero_10",
+        "task_id": 7,
+        "task_order_index": 0
+      },
+      "tokens": {
+        "input": 1036281,
+        "output": 4124
+      },
+      "recording": {
+        "id": "rec_00mu4h0iji000019",
+        "kind": "stream",
+        "name": "put-both-the-alphabet-soup",
+        "task": "put both the alphabet soup and the cream cheese box in the basket\n\nThe simulation service is already running. In Python, use `env = roboenv.connect(os.environ['ROBOENV_ENDPOINT'])`, then inspect `env.task`, `env.devices()`, and `env.device(name).profile`. Read sensors and command devices through their declared basic interfaces. Physics pauses between actions. Each write advances one native control interval and then pauses again; reads and stop do not advance time. There is no simulation horizon. Reads and IK/FK do not request extra steps. Camera reads return client-accessible image files. Live profiles and thin drivers are in /run/roboenv/robot/devices. Build perception and control tools in /app. The verifier checks final state and budget after you finish.\n\n\nLIBERO gripper writes select a persistent direction: +1 closes, -1 opens, and 0\nretains the accumulated actuator target. Gripper stop instead resets that target\nto the measured finger positions; it can reduce gripping force and is not a\ngrasp-preserving cleanup operation. Arm stop affects only the arm. A write being\naccepted does not establish arrival or a grasp: check measured motion and finger\naperture, then use a small lift and fresh images to check that the object follows.\n\nBefore contact, check the measured tool pose and finger-pad geometry, allowing\nclearance for the whole gripper and arm around articulated fixtures. If motion\nstalls, re-observe and revise the approach before closing the fingers. After an\nobject or fixture moves, refresh its observed location. For wrist-camera geometry,\nhold the arm still while reading the image and pose; do not pair an old image\nwith a later arm pose.\n\n\nBefore ending the task or claiming success, define concrete, task-specific checks\nfor every requested outcome and verify all of them using fresh public sensor\nobservations, including the object's final relation to its target and any required\ndrawer, door, or switch state. Use multiple views or measured feedback when one\nview is ambiguous. Tool acceptance, a completed todo, and absence of errors do not\nprove task completion. If a check fails or remains uncertain and time is available,\ndiagnose it and attempt a safe correction; do not end solely because one grasp or\nmotion failed. If further progress is blocked or the run limit is reached, report\nthe task as incomplete and state which checks failed. Do not access private\nverifier state or change the benchmark success rules.\n\nEvaluation execution policy: You have 20 minutes of wall-clock execution time. There is no action-step or model-loop limit. This is one episode: do not reset, restore, checkpoint, or request a new initial state. The agent cameras have native 256 x 256 resolution. Complete all requested subgoals and verify them before ending.\n",
+        "robotID": "libero-panda-living-room",
+        "sessionID": "ses_00mu4h0hsu0000ph",
+        "started": "2026-09-16T19:05:22.411Z",
+        "status": "stopped",
+        "sampling": {
+          "devices": {
+            "camera": {
+              "rate": 10,
+              "source": "harness"
+            },
+            "camera_wrist": {
+              "rate": 10,
+              "source": "harness"
+            }
+          }
+        },
+        "wallMs": 400053,
+        "devices": {
+          "camera": {
+            "type": "rgb",
+            "events": 3949,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 50,
+            "samples": 3949,
+            "readErrors": 0,
+            "effectiveHz": 9.9,
+            "stream": {
+              "status": "stopped",
+              "bytes": 2485037,
+              "fps": 15,
+              "frames": 5997,
+              "samples": 3949,
+              "repeated": 2051,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 2,
+              "started_ns": 1789585522622000000,
+              "video": "devices/camera/stream/video.mp4",
+              "timestamps": "devices/camera/stream/frames.jsonl",
+              "ended_ns": 1789585922376708000
+            },
+            "warning": "camera: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          },
+          "camera_wrist": {
+            "type": "rgb",
+            "events": 3927,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 71,
+            "samples": 3927,
+            "readErrors": 0,
+            "effectiveHz": 9.8,
+            "stream": {
+              "status": "stopped",
+              "bytes": 3770387,
+              "fps": 15,
+              "frames": 5996,
+              "samples": 3927,
+              "repeated": 2075,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 5,
+              "video": "devices/camera_wrist/stream/video.mp4",
+              "timestamps": "devices/camera_wrist/stream/frames.jsonl",
+              "started_ns": 1789585522679000000,
+              "ended_ns": 1789585922377683700
+            },
+            "warning": "camera_wrist: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          }
+        },
+        "passive": {
+          "arm": {
+            "type": "joint",
+            "events": 1,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 0,
+            "samples": 0,
+            "readErrors": 0
+          }
+        },
+        "bytes": 8382576,
+        "messageRange": {
+          "first": "msg_00mu4h0iq90000kr",
+          "last": "msg_00mu4h90280000s6"
+        },
+        "notes": 0,
+        "ended": "2026-09-16T19:12:02.464Z",
+        "endedBy": "stop"
+      },
+      "final_agent_text": "Placed both the alphabet soup and the cream cheese box in the basket. Fresh overhead and side views confirmed both remain inside after release, with the gripper open and clear.",
+      "wall_minutes": 6.67,
+      "predicates": [
+        {
+          "goal": [
+            "in",
+            "alphabet_soup_1",
+            "basket_1_contain_region"
+          ],
+          "satisfied": true
+        },
+        {
+          "goal": [
+            "in",
+            "cream_cheese_1",
+            "basket_1_contain_region"
+          ],
+          "satisfied": true
+        }
+      ],
+      "analysis": {
+        "root_cause": "任务成功。汤罐靠近篮口时下降受阻，agent 撤高并从篮口上方释放；随后把奶酪盒放进剩余空间，两个原生 in predicate 同时成立。",
+        "evidence": [
+          "Session 消息 12–13：汤罐夹持后随短距离抬升移动；消息 17 下降放置时残余误差约 39.6 mm，控制器明确报告 motion stalled。",
+          "消息 18–23 与视频：停止机械臂、查看两路新图像后，抬高并在篮口上方释放，避免继续向下挤压。",
+          "消息 29–37：奶酪盒通过试抬检查后被搬到篮内，释放并追加静置动作，再从两路相机检查。终态奶酪盒倾斜靠在篮边和汤罐上，但其中心仍在原生容器区域，两个子目标均通过。",
+          "1,237 个原生控制帧、40 次模型请求、0 次 reset；高清精确回放终态误差为 0。"
+        ],
+        "termination": "Agent 完成两项放置检查后主动结束，未触及时钟上限。",
+        "confidence": "高：完整 session、实际运动与终态双视角画面、原生 predicate 相互印证。"
+      }
+    },
+    {
+      "id": "long-t08-s00",
+      "task_id": 8,
+      "instruction": "put both moka pots on the stove",
+      "title_zh": "把两个摩卡壶都放到炉灶上",
+      "completed": true,
+      "edited": true,
+      "native_success": true,
+      "valid": true,
+      "action_frames": 2945,
+      "action_limit": null,
+      "model_loop_limit": null,
+      "timeout_s": 1200,
+      "model_turns": 45,
+      "provider_requests": 45,
+      "successful_image_requests": 41,
+      "tool_calls": 44,
+      "tool_errors": 5,
+      "reset_requests": 0,
+      "execution_passed": true,
+      "execution_error": null,
+      "trial_exception": null,
+      "trial": "long-t08-s00__UFX5ftf",
+      "native_initialization": {
+        "bddl_sha256": "ae1299a707d3e810096ad648948c517de40474bcdacca93a15e17d191e34454a",
+        "control_frequency_hz": 20,
+        "controller": "JOINT_POSITION/set_qpos",
+        "init_state_index": 0,
+        "init_state_sha256": "44f992e911c84a1340589510ecdaf947a4872966f7678c8364d8bb5d13dc4dac",
+        "initialization_frames": 5,
+        "loaded_state_sha256": "61a34575b44313156895ce73996cf18dd243c396572fd0e1cd476e0e9fbe70af",
+        "max_steps": null,
+        "realtime": false,
+        "seed": 0,
+        "suite": "libero_10",
+        "task_id": 8,
+        "task_order_index": 0
+      },
+      "tokens": {
+        "input": 1199497,
+        "output": 4809
+      },
+      "recording": {
+        "id": "rec_00mu4h40at00000t",
+        "kind": "stream",
+        "name": "put-both-moka-pots-on",
+        "task": "put both moka pots on the stove\n\nThe simulation service is already running. In Python, use `env = roboenv.connect(os.environ['ROBOENV_ENDPOINT'])`, then inspect `env.task`, `env.devices()`, and `env.device(name).profile`. Read sensors and command devices through their declared basic interfaces. Physics pauses between actions. Each write advances one native control interval and then pauses again; reads and stop do not advance time. There is no simulation horizon. Reads and IK/FK do not request extra steps. Camera reads return client-accessible image files. Live profiles and thin drivers are in /run/roboenv/robot/devices. Build perception and control tools in /app. The verifier checks final state and budget after you finish.\n\n\nLIBERO gripper writes select a persistent direction: +1 closes, -1 opens, and 0\nretains the accumulated actuator target. Gripper stop instead resets that target\nto the measured finger positions; it can reduce gripping force and is not a\ngrasp-preserving cleanup operation. Arm stop affects only the arm. A write being\naccepted does not establish arrival or a grasp: check measured motion and finger\naperture, then use a small lift and fresh images to check that the object follows.\n\nBefore contact, check the measured tool pose and finger-pad geometry, allowing\nclearance for the whole gripper and arm around articulated fixtures. If motion\nstalls, re-observe and revise the approach before closing the fingers. After an\nobject or fixture moves, refresh its observed location. For wrist-camera geometry,\nhold the arm still while reading the image and pose; do not pair an old image\nwith a later arm pose.\n\n\nBefore ending the task or claiming success, define concrete, task-specific checks\nfor every requested outcome and verify all of them using fresh public sensor\nobservations, including the object's final relation to its target and any required\ndrawer, door, or switch state. Use multiple views or measured feedback when one\nview is ambiguous. Tool acceptance, a completed todo, and absence of errors do not\nprove task completion. If a check fails or remains uncertain and time is available,\ndiagnose it and attempt a safe correction; do not end solely because one grasp or\nmotion failed. If further progress is blocked or the run limit is reached, report\nthe task as incomplete and state which checks failed. Do not access private\nverifier state or change the benchmark success rules.\n\nEvaluation execution policy: You have 20 minutes of wall-clock execution time. There is no action-step or model-loop limit. This is one episode: do not reset, restore, checkpoint, or request a new initial state. The agent cameras have native 256 x 256 resolution. Complete all requested subgoals and verify them before ending.\n",
+        "robotID": "libero-panda-kitchen",
+        "sessionID": "ses_00mu4h3zd80000h4",
+        "started": "2026-09-16T19:08:05.392Z",
+        "status": "stopped",
+        "sampling": {
+          "devices": {
+            "camera": {
+              "rate": 10,
+              "source": "harness"
+            },
+            "camera_wrist": {
+              "rate": 10,
+              "source": "harness"
+            }
+          }
+        },
+        "wallMs": 473883,
+        "devices": {
+          "camera": {
+            "type": "rgb",
+            "events": 4692,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 45,
+            "samples": 4692,
+            "readErrors": 0,
+            "effectiveHz": 9.9,
+            "stream": {
+              "status": "stopped",
+              "bytes": 3537357,
+              "fps": 15,
+              "frames": 7103,
+              "samples": 4692,
+              "repeated": 2423,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 12,
+              "video": "devices/camera/stream/video.mp4",
+              "timestamps": "devices/camera/stream/frames.jsonl",
+              "started_ns": 1789585685684000000,
+              "ended_ns": 1789586159195491600
+            },
+            "warning": "camera: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          },
+          "camera_wrist": {
+            "type": "rgb",
+            "events": 4668,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 68,
+            "samples": 4668,
+            "readErrors": 0,
+            "effectiveHz": 9.9,
+            "stream": {
+              "status": "stopped",
+              "bytes": 4179079,
+              "fps": 15,
+              "frames": 7103,
+              "samples": 4668,
+              "repeated": 2442,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 7,
+              "video": "devices/camera_wrist/stream/video.mp4",
+              "timestamps": "devices/camera_wrist/stream/frames.jsonl",
+              "started_ns": 1789585685709000000,
+              "ended_ns": 1789586159195623000
+            },
+            "warning": "camera_wrist: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          }
+        },
+        "passive": {},
+        "bytes": 10253248,
+        "messageRange": {
+          "first": "msg_00mu4h40id0000h0",
+          "last": "msg_00mu4he1zb0000an"
+        },
+        "notes": 0,
+        "ended": "2026-09-16T19:15:59.275Z",
+        "endedBy": "stop"
+      },
+      "final_agent_text": "Both moka pots are on the stove. Fresh front and overhead views confirm they are upright and stable after release, with the gripper clear.",
+      "wall_minutes": 7.9,
+      "predicates": [
+        {
+          "goal": [
+            "on",
+            "moka_pot_1",
+            "flat_stove_1_cook_region"
+          ],
+          "satisfied": true
+        },
+        {
+          "goal": [
+            "on",
+            "moka_pot_2",
+            "flat_stove_1_cook_region"
+          ],
+          "satisfied": true
+        },
+        {
+          "goal": [
+            "turnon",
+            "flat_stove_1"
+          ],
+          "satisfied": true
+        }
+      ],
+      "analysis": {
+        "root_cause": "任务成功。直接从上方包住壶身受到宽壶盖阻挡，调整角度仍受阻后，agent 改抓把手，依次把两只壶放到炉面不同位置。",
+        "evidence": [
+          "Session 消息 14–18：第一次大幅转腕在控制器允许的 12 次写入内未收敛；agent 延长局部运动等待后恢复。这是临时控制器内部的等待条件，不是评测 action/model-loop 上限。",
+          "消息 18–23 与视频：两次壶身下降分别在约 z=1.042 m、1.041 m 停住；查看新图像并改变接近方式后，从把手位置完成抓取。",
+          "消息 25–27：夹爪开口约 13 mm，壶随试抬移动。搬运工具一次 20 秒 shell 超时返回 143，但释放已经发生；agent 重新读取状态后继续，没有丢失 episode。",
+          "消息 33–42：第二只壶同样通过把手搬运，释放后增加静置动作，再查看正面与俯视图。两只壶的 on-stove predicate 均满足；原生额外要求的 turnon 在初态已经为真，终态仍为真。",
+          "2,945 个原生控制帧、45 次模型请求、0 次 reset；高清回放终态误差为 0。两次物理接近受阻和一次工具超时都已恢复。"
+        ],
+        "termination": "Agent 完成释放、直立和稳定性检查后主动结束，未触及总时钟上限。",
+        "confidence": "高：完整 session、实际搬运视频、初末原生 predicate 与精确回放相互一致。"
+      }
+    },
+    {
+      "id": "long-t09-s00",
+      "task_id": 9,
+      "instruction": "put the yellow and white mug in the microwave and close it",
+      "title_zh": "把黄白杯放入微波炉并关门",
+      "completed": true,
+      "edited": true,
+      "native_success": false,
+      "valid": true,
+      "action_frames": 7594,
+      "action_limit": null,
+      "model_loop_limit": null,
+      "timeout_s": 1200,
+      "model_turns": 108,
+      "provider_requests": 108,
+      "successful_image_requests": 103,
+      "tool_calls": 107,
+      "tool_errors": 18,
+      "reset_requests": 0,
+      "execution_passed": false,
+      "execution_error": "Execution deadline exceeded",
+      "trial_exception": {
+        "exception_type": "RuntimeError",
+        "exception_message": "Kinex command exited 1: None\nNone",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"<python-environment>/lib/python3.12/site-packages/harbor/trial/trial.py\", line 409, in run\n    await self._run()\n  File \"<python-environment>/lib/python3.12/site-packages/harbor/trial/single_step.py\", line 41, in _run\n    await self._run_agent()\n  File \"<python-environment>/lib/python3.12/site-packages/harbor/trial/single_step.py\", line 77, in _run_agent\n    await self._run_agent_phase(\n  File \"<python-environment>/lib/python3.12/site-packages/harbor/trial/trial.py\", line 545, in _run_agent_phase\n    await asyncio.wait_for(\n  File \"/usr/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"<evaluation>/scripts/eval_agent.py\", line 47, in run\n    return await super().run(instruction,environment,context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<evaluation>/source/RoboEnv/src/roboenv/harbor/kinex.py\", line 225, in run\n    await self.checked(\n  File \"<evaluation>/source/RoboEnv/src/roboenv/harbor/kinex.py\", line 136, in checked\n    raise RuntimeError(\nRuntimeError: Kinex command exited 1: None\nNone\n",
+        "occurred_at": "2026-09-16T19:33:04.760946Z"
+      },
+      "trial": "long-t09-s00__U2ZX9Cm",
+      "native_initialization": {
+        "bddl_sha256": "456d145f92be049f445fc77673dc583d9d17ea7afe92f6ffcb2fd1fa5565d420",
+        "control_frequency_hz": 20,
+        "controller": "JOINT_POSITION/set_qpos",
+        "init_state_index": 0,
+        "init_state_sha256": "6b75c8d4d1e1c40b5d99c78ceea380d99ccffb0a484a4cb2d3153488a0afbbe2",
+        "initialization_frames": 5,
+        "loaded_state_sha256": "ea7db2b727794199cfa1e42f8d924c5841e4af18716a392adf30d5517114c87f",
+        "max_steps": null,
+        "realtime": false,
+        "seed": 0,
+        "suite": "libero_10",
+        "task_id": 9,
+        "task_order_index": 0
+      },
+      "tokens": {
+        "input": 3281893,
+        "output": 10274
+      },
+      "recording": {
+        "id": "rec_00mu4haef10000fa",
+        "kind": "stream",
+        "name": "put-the-yellow-and-white",
+        "task": "put the yellow and white mug in the microwave and close it\n\nThe simulation service is already running. In Python, use `env = roboenv.connect(os.environ['ROBOENV_ENDPOINT'])`, then inspect `env.task`, `env.devices()`, and `env.device(name).profile`. Read sensors and command devices through their declared basic interfaces. Physics pauses between actions. Each write advances one native control interval and then pauses again; reads and stop do not advance time. There is no simulation horizon. Reads and IK/FK do not request extra steps. Camera reads return client-accessible image files. Live profiles and thin drivers are in /run/roboenv/robot/devices. Build perception and control tools in /app. The verifier checks final state and budget after you finish.\n\n\nLIBERO gripper writes select a persistent direction: +1 closes, -1 opens, and 0\nretains the accumulated actuator target. Gripper stop instead resets that target\nto the measured finger positions; it can reduce gripping force and is not a\ngrasp-preserving cleanup operation. Arm stop affects only the arm. A write being\naccepted does not establish arrival or a grasp: check measured motion and finger\naperture, then use a small lift and fresh images to check that the object follows.\n\nBefore contact, check the measured tool pose and finger-pad geometry, allowing\nclearance for the whole gripper and arm around articulated fixtures. If motion\nstalls, re-observe and revise the approach before closing the fingers. After an\nobject or fixture moves, refresh its observed location. For wrist-camera geometry,\nhold the arm still while reading the image and pose; do not pair an old image\nwith a later arm pose.\n\n\nBefore ending the task or claiming success, define concrete, task-specific checks\nfor every requested outcome and verify all of them using fresh public sensor\nobservations, including the object's final relation to its target and any required\ndrawer, door, or switch state. Use multiple views or measured feedback when one\nview is ambiguous. Tool acceptance, a completed todo, and absence of errors do not\nprove task completion. If a check fails or remains uncertain and time is available,\ndiagnose it and attempt a safe correction; do not end solely because one grasp or\nmotion failed. If further progress is blocked or the run limit is reached, report\nthe task as incomplete and state which checks failed. Do not access private\nverifier state or change the benchmark success rules.\n\nEvaluation execution policy: You have 20 minutes of wall-clock execution time. There is no action-step or model-loop limit. This is one episode: do not reset, restore, checkpoint, or request a new initial state. The agent cameras have native 256 x 256 resolution. Complete all requested subgoals and verify them before ending.\n",
+        "robotID": "libero-panda-kitchen",
+        "sessionID": "ses_00mu4hadld000017",
+        "started": "2026-09-16T19:13:03.623Z",
+        "status": "stopped",
+        "sampling": {
+          "devices": {
+            "camera": {
+              "rate": 10,
+              "source": "harness"
+            },
+            "camera_wrist": {
+              "rate": 10,
+              "source": "harness"
+            }
+          }
+        },
+        "wallMs": 1199021,
+        "devices": {
+          "camera": {
+            "type": "rgb",
+            "events": 11843,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 145,
+            "samples": 11843,
+            "readErrors": 0,
+            "effectiveHz": 9.9,
+            "stream": {
+              "status": "stopped",
+              "bytes": 10099660,
+              "fps": 15,
+              "frames": 17981,
+              "samples": 11843,
+              "repeated": 6140,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 2,
+              "timestamps": "devices/camera/stream/frames.jsonl",
+              "started_ns": 1789585983876000000,
+              "video": "devices/camera/stream/video.mp4",
+              "ended_ns": 1789587182559700500
+            },
+            "warning": "camera: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          },
+          "camera_wrist": {
+            "type": "rgb",
+            "events": 11886,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 101,
+            "samples": 11886,
+            "readErrors": 0,
+            "effectiveHz": 9.9,
+            "stream": {
+              "status": "stopped",
+              "bytes": 10116872,
+              "fps": 15,
+              "frames": 17980,
+              "samples": 11886,
+              "repeated": 6122,
+              "transport_dropped": 0,
+              "capture_samples": 0,
+              "capture_missed": 0,
+              "capture_errors": 0,
+              "rows": 0,
+              "dropped": 28,
+              "video": "devices/camera_wrist/stream/video.mp4",
+              "timestamps": "devices/camera_wrist/stream/frames.jsonl",
+              "started_ns": 1789585983942000000,
+              "ended_ns": 1789587182559459600
+            },
+            "warning": "camera_wrist: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+          }
+        },
+        "passive": {
+          "arm": {
+            "type": "joint",
+            "events": 2,
+            "frames": 0,
+            "bytes": 0,
+            "skipped": 0,
+            "samples": 0,
+            "readErrors": 0
+          }
+        },
+        "bytes": 26639126,
+        "messageRange": {
+          "first": "msg_00mu4haen10000th",
+          "last": "msg_00mu4i02lo0000g7"
+        },
+        "notes": 0,
+        "ended": "2026-09-16T19:33:02.644Z",
+        "endedBy": "error"
+      },
+      "final_agent_text": "",
+      "wall_minutes": 19.98,
+      "predicates": [
+        {
+          "goal": [
+            "in",
+            "white_yellow_mug_1",
+            "microwave_1_heating_region"
+          ],
+          "satisfied": false
+        },
+        {
+          "goal": [
+            "close",
+            "microwave_1"
+          ],
+          "satisfied": false
+        }
+      ],
+      "analysis": {
+        "root_cause": "物理困难的起点是放入路线与微波炉顶板冲突：杯把已抓住且完成搬运，但高位下降使杯体撞上顶板，杯子随后在夹持中转动、倾斜。撤回并放到台面后，杯子侧倒；后续把手和杯沿抓取多次空抓、受阻或 IK 无解，未恢复有效搬运。",
+        "evidence": [
+          "Session 消息 19–22 与前段视频：夹爪开口约 17.4 mm，杯子随试抬及横向搬运移动；原生 frame 539 的杯中心高度约 1.001 m，frame 800 已到约 1.140 m，因此并非从未建立抓取。",
+          "消息 25 命令 TCP 到 [-0.09,0.25,1.10] m，却在距目标约 96.2 mm 处停滞。独立接触回放的 frame 820–893 显示 white_yellow_mug 与 microwave_1_g6 连续接触；该 geom 是顶板，接触高度约 1.107 m。此处直接受阻的是所持杯体。",
+          "消息 28–30 与视频：撤回时杯子已明显倾斜，之后 agent 主动张开夹爪将其放回台面，杯子侧倒。后续多次闭合后开口降到 0，物体没有随抬升移动；例如 frame 2803 两指垫直接接触，而杯子仍接触桌面。",
+          "消息 43–104 中反复调整目标高度、夹爪角度和侧向接近，期间有多个显式 motion stalled 和 IK 无解。后半段杯中心长期在 z≈0.932 m 的桌面侧倒高度，只发生水平推动；终态仍在微波炉外。",
+          "最终 in(mug, heating_region)=false，close(microwave)=false；7,594 个原生控制帧、108 次模型请求、0 次 reset。前 107 次请求返回 200，最后一次被 20 分钟时钟取消；不是 action-step 或 model-loop 截断。原生视频回放和独立接触回放的终态误差均为 0。"
+        ],
+        "termination": "20 分钟 execution clock 到时，agent 仍在尝试恢复。结束原因与此前的碰撞、侧倒和无效再抓分别记录；不据此推断延长时间一定会成功。",
+        "confidence": "高：初始有效抓取、杯体与顶板接触、放下侧倒及后续空抓均有 session、实际双视角视频和原生状态证据。",
+        "chapters": [
+          {
+            "message": 19,
+            "native_frame": 452,
+            "time": 23.4,
+            "label": "杯把抓取与试抬成功 · 0:23"
+          },
+          {
+            "message": 25,
+            "native_frame": 802,
+            "time": 40.9,
+            "label": "杯体撞到微波炉顶板 · 0:41"
+          },
+          {
+            "message": 30,
+            "native_frame": 1077,
+            "time": 54.7,
+            "label": "撤回、放下后杯子侧倒 · 0:55"
+          },
+          {
+            "message": 55,
+            "native_frame": 2666,
+            "time": 134.1,
+            "label": "后续空抓 · 2:14"
+          },
+          {
+            "message": 87,
+            "native_frame": 4908,
+            "time": 246.2,
+            "label": "尝试侧向恢复 · 4:06"
+          },
+          {
+            "message": 99,
+            "native_frame": 6025,
+            "time": 302.1,
+            "label": "到时前仍未恢复有效抓取 · 5:02"
+          }
+        ],
+        "contact_audit": "evidence/long-t09-s00/contact-audit.json",
+        "verification_note": "Kinex 的 deadline 异常在 Harbor 中被记录为 RuntimeError，导致常规 verifier 阶段被跳过。动作停止后，使用本轮原封不动的 verify.py 对同一个 live 终态完成唯一一次 submit；journal 校验通过。没有重跑、reset 或额外策略动作；Harbor 原始异常记录保留。",
+        "verification_receipt": "evidence/long-t09-s00/deadline-verifier-recovery.json"
+      }
+    }
+  ],
+  "final": true,
+  "montage": false
+}

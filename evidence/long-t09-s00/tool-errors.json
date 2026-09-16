@@ -1,0 +1,162 @@
+[
+  {
+    "message": 1,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport roboenv,os\ne=roboenv.connect(os.environ['ROBOENV_ENDPOINT']);print(e.task);print(e.devices())\nfor n in e.devices():\n print(n,e.device(n).profile)\nPY"
+    },
+    "output": "TaskInfo(id='libero/long-t09-s00', instruction='put the yellow and white mug in the microwave and close it', context=mappingproxy({}))\n[{'actions': {'load': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['loaded'], 'type': 'object'}, 'read_only': True, 'supported': True}, 'read': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['positions', 'velocities', 'faults', 'sample_time_s'], 'type': 'object'}, 'read_only': True, 'supported': True}, 'status': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['loaded'], 'type': 'object'}, 'read_only': True, 'supported': True}, 'stop': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['stopped', 'behavior', 'affected_devices'], 'type': 'object'}, 'read_only': False, 'supported': True}, 'unload': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['unloaded'], 'type': 'object'}, 'read_only': True, 'supported': True}, 'write': {'input_schema': {'additionalProperties': False, 'properties': {'target': {'items': {'type': 'number'}, 'maxItems': 7, 'minItems': 7, 'type': 'array'}}, 'required': ['target'], 'type': 'object'}, 'output_schema': {'required': ['accepted'], 'type': 'object'}, 'read_only': False, 'supported': True}}, 'binding': {'entity': 'arm', 'id': 'libero.device/1'}, 'execution': {'interruptible': False, 'mode': 'synchronous'}, 'extrinsics': {'calibrated_at': None, 'method': 'introspection', 'mount': {'parent': 'world', 'parent_frame': 'world', 'rotation_xyzw': [0.0, 0.0, 0.0, 1.0], 'translation_m': [-0.66, 0.0, 0.912]}, 'source': 'introspected'}, 'implementation': 'libero-native-device', 'intrinsics': {'calibrated_at': None, 'control': {'execution': {'interval_s': 0.05, 'mode': 'stepped'}, 'mode': 'position', 'speed': None}, 'feedback': {'clock': 'simulation', 'efforts': False, 'velocities': True}, 'frames': {'flange': None}, 'home': {'robot0_joint1': 0.0, 'robot0_joint2': -0.161037389, 'robot0_joint3': 0.0, 'robot0_joint4': -2.44459747, 'robot0_joint5': 0.0, 'robot0_joint6': 2.2267522, 'robot0_joint7': 0.7853981633974483}, 'kinematics': {'feedback': 'driver', 'fk': 'numerical', 'frame': 'flange', 'frame_to_reported': [0, 0, 0, 0, 0, 0, 1], 'ik': {'backend': 'numerical', 'damping': 0.01, 'max_iterations': 200, 'method': 'damped_least_squares', 'position_tolerance_m': 0.0001, 'rotation_tolerance_rad': 0.001}}, 'method': 'introspection', 'model': {'chain': [{'anchor': [0.0, 0.0, 0.0], 'axis': [0.0, 0.0, 1.0], 'joint': 0, 'origin': [0.0, 0.0, 0.333, 0.0, 0.0, 0.0, 1.0], 'reference': 0.0}, {'anchor': [0.0, 0.0, 0.0], 'axis': [0.0, 0.0, 1.0], 'joint': 1, 'origin': [0.0, 0.0, 0.0, -0.7071067811865475, 0.0, 0.0, 0.7071067811865475], 'reference': 0.0}, {'anchor': [0.0, 0.0, 0.0], 'axis': [0.0, 0.0, 1.0], 'joint': 2, 'origin': [0.0, -0.316, 0.0, 0.7071067811865475, 0.0, 0.0, 0.7071067811865475], 'reference': 0.0}, {'anchor': [0.0, 0.0, 0.0], 'axis': [0.0, 0.0, 1.0], 'joint': 3, 'origin': [0.0825, 0.0, 0.0, 0.7071067811865475, 0.0, 0.0, 0.7071067811865475], 'reference': 0.0}, {'anchor': [0.0, 0.0, 0.0], 'axis': [0.0, 0.0, 1.0], 'joint': 4, 'origin': [-0.0825, 0.384, 0.0, -0.7071067811865475, 0.0, 0.0, 0.7071067811865475], 'reference': 0.0}, {'anchor': [0.0, 0.0, 0.0], 'axis': [0.0, 0.0, 1.0], 'joint': 5, 'origin': [0.0, 0.0, 0.0, 0.7071067811865475, 0.0, 0.0, 0.7071067811865475], 'reference': 0.0}, {'anchor': [0.0, 0.0, 0.0], 'axis': [0.0, 0.0, 1.0], 'joint': 6, 'origin': [0.088, 0.0, 0.0, 0.7071067811865475, 0.0, 0.0, 0.7071067811865475], 'reference': 0.0}, {'origin': [0.0, 0.0, 0.1065, 0.0, 0.0, -0.38291098354328656, 0.923785244892942]}], 'format': 'serial_chain', 'joints': [{'limits': {'max': 2.8973, 'min': -2.8973}, 'max_effort': None, 'max_velocity': None, 'name': 'robot0_joint1', 'type': 'revolute'}, {'limits': {'max': 1.7628, 'min': -1.7628}, 'max_effort': None, 'max_velocity': None, 'name': 'robot0_joint2', 'type': 'revolute'}, {'limits': {'max': 2.8973, 'min': -2.8973}, 'max_effort': None, 'max_velocity': None, 'name': 'robot0_joint3', 'type': 'revolute'}, {'limits': {'max': -0.0698, 'min': -3.0718}, 'max_effort': None, 'max_velocity': None, 'name': 'robot0_joint4', 'type': 'revolute'}, {'limits': {'max': 2.8973, 'min': -2.8973}, 'max_effort': None, 'max_velocity': None, 'name': 'robot0_joint5', 'type': 'revolute'}, {'limits': {'max': 3.7525, 'min': -0.0175}, 'max_effort': None, 'max_velocity': None, 'name': 'robot0_joint6', 'type': 'revolute'}, {'limits': {'max': 2.8973, 'min': -2.8973}, 'max_effort': None, 'max_velocity': None, 'name': 'robot0_joint7', 'type': 'revolute'}]}, 'source': 'introspected', 'stop': {'affected_devices': ['arm'], 'behavior': 'hold'}}, 'name': 'arm', 'schema_version': 'roboenv/devices/1', 'type': 'joint', 'validation': 'Native model resolved; task success requires separate evidence'}, {'actions': {'load': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['loaded'], 'type': 'object'}, 'read_only': True, 'supported': True}, 'read': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['file', 'height', 'width', 'sample_time_s'], 'type': 'object'}, 'read_only': True, 'supported': True}, 'status': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['loaded'], 'type': 'object'}, 'read_only': True, 'supported': True}, 'unload': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['unloaded'], 'type': 'object'}, 'read_only': True, 'supported': True}}, 'binding': {'entity': 'camera', 'id': 'libero.device/1'}, 'execution': {'interruptible': False, 'mode': 'synchronous'}, 'extrinsics': {'calibrated_at': None, 'method': 'introspection', 'mount': {'parent': 'world', 'parent_frame': 'world', 'rotation_xyzw': [0.6380177212293417, 0.6380177212293417, -0.3048498380157687, -0.30484971880648903], 'translation_m': [0.6586131746834771, 0.0, 1.6103500240372424]}, 'source': 'introspected'}, 'implementation': 'libero-native-device', 'intrinsics': {'calibrated_at': None, 'color': {'distortion': {'model': 'none'}, 'fov': {'horizontal_deg': 44.99985643448214, 'vertical_deg': 44.99985643448214}, 'fps': None, 'height': 256, 'image_format': 'png', 'pixel_format': 'rgb8', 'projection': {'cx': 128.0, 'cy': 128.0, 'fx': 309.01933598375615, 'fy': 309.01933598375615, 'model': 'pinhole', 'skew': 0}, 'width': 256}, 'method': 'introspection', 'source': 'introspected'}, 'name': 'camera', 'schema_version': 'roboenv/devices/1', 'type': 'rgb', 'validation': 'Native model resolved; task success requires separate evidence'}, {'actions': {'load': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['loaded'], 'type': 'object'}, 'read_only': True, 'supported': True}, 'read': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['file', 'height', 'width', 'sample_time_s'], 'type': 'object'}, 'read_only': True, 'supported': True}, 'status': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['loaded'], 'type': 'object'}, 'read_only': True, 'supported': True}, 'unload': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['unloaded'], 'type': 'object'}, 'read_only': True, 'supported': True}}, 'binding': {'entity': 'camera', 'id': 'libero.device/1'}, 'execution': {'interruptible': False, 'mode': 'synchronous'}, 'extrinsics': {'calibrated_at': None, 'method': 'introspection', 'mount': {'parent': 'arm', 'parent_frame': 'flange', 'rotation_xyzw': [4.676544920884293e-18, -5.3665269583918126e-18, 0.7071067811865465, 0.7071067811865471], 'translation_m': [0.049999999999999906, -2.913793338554793e-19, 5.637851296924623e-17]}, 'source': 'introspected'}, 'implementation': 'libero-native-device', 'intrinsics': {'calibrated_at': None, 'color': {'distortion': {'model': 'none'}, 'fov': {'horizontal_deg': 74.99943844035373, 'vertical_deg': 74.99943844035373}, 'fps': None, 'height': 256, 'image_format': 'png', 'pixel_format': 'rgb8', 'projection': {'cx': 128.0, 'cy': 128.0, 'fx': 166.81284772367434, 'fy': 166.81284772367434, 'model': 'pinhole', 'skew': 0}, 'width': 256}, 'method': 'introspection', 'source': 'introspected'}, 'name': 'camera_wrist', 'schema_version': 'roboenv/devices/1', 'type': 'rgb', 'validation': 'Native model resolved; task success requires separate evidence'}, {'actions': {'load': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['loaded'], 'type': 'object'}, 'read_only': True, 'supported': True}, 'read': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['positions', 'velocities', 'faults', 'sample_time_s'], 'type': 'object'}, 'read_only': True, 'supported': True}, 'status': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['loaded'], 'type': 'object'}, 'read_only': True, 'supported': True}, 'stop': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['stopped', 'behavior', 'affected_devices'], 'type': 'object'}, 'read_only': False, 'supported': True}, 'unload': {'input_schema': {'additionalProperties': False, 'properties': {}, 'type': 'object'}, 'output_schema': {'required': ['unloaded'], 'type': 'object'}, 'read_only': True, 'supported': True}, 'write': {'input_schema': {'additionalProperties': False, 'properties': {'target': {'items': {'type': 'number'}, 'maxItems': 1, 'minItems': 1, 'type': 'array'}}, 'required': ['target'], 'type': 'object'}, 'output_schema': {'required': ['accepted'], 'type': 'object'}, 'read_only': False, 'supported': True}}, 'binding': {'entity': 'gripper', 'id': 'libero.device/1'}, 'execution': {'interruptible': False, 'mode': 'synchronous'}, 'extrinsics': {'calibrated_at': None, 'method': 'introspection', 'mount': {'parent': 'arm', 'parent_frame': 'flange', 'rotation_xyzw': [4.6765449208842925e-18, 8.126455108421887e-18, -0.7071067811865464, 0.7071067811865472], 'translation_m': [-1.0408340855860843e-17, -1.5449880957918438e-18, 0.09699999999999974]}, 'source': 'introspected'}, 'implementation': 'libero-native-device', 'intrinsics': {'aperture_m': {'max': 0.079, 'min': 0.0}, 'calibrated_at': None, 'control': {'close_target': 1, 'increment_per_interval': 0.25, 'mode': 'direction', 'open_target': -1}, 'feedback': {'aperture_model': {'coefficients': [1.0, -1.0], 'model': 'affine', 'offset_m': -0.001}, 'clock': 'simulation', 'positions': [{'name': 'gripper0_finger_joint1', 'units': 'm'}, {'name': 'gripper0_finger_joint2', 'units': 'm'}], 'sensors': [], 'velocities': True}, 'frames': {'left_pad': None, 'right_pad': None}, 'geometry': {'approach_axis': [0, 0, 1], 'closing_axis': [1.0, 0.0, -0.0], 'contacts': {'left_pad': {'frame': 'left_pad', 'size_m': [0.016, 0.016]}, 'right_pad': {'frame': 'right_pad', 'size_m': [0.016, 0.016]}}, 'description': 'TCP is grip_site, 97 mm from the flange. Parallel jaws; contact frames locate the inner pad surfaces. Contact +Z points toward the object; local XY bounds describe each pad, not collision clearance.'}, 'method': 'introspection', 'source': 'introspected', 'stop': {'affected_devices': ['gripper'], 'behavior': 'hold'}}, 'name': 'gripper', 'schema_version': 'roboenv/devices/1', 'type': 'gripper', 'validation': 'Native model resolved; task success requires separate evidence'}, {'actions': {}, 'binding': {'entity': 'world', 'id': 'libero.device/1'}, 'execution': {'interruptible': False, 'mode': 'synchronous'}, 'extrinsics': {}, 'implementation': 'libero-native-device', 'intrinsics': {'bounds': None, 'calibrated_at': None, 'method': 'unknown', 'source': 'default', 'surfaces': []}, 'name': 'world', 'schema_version': 'roboenv/devices/1', 'type': 'world', 'validation': 'Native model resolved; task success requires separate evidence'}]\n\nstderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\n  File \"/app/workspace/.venv/lib/python3.12/site-packages/roboenv/devices/client.py\", line 44, in device\n    if name not in self._profiles:\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: unhashable type: 'dict'\n\nexit code: 1"
+  },
+  {
+    "message": 9,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"grip(-1);move([-.024,0,1.13],R.from_euler('xyz',[180,0,90],degrees=True).as_quat());snap('above')\"",
+      "timeout": 20000
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/control.py\", line 21, in grip\n    for _ in range(n):g.write({'target':[v]})\n                      ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/workspace/.venv/lib/python3.12/site-packages/roboenv/devices/client.py\", line 111, in invoke\n    reply = env._transport.device(self._profile[\"name\"]).call(action, args)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/workspace/.venv/lib/python3.12/site-packages/roboenv/client.py\", line 283, in call\n    return self.client.request(\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/app/workspace/.venv/lib/python3.12/site-packages/roboenv/client.py\", line 155, in request\n    raise RemoteError(op, response.get(\"error\") or {}, request[\"request_id\"])\nroboenv.client.RemoteError: devices.call: invalid_args: arguments do not match the declared device input schema\n\nexit code: 1"
+  },
+  {
+    "message": 12,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"stereo([127,144],[131,160]);move([-.024,0,.974]);snap('pregrasp')\"",
+      "timeout": 20000
+    },
+    "output": "point [-0.02171407  0.00124196  0.99879655] gap 0.008660679792318382\ntcp [-2.06069285e-02 -3.47022586e-04  1.01099676e+00] err 0.037153649118589684 grip 0.0780382731693374\n\nstderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/control.py\", line 19, in move\n    a.stop();raise RuntimeError('motion stalled')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: motion stalled\n\nexit code: 1"
+  },
+  {
+    "message": 25,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"move([-.09,.25,1.10]);snap('entry')\"",
+      "timeout": 20000
+    },
+    "output": "tcp [-0.06389371  0.20341355  1.18005012] err 0.09622815275861021 grip 0.02351274844121323\n\nstderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/control.py\", line 19, in move\n    a.stop();raise RuntimeError('motion stalled')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: motion stalled\n\nexit code: 1"
+  },
+  {
+    "message": 38,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"for uv,z in [([70,135],1.15),([120,120],1.1),([169,119],.95)]:\\n t,v=ray('camera_wrist',uv);print(uv,t+v*((z-t[2])/v[2]))\""
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1\n    for uv,z in [([70,135],1.15),([120,120],1.1),([169,119],.95)]:\\n t,v=ray('camera_wrist',uv);print(uv,t+v*((z-t[2])/v[2]))\n                                                                   ^\nSyntaxError: unexpected character after line continuation character\n\nexit code: 1"
+  },
+  {
+    "message": 43,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"move([.096,.109,1.08],R.from_euler('xyz',[180,0,45],degrees=True).as_quat());move([.096,.109,.962],step=.008);snap('grasp2')\"",
+      "timeout": 20000
+    },
+    "output": "tcp [0.09479722 0.10984449 1.08292621] err 0.0032745300106458435 grip 0.07899759332693858\ntcp [0.110388   0.10252595 1.00536786] err 0.046148660078303705 grip 0.07903291040982754\n\nstderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/control.py\", line 19, in move\n    a.stop();raise RuntimeError('motion stalled')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: motion stalled\n\nexit code: 1"
+  },
+  {
+    "message": 47,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"move([.136,.035,1.08]);move([.136,.035,.963],step=.008);grip(1);move([.136,.035,1.10]);snap('lift2')\"",
+      "timeout": 20000
+    },
+    "output": "tcp [0.13568878 0.0355999  1.08082639] err 0.0010675504617177834 grip 0.0789984137120198\ntcp [0.15508981 0.03400229 1.00945035] err 0.050229984078110614 grip 0.07708443150871444\n\nstderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/control.py\", line 19, in move\n    a.stop();raise RuntimeError('motion stalled')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: motion stalled\n\nexit code: 1"
+  },
+  {
+    "message": 51,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"move([.135,.035,1.04]);move([.135,.035,.951],step=.006);snap('h3')\"",
+      "timeout": 20000
+    },
+    "output": "tcp [0.13495382 0.03329502 1.04395531] err 0.004307382948276977 grip 0.07899534380777946\ntcp [0.14141289 0.03186667 0.98567125] err 0.035398279874055076 grip 0.07932034681626601\n\nstderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/control.py\", line 19, in move\n    a.stop();raise RuntimeError('motion stalled')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: motion stalled\n\nexit code: 1"
+  },
+  {
+    "message": 57,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"grip(-1);move([.136,.032,.956],step=.006);snap('align')\"",
+      "timeout": 20000
+    },
+    "output": "grip {'aperture_m': 0.07504568857598642, 'faults': [], 'force_n': None, 'frame_poses': {'left_pad': [-0.03751313761410915, 3.438996117499822e-17, -0.0036000000000002046, 0.4999999999999994, 0.4999999999999994, 0.49999999999999895, 0.5000000000000002], 'right_pad': [0.03753255096187716, -3.8880506344866894e-17, -0.0035999999999997497, -0.49999999999999895, 0.5000000000000002, 0.4999999999999994, -0.4999999999999994]}, 'object_detected': None, 'positions': [0.0380131376141092, -0.03803255096187723], 'pressure_pa': None, 'sample_time_s': 140.74999999994395, 'velocities': [0.011496002825633811, -0.011496000907807839]}\ntcp [0.13994617 0.02694673 0.98029455] err 0.02512634082023638 grip 0.07926431997009879\n\nstderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/control.py\", line 19, in move\n    a.stop();raise RuntimeError('motion stalled')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: motion stalled\n\nexit code: 1"
+  },
+  {
+    "message": 65,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"grip(-1);move([.153,.070,1.04]);move([.153,.070,.976],step=.005);snap('handleNow')\"",
+      "timeout": 20000
+    },
+    "output": "grip {'aperture_m': 0.07504568882542462, 'faults': [], 'force_n': None, 'frame_poses': {'left_pad': [-0.03750525796650558, 4.1084486073622584e-17, -0.0036000000000002965, 0.4999999999999999, 0.49999999999999983, 0.4999999999999993, 0.5000000000000009], 'right_pad': [0.037540430858918825, -4.7718448116518264e-17, -0.003599999999999817, -0.49999999999999994, 0.5, 0.500000000000001, -0.4999999999999994]}, 'object_detected': None, 'positions': [0.03800525796650571, -0.038040430858918915], 'pressure_pa': None, 'sample_time_s': 188.9500000001741, 'velocities': [0.01149599404154817, -0.01149600675709682]}\n\nstderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/control.py\", line 13, in move\n    pos=start+(end-start)*t; rr=R.from_quat(quat); flange=pos-np.array([-.66,0,.912])-rr.apply([0,0,.097]);q=model.ik(list(flange)+list(quat),a.read()['positions'])['joints']\n                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/joints.py\", line 65, in ik\n    result = self.solver.ik(target, seed)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/kinematics.py\", line 90, in ik\n    return solve_tasks(self.joints, self.options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/kinematics.py\", line 129, in solve_tasks\n    raise ValueError(\"No IK solution found within limits from the supplied seed\")\nValueError: No IK solution found within limits from the supplied seed\n\nexit code: 1"
+  },
+  {
+    "message": 66,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"move([.148,.067,1.06],R.from_euler('xyz',[180,0,90],degrees=True).as_quat());move([.148,.067,.976],step=.005);snap('hn')\"",
+      "timeout": 20000
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/control.py\", line 13, in move\n    pos=start+(end-start)*t; rr=R.from_quat(quat); flange=pos-np.array([-.66,0,.912])-rr.apply([0,0,.097]);q=model.ik(list(flange)+list(quat),a.read()['positions'])['joints']\n                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/joints.py\", line 65, in ik\n    result = self.solver.ik(target, seed)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/kinematics.py\", line 90, in ik\n    return solve_tasks(self.joints, self.options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/kinematics.py\", line 129, in solve_tasks\n    raise ValueError(\"No IK solution found within limits from the supplied seed\")\nValueError: No IK solution found within limits from the supplied seed\n\nexit code: 1"
+  },
+  {
+    "message": 67,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"print(state()[1]);move([.15,.067,1.07],R.from_euler('xyz',[180,-20,90],degrees=True).as_quat());move([.15,.067,.976],step=.005);snap('hn')\"",
+      "timeout": 20000
+    },
+    "output": "[0.14444933 0.04668737 1.06571315]\n\nstderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/control.py\", line 13, in move\n    pos=start+(end-start)*t; rr=R.from_quat(quat); flange=pos-np.array([-.66,0,.912])-rr.apply([0,0,.097]);q=model.ik(list(flange)+list(quat),a.read()['positions'])['joints']\n                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/joints.py\", line 65, in ik\n    result = self.solver.ik(target, seed)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/kinematics.py\", line 90, in ik\n    return solve_tasks(self.joints, self.options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/kinematics.py\", line 129, in solve_tasks\n    raise ValueError(\"No IK solution found within limits from the supplied seed\")\nValueError: No IK solution found within limits from the supplied seed\n\nexit code: 1"
+  },
+  {
+    "message": 72,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"move([.07,.08,1.20],R.from_euler('xyz',[180,0,0],degrees=True).as_quat());snap('survey')\"",
+      "timeout": 20000
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/control.py\", line 13, in move\n    pos=start+(end-start)*t; rr=R.from_quat(quat); flange=pos-np.array([-.66,0,.912])-rr.apply([0,0,.097]);q=model.ik(list(flange)+list(quat),a.read()['positions'])['joints']\n                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/joints.py\", line 65, in ik\n    result = self.solver.ik(target, seed)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/kinematics.py\", line 90, in ik\n    return solve_tasks(self.joints, self.options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/kinematics.py\", line 129, in solve_tasks\n    raise ValueError(\"No IK solution found within limits from the supplied seed\")\nValueError: No IK solution found within limits from the supplied seed\n\nexit code: 1"
+  },
+  {
+    "message": 80,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"grip(-1);q=(R.from_euler('y',-25,degrees=True)*R.from_euler('xyz',[180,0,0],degrees=True)).as_quat();move([.163,.08,1.06],q);move([.163,.08,.943],step=.005);snap('precise')\"",
+      "timeout": 20000
+    },
+    "output": "exit code: 143"
+  },
+  {
+    "message": 87,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"q=R.from_euler('xyz',[0,90,0],degrees=True).as_quat();move([.08,.08,1.08],q);snap('side')\"",
+      "timeout": 20000
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/control.py\", line 13, in move\n    pos=start+(end-start)*t; rr=R.from_quat(quat); flange=pos-np.array([-.66,0,.912])-rr.apply([0,0,.097]);q=model.ik(list(flange)+list(quat),a.read()['positions'])['joints']\n                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/joints.py\", line 65, in ik\n    result = self.solver.ik(target, seed)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/kinematics.py\", line 90, in ik\n    return solve_tasks(self.joints, self.options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/kinematics.py\", line 129, in solve_tasks\n    raise ValueError(\"No IK solution found within limits from the supplied seed\")\nValueError: No IK solution found within limits from the supplied seed\n\nexit code: 1"
+  },
+  {
+    "message": 88,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"q=(R.from_euler('y',-65,degrees=True)*R.from_euler('xyz',[180,0,90],degrees=True)).as_quat();move([.10,.08,1.07],q);move([.16,.08,.955],step=.006);snap('side2')\"",
+      "timeout": 20000
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/control.py\", line 13, in move\n    pos=start+(end-start)*t; rr=R.from_quat(quat); flange=pos-np.array([-.66,0,.912])-rr.apply([0,0,.097]);q=model.ik(list(flange)+list(quat),a.read()['positions'])['joints']\n                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/joints.py\", line 65, in ik\n    result = self.solver.ik(target, seed)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/kinematics.py\", line 90, in ik\n    return solve_tasks(self.joints, self.options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/kinematics.py\", line 129, in solve_tasks\n    raise ValueError(\"No IK solution found within limits from the supplied seed\")\nValueError: No IK solution found within limits from the supplied seed\n\nexit code: 1"
+  },
+  {
+    "message": 89,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"q=(R.from_euler('y',-40,degrees=True)*R.from_euler('xyz',[180,0,90],degrees=True)).as_quat();move([.10,.08,1.07],q);move([.16,.08,.955],step=.006);snap('side2')\"",
+      "timeout": 20000
+    },
+    "output": "exit code: 143"
+  },
+  {
+    "message": 104,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/control.py \"grip(-1);q=(R.from_euler('y',-20,degrees=True)*R.from_euler('xyz',[180,0,45],degrees=True)).as_quat();move([.18,.095,1.09],q);move([.18,.095,.945],step=.005);snap('cross');grip(1);move([.18,.095,1.10],step=.008);snap('crossLift')\"",
+      "timeout": 60000
+    },
+    "output": "grip {'aperture_m': 0.07504568653046062, 'faults': [], 'force_n': None, 'frame_poses': {'left_pad': [-0.037255155004487485, -1.7780915628762273e-17, -0.003600000000000084, 0.4999999999999999, 0.4999999999999996, 0.49999999999999933, 0.5000000000000002], 'right_pad': [0.03779053152597309, -2.2985086056692694e-17, -0.0036000000000001187, -0.4999999999999996, 0.4999999999999999, 0.5000000000000002, -0.49999999999999933]}, 'object_detected': None, 'positions': [0.03775515500448748, -0.03829053152597314], 'pressure_pa': None, 'sample_time_s': 340.9500000008999, 'velocities': [0.011496424331002007, -0.011495598848056813]}\ntcp [0.17962171 0.09562898 1.08949564] err 0.0008905624748646211 grip 0.07847961130690842\ntcp [0.20588299 0.09539355 1.00882449] err 0.06887415620241621 grip 0.07274558769461818\n\nstderr:\nTraceback (most recent call last):\n  File \"/app/control.py\", line 38, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/control.py\", line 19, in move\n    a.stop();raise RuntimeError('motion stalled')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: motion stalled\n\nexit code: 1"
+  }
+]

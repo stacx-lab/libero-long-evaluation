@@ -1,0 +1,274 @@
+{
+  "native_success_latched": true,
+  "final_predicates_all": true,
+  "predicates": [
+    {
+      "goal": [
+        "turnon",
+        "flat_stove_1"
+      ],
+      "satisfied": true
+    },
+    {
+      "goal": [
+        "on",
+        "moka_pot_1",
+        "flat_stove_1_cook_region"
+      ],
+      "satisfied": true
+    }
+  ],
+  "objects": {
+    "chefmate_8_frypan_1": {
+      "position": [
+        -0.0742453733711568,
+        -0.2722741070492111,
+        0.899170958627053
+      ],
+      "quaternion": [
+        0.7071065468040253,
+        -7.829701864720136e-05,
+        8.432544031772327e-05,
+        0.7071070062060513
+      ]
+    },
+    "moka_pot_1": {
+      "position": [
+        -0.04401844042875138,
+        0.18328862685990943,
+        0.9966058538799802
+      ],
+      "quaternion": [
+        -0.0787863633317143,
+        5.694943961943824e-07,
+        -4.579015050862779e-06,
+        0.996891523151677
+      ]
+    },
+    "flat_stove_1": {
+      "position": [
+        -0.19072674478997942,
+        0.19766883037651556,
+        0.905
+      ],
+      "quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "contacts": [
+    {
+      "geom1": "table_collision",
+      "geom2": "chefmate_8_frypan_1_g4",
+      "distance": -2.1061790843161032e-05
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "chefmate_8_frypan_1_g4",
+      "distance": -8.44722972582057e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "chefmate_8_frypan_1_g4",
+      "distance": -2.059416440708331e-05
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "chefmate_8_frypan_1_g4",
+      "distance": -7.979603289742846e-06
+    },
+    {
+      "geom1": "moka_pot_1_g2",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.193473849138039e-06
+    },
+    {
+      "geom1": "moka_pot_1_g2",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.183125839510544e-06
+    },
+    {
+      "geom1": "moka_pot_1_g2",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.9629913650878894e-06
+    },
+    {
+      "geom1": "moka_pot_1_g2",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.9526433554603946e-06
+    },
+    {
+      "geom1": "moka_pot_1_g3",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.98193702526106e-06
+    },
+    {
+      "geom1": "moka_pot_1_g3",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.93537956348293e-06
+    },
+    {
+      "geom1": "moka_pot_1_g3",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.9715890156335654e-06
+    },
+    {
+      "geom1": "moka_pot_1_g3",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.9250315538554353e-06
+    },
+    {
+      "geom1": "moka_pot_1_g4",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.237726486040148e-06
+    },
+    {
+      "geom1": "moka_pot_1_g4",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.191169024262018e-06
+    },
+    {
+      "geom1": "moka_pot_1_g4",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.227378476412653e-06
+    },
+    {
+      "geom1": "moka_pot_1_g4",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.180821014634523e-06
+    },
+    {
+      "geom1": "moka_pot_1_g5",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.2058193902066425e-06
+    },
+    {
+      "geom1": "moka_pot_1_g5",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.192709520065874e-06
+    },
+    {
+      "geom1": "moka_pot_1_g5",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.0565297204178138e-06
+    },
+    {
+      "geom1": "moka_pot_1_g5",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.0434198502770454e-06
+    },
+    {
+      "geom1": "moka_pot_1_g6",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.0956571992816753e-06
+    },
+    {
+      "geom1": "moka_pot_1_g6",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.082547329140907e-06
+    },
+    {
+      "geom1": "moka_pot_1_g6",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.9463675294928465e-06
+    },
+    {
+      "geom1": "moka_pot_1_g6",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.933257659352078e-06
+    },
+    {
+      "geom1": "moka_pot_1_g7",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.0813089995630474e-06
+    },
+    {
+      "geom1": "moka_pot_1_g7",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.062978127605771e-06
+    },
+    {
+      "geom1": "moka_pot_1_g7",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.9415319851685497e-06
+    },
+    {
+      "geom1": "moka_pot_1_g7",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.923201113211273e-06
+    },
+    {
+      "geom1": "moka_pot_1_g8",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.22774437122486e-06
+    },
+    {
+      "geom1": "moka_pot_1_g8",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.2094134992675836e-06
+    },
+    {
+      "geom1": "moka_pot_1_g8",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.0879673568303624e-06
+    },
+    {
+      "geom1": "moka_pot_1_g8",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.069636484873086e-06
+    }
+  ],
+  "joints": {
+    "robot0_joint1": [
+      -0.5349894284164601
+    ],
+    "robot0_joint2": [
+      -0.026394369567397487
+    ],
+    "robot0_joint3": [
+      0.8770805146923365
+    ],
+    "robot0_joint4": [
+      -1.950121041468356
+    ],
+    "robot0_joint5": [
+      0.021979871194238793
+    ],
+    "robot0_joint6": [
+      1.9333360562609192
+    ],
+    "robot0_joint7": [
+      1.1168272289894863
+    ],
+    "gripper0_finger_joint1": [
+      0.03999942319211273
+    ],
+    "gripper0_finger_joint2": [
+      -0.0399997398157601
+    ],
+    "chefmate_8_frypan_1_joint0": [
+      -0.0742453733711568,
+      -0.2722741070492111,
+      0.899170958627053,
+      0.7071065468040253,
+      -7.829701864720136e-05,
+      8.432544031772327e-05,
+      0.7071070062060513
+    ],
+    "moka_pot_1_joint0": [
+      -0.04401844042875138,
+      0.18328862685990943,
+      0.9966058538799802,
+      -0.0787863633317143,
+      5.694943961943824e-07,
+      -4.579015050862779e-06,
+      0.996891523151677
+    ],
+    "flat_stove_1_button": [
+      0.6468544616609003
+    ]
+  }
+}

@@ -1,0 +1,390 @@
+{
+  "native_success_latched": true,
+  "final_predicates_all": true,
+  "predicates": [
+    {
+      "goal": [
+        "on",
+        "porcelain_mug_1",
+        "plate_1"
+      ],
+      "satisfied": true
+    },
+    {
+      "goal": [
+        "on",
+        "white_yellow_mug_1",
+        "plate_2"
+      ],
+      "satisfied": true
+    }
+  ],
+  "objects": {
+    "porcelain_mug_1": {
+      "position": [
+        -0.0019461624178802976,
+        -0.3076196483571365,
+        0.44263142547318196
+      ],
+      "quaternion": [
+        -0.6563853403002186,
+        -0.008401749705551645,
+        -0.009656187082497563,
+        0.7543172102583112
+      ]
+    },
+    "red_coffee_mug_1": {
+      "position": [
+        -0.20239367395815558,
+        0.01827004732552866,
+        0.4385990213862531
+      ],
+      "quaternion": [
+        -0.7071070833759007,
+        -5.101358841179563e-07,
+        6.141475733175517e-07,
+        0.7071064789966134
+      ]
+    },
+    "white_yellow_mug_1": {
+      "position": [
+        0.01326163013669052,
+        0.3087280211656819,
+        0.44532679683249915
+      ],
+      "quaternion": [
+        -0.7335502114866005,
+        -0.03275482607341777,
+        -0.01417116354562682,
+        0.6786975664613991
+      ]
+    },
+    "plate_1": {
+      "position": [
+        -0.004480900528047257,
+        -0.32319728111667856,
+        0.43927268591882734
+      ],
+      "quaternion": [
+        0.7071067654117922,
+        3.359747171828383e-07,
+        1.9100442731600226e-07,
+        0.7071067969611972
+      ]
+    },
+    "plate_2": {
+      "position": [
+        0.005397338253625423,
+        0.3108610689150151,
+        0.43927257133125985
+      ],
+      "quaternion": [
+        0.7076038246396947,
+        -5.999665113088664e-08,
+        1.2794635500503952e-06,
+        0.7066093881018252
+      ]
+    }
+  },
+  "contacts": [
+    {
+      "geom1": null,
+      "geom2": "red_coffee_mug_1_g2",
+      "distance": -1.204951154756828e-07
+    },
+    {
+      "geom1": null,
+      "geom2": "red_coffee_mug_1_g4",
+      "distance": -3.239298843743521e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "red_coffee_mug_1_g5",
+      "distance": -6.365349723008729e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "red_coffee_mug_1_g6",
+      "distance": -6.209723565214764e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "red_coffee_mug_1_g7",
+      "distance": -3.0892380986635715e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "red_coffee_mug_1_g8",
+      "distance": -4.3887827677613345e-09
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g2",
+      "distance": -5.549727956095235e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g3",
+      "distance": -5.549727956095235e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g4",
+      "distance": -1.1427073869698387e-07
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g6",
+      "distance": -2.447343446936078e-07
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g7",
+      "distance": -4.119067550386419e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g8",
+      "distance": -7.619592499617453e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g9",
+      "distance": -9.218910058776675e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g10",
+      "distance": -8.288047104507536e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_2_g2",
+      "distance": -6.760031599637372e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_2_g3",
+      "distance": -6.760031599637372e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_2_g4",
+      "distance": -1.5077863359030594e-07
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_2_g6",
+      "distance": -3.459354359507702e-07
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_2_g7",
+      "distance": -1.445350937933753e-07
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_2_g8",
+      "distance": -1.5304634108686188e-07
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_2_g9",
+      "distance": -1.3168838885270527e-07
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_2_g10",
+      "distance": -9.492944177697665e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g5",
+      "geom2": "plate_1_g1",
+      "distance": -4.9792187543293805e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g5",
+      "geom2": "plate_1_g1",
+      "distance": -3.3325645583003566e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g5",
+      "geom2": "plate_1_g1",
+      "distance": -4.3744895389601945e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g5",
+      "geom2": "plate_1_g1",
+      "distance": -2.7278353429311705e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g19",
+      "geom2": "plate_1_g1",
+      "distance": -4.209356177680184e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g19",
+      "geom2": "plate_1_g1",
+      "distance": -4.10336600332519e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g19",
+      "geom2": "plate_1_g1",
+      "distance": -2.833603156111548e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g19",
+      "geom2": "plate_1_g1",
+      "distance": -2.7276129817565538e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g20",
+      "geom2": "plate_1_g1",
+      "distance": -3.298167496833333e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g20",
+      "geom2": "plate_1_g1",
+      "distance": -2.9794602330895272e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g20",
+      "geom2": "plate_1_g1",
+      "distance": -2.763990023147488e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g20",
+      "geom2": "plate_1_g1",
+      "distance": -2.445282759403682e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g21",
+      "geom2": "plate_1_g1",
+      "distance": -5.123931685712614e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g21",
+      "geom2": "plate_1_g1",
+      "distance": -4.805224421968808e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g21",
+      "geom2": "plate_1_g1",
+      "distance": -4.589754212026769e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g21",
+      "geom2": "plate_1_g1",
+      "distance": -4.271046948282962e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g22",
+      "geom2": "plate_1_g1",
+      "distance": -4.9047947770958605e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g22",
+      "geom2": "plate_1_g1",
+      "distance": -4.7988046027408663e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g22",
+      "geom2": "plate_1_g1",
+      "distance": -3.529041755527225e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g22",
+      "geom2": "plate_1_g1",
+      "distance": -3.42305158117223e-08
+    },
+    {
+      "geom1": "white_yellow_mug_1_g23",
+      "geom2": "plate_2_g1",
+      "distance": -2.3599078117966105e-07
+    },
+    {
+      "geom1": "white_yellow_mug_1_g33",
+      "geom2": "plate_2_g1",
+      "distance": -4.959691471927152e-07
+    },
+    {
+      "geom1": "white_yellow_mug_1_g37",
+      "geom2": "plate_2_g6",
+      "distance": -4.2801086434784974e-07
+    }
+  ],
+  "joints": {
+    "robot0_joint1": [
+      0.258831026956681
+    ],
+    "robot0_joint2": [
+      0.10192397853643066
+    ],
+    "robot0_joint3": [
+      0.23557608786043724
+    ],
+    "robot0_joint4": [
+      -1.8779047765269579
+    ],
+    "robot0_joint5": [
+      -0.02468959734118741
+    ],
+    "robot0_joint6": [
+      1.9780846678397408
+    ],
+    "robot0_joint7": [
+      -0.2831186206736449
+    ],
+    "gripper0_finger_joint1": [
+      0.039999353260160776
+    ],
+    "gripper0_finger_joint2": [
+      -0.040000019838280054
+    ],
+    "porcelain_mug_1_joint0": [
+      -0.0019461624178802976,
+      -0.3076196483571365,
+      0.44263142547318196,
+      -0.6563853403002186,
+      -0.008401749705551645,
+      -0.009656187082497563,
+      0.7543172102583112
+    ],
+    "red_coffee_mug_1_joint0": [
+      -0.20239367395815558,
+      0.01827004732552866,
+      0.4385990213862531,
+      -0.7071070833759007,
+      -5.101358841179563e-07,
+      6.141475733175517e-07,
+      0.7071064789966134
+    ],
+    "white_yellow_mug_1_joint0": [
+      0.01326163013669052,
+      0.3087280211656819,
+      0.44532679683249915,
+      -0.7335502114866005,
+      -0.03275482607341777,
+      -0.01417116354562682,
+      0.6786975664613991
+    ],
+    "plate_1_joint0": [
+      -0.004480900528047257,
+      -0.32319728111667856,
+      0.43927268591882734,
+      0.7071067654117922,
+      3.359747171828383e-07,
+      1.9100442731600226e-07,
+      0.7071067969611972
+    ],
+    "plate_2_joint0": [
+      0.005397338253625423,
+      0.3108610689150151,
+      0.43927257133125985,
+      0.7076038246396947,
+      -5.999665113088664e-08,
+      1.2794635500503952e-06,
+      0.7066093881018252
+    ]
+  }
+}

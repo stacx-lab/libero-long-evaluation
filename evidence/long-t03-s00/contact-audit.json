@@ -1,0 +1,535 @@
+{
+  "replay": {
+    "passed": true,
+    "max_state_difference": 0.0,
+    "native_success": true,
+    "budget": {
+      "used": 6585,
+      "max": null,
+      "unit": "action_frames"
+    },
+    "command_count": 6593
+  },
+  "samples": [
+    {
+      "frame": 210,
+      "contacts": [],
+      "fixture_joints": {
+        "white_cabinet_1_top_level": 0.0,
+        "white_cabinet_1_middle_level": 0.0,
+        "white_cabinet_1_bottom_level": -0.1460353727890157
+      },
+      "predicates": [
+        {
+          "goal": [
+            "close",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": false
+        },
+        {
+          "goal": [
+            "in",
+            "akita_black_bowl_1",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": false
+        }
+      ]
+    },
+    {
+      "frame": 500,
+      "contacts": [
+        {
+          "geoms": [
+            "wine_rack_1_g5",
+            "gripper0_hand_collision"
+          ],
+          "bodies": [
+            "wine_rack_1_main",
+            "gripper0_right_gripper"
+          ],
+          "distance": -8.598776645901616e-07,
+          "position": [
+            0.039618092510550505,
+            -0.17800644180818181,
+            1.025439187390726
+          ]
+        }
+      ],
+      "fixture_joints": {
+        "white_cabinet_1_top_level": 0.0,
+        "white_cabinet_1_middle_level": 0.0,
+        "white_cabinet_1_bottom_level": -0.1460353727890157
+      },
+      "predicates": [
+        {
+          "goal": [
+            "close",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": false
+        },
+        {
+          "goal": [
+            "in",
+            "akita_black_bowl_1",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": false
+        }
+      ]
+    },
+    {
+      "frame": 2504,
+      "contacts": [
+        {
+          "geoms": [
+            "white_cabinet_1_g33",
+            "gripper0_hand_collision"
+          ],
+          "bodies": [
+            "white_cabinet_1_cabinet_bottom",
+            "gripper0_right_gripper"
+          ],
+          "distance": -1.3746626814177484e-06,
+          "position": [
+            -0.02098412526701042,
+            0.1505540395759276,
+            0.9840293825719775
+          ]
+        },
+        {
+          "geoms": [
+            "gripper0_finger1_pad_collision",
+            "gripper0_finger2_pad_collision"
+          ],
+          "bodies": [
+            "gripper0_finger_joint1_tip",
+            "gripper0_finger_joint2_tip"
+          ],
+          "distance": -4.154920477668182e-07,
+          "position": [
+            -0.012300108269889283,
+            0.09567487954635825,
+            0.9646208900483385
+          ]
+        },
+        {
+          "geoms": [
+            "white_cabinet_1_g40",
+            "gripper0_finger2_collision"
+          ],
+          "bodies": [
+            "white_cabinet_1_cabinet_bottom",
+            "gripper0_rightfinger"
+          ],
+          "distance": -2.2568819778185706e-06,
+          "position": [
+            -0.013600024452662993,
+            0.11377491060237303,
+            0.9543091276121456
+          ]
+        }
+      ],
+      "fixture_joints": {
+        "white_cabinet_1_top_level": 0.001619930870925216,
+        "white_cabinet_1_middle_level": 0.001620070913657227,
+        "white_cabinet_1_bottom_level": -0.08356830851011307
+      },
+      "predicates": [
+        {
+          "goal": [
+            "close",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": false
+        },
+        {
+          "goal": [
+            "in",
+            "akita_black_bowl_1",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": true
+        }
+      ]
+    },
+    {
+      "frame": 2638,
+      "contacts": [
+        {
+          "geoms": [
+            "white_cabinet_1_g29",
+            "gripper0_hand_collision"
+          ],
+          "bodies": [
+            "white_cabinet_1_cabinet_middle",
+            "gripper0_right_gripper"
+          ],
+          "distance": -9.925511564819325e-06,
+          "position": [
+            -0.02022284340404667,
+            0.1990030038172335,
+            1.0235792645694046
+          ]
+        },
+        {
+          "geoms": [
+            "gripper0_finger1_pad_collision",
+            "gripper0_finger2_pad_collision"
+          ],
+          "bodies": [
+            "gripper0_finger_joint1_tip",
+            "gripper0_finger_joint2_tip"
+          ],
+          "distance": -2.096599790810949e-07,
+          "position": [
+            -0.012460814024120694,
+            0.09530648770532663,
+            0.9665918575905028
+          ]
+        }
+      ],
+      "fixture_joints": {
+        "white_cabinet_1_top_level": 0.001619930870925216,
+        "white_cabinet_1_middle_level": 0.0016599137831921399,
+        "white_cabinet_1_bottom_level": -0.08250775053985299
+      },
+      "predicates": [
+        {
+          "goal": [
+            "close",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": false
+        },
+        {
+          "goal": [
+            "in",
+            "akita_black_bowl_1",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": true
+        }
+      ]
+    },
+    {
+      "frame": 3500,
+      "contacts": [
+        {
+          "geoms": [
+            "table_collision",
+            "gripper0_hand_collision"
+          ],
+          "bodies": [
+            "table",
+            "gripper0_right_gripper"
+          ],
+          "distance": -1.1401612229899882e-05,
+          "position": [
+            -0.024899600228313314,
+            0.03217635492691616,
+            0.8999978344684133
+          ]
+        }
+      ],
+      "fixture_joints": {
+        "white_cabinet_1_top_level": 0.001619930870925216,
+        "white_cabinet_1_middle_level": 0.0016597338217281998,
+        "white_cabinet_1_bottom_level": -0.012528793508737972
+      },
+      "predicates": [
+        {
+          "goal": [
+            "close",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": false
+        },
+        {
+          "goal": [
+            "in",
+            "akita_black_bowl_1",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": true
+        }
+      ]
+    },
+    {
+      "frame": 4000,
+      "contacts": [
+        {
+          "geoms": [
+            "gripper0_finger1_pad_collision",
+            "gripper0_finger2_pad_collision"
+          ],
+          "bodies": [
+            "gripper0_finger_joint1_tip",
+            "gripper0_finger_joint2_tip"
+          ],
+          "distance": -2.275091543733898e-07,
+          "position": [
+            -0.04031120047471076,
+            -0.014366788695500603,
+            1.1718311433070059
+          ]
+        }
+      ],
+      "fixture_joints": {
+        "white_cabinet_1_top_level": 0.001619930870925216,
+        "white_cabinet_1_middle_level": 0.0016597338217281998,
+        "white_cabinet_1_bottom_level": -0.012528793505225157
+      },
+      "predicates": [
+        {
+          "goal": [
+            "close",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": false
+        },
+        {
+          "goal": [
+            "in",
+            "akita_black_bowl_1",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": true
+        }
+      ]
+    },
+    {
+      "frame": 5000,
+      "contacts": [
+        {
+          "geoms": [
+            "table_collision",
+            "gripper0_hand_collision"
+          ],
+          "bodies": [
+            "table",
+            "gripper0_right_gripper"
+          ],
+          "distance": -2.0328174597294968e-05,
+          "position": [
+            -0.021986449540665094,
+            0.08398497224054527,
+            0.8999959882573796
+          ]
+        },
+        {
+          "geoms": [
+            "gripper0_finger1_pad_collision",
+            "gripper0_finger2_pad_collision"
+          ],
+          "bodies": [
+            "gripper0_finger_joint1_tip",
+            "gripper0_finger_joint2_tip"
+          ],
+          "distance": -5.965385354159137e-08,
+          "position": [
+            -0.00943917773218305,
+            0.15981824137547726,
+            0.9641282424384964
+          ]
+        }
+      ],
+      "fixture_joints": {
+        "white_cabinet_1_top_level": 0.001619930870925216,
+        "white_cabinet_1_middle_level": 0.0016597338217281998,
+        "white_cabinet_1_bottom_level": -0.012528793498199527
+      },
+      "predicates": [
+        {
+          "goal": [
+            "close",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": false
+        },
+        {
+          "goal": [
+            "in",
+            "akita_black_bowl_1",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": true
+        }
+      ]
+    },
+    {
+      "frame": 5500,
+      "contacts": [
+        {
+          "geoms": [
+            "gripper0_finger1_pad_collision",
+            "gripper0_finger2_pad_collision"
+          ],
+          "bodies": [
+            "gripper0_finger_joint1_tip",
+            "gripper0_finger_joint2_tip"
+          ],
+          "distance": -1.856458092332272e-07,
+          "position": [
+            -0.022255870276660688,
+            0.12773909486897855,
+            1.1846822959851762
+          ]
+        }
+      ],
+      "fixture_joints": {
+        "white_cabinet_1_top_level": 0.001619930870925216,
+        "white_cabinet_1_middle_level": 0.0016597338217281998,
+        "white_cabinet_1_bottom_level": -0.012528793494686712
+      },
+      "predicates": [
+        {
+          "goal": [
+            "close",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": false
+        },
+        {
+          "goal": [
+            "in",
+            "akita_black_bowl_1",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": true
+        }
+      ]
+    },
+    {
+      "frame": 5800,
+      "contacts": [
+        {
+          "geoms": [
+            "gripper0_finger1_pad_collision",
+            "gripper0_finger2_pad_collision"
+          ],
+          "bodies": [
+            "gripper0_finger_joint1_tip",
+            "gripper0_finger_joint2_tip"
+          ],
+          "distance": -2.237709074465661e-07,
+          "position": [
+            -0.020632029827822144,
+            0.13582782526325682,
+            0.9489270763658335
+          ]
+        }
+      ],
+      "fixture_joints": {
+        "white_cabinet_1_top_level": 0.001619930870925216,
+        "white_cabinet_1_middle_level": 0.0016597338217281998,
+        "white_cabinet_1_bottom_level": -0.012528793492579023
+      },
+      "predicates": [
+        {
+          "goal": [
+            "close",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": false
+        },
+        {
+          "goal": [
+            "in",
+            "akita_black_bowl_1",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": true
+        }
+      ]
+    },
+    {
+      "frame": 6020,
+      "contacts": [
+        {
+          "geoms": [
+            "white_cabinet_1_g40",
+            "gripper0_finger2_collision"
+          ],
+          "bodies": [
+            "white_cabinet_1_cabinet_bottom",
+            "gripper0_rightfinger"
+          ],
+          "distance": -3.022202472628914e-05,
+          "position": [
+            -0.035132445846871196,
+            0.19900827183779354,
+            0.9543036975825998
+          ]
+        }
+      ],
+      "fixture_joints": {
+        "white_cabinet_1_top_level": 0.001619930870925216,
+        "white_cabinet_1_middle_level": 0.0016597338217281998,
+        "white_cabinet_1_bottom_level": 0.0016599350720024563
+      },
+      "predicates": [
+        {
+          "goal": [
+            "close",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": true
+        },
+        {
+          "goal": [
+            "in",
+            "akita_black_bowl_1",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": true
+        }
+      ]
+    },
+    {
+      "frame": 6585,
+      "contacts": [
+        {
+          "geoms": [
+            "gripper0_finger1_pad_collision",
+            "gripper0_finger2_pad_collision"
+          ],
+          "bodies": [
+            "gripper0_finger_joint1_tip",
+            "gripper0_finger_joint2_tip"
+          ],
+          "distance": -2.1010063143206155e-07,
+          "position": [
+            -0.00045464082273659594,
+            0.13567975638097016,
+            1.255295520396826
+          ]
+        }
+      ],
+      "fixture_joints": {
+        "white_cabinet_1_top_level": 0.001619930870925216,
+        "white_cabinet_1_middle_level": 0.0016597338217281998,
+        "white_cabinet_1_bottom_level": 0.0016598410020573085
+      },
+      "predicates": [
+        {
+          "goal": [
+            "close",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": true
+        },
+        {
+          "goal": [
+            "in",
+            "akita_black_bowl_1",
+            "white_cabinet_1_bottom_region"
+          ],
+          "satisfied": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "native_success_latched": false,
+  "final_predicates_all": false,
+  "predicates": [
+    {
+      "goal": [
+        "in",
+        "black_book_1",
+        "desk_caddy_1_back_contain_region"
+      ],
+      "satisfied": false
+    }
+  ],
+  "objects": {
+    "black_book_1": {
+      "position": [
+        -0.37757628729240184,
+        -0.29249619565716645,
+        0.9058748396702417
+      ],
+      "quaternion": [
+        -0.7055892303504125,
+        0.16668504086930352,
+        0.17667494423794292,
+        0.6656920453501238
+      ]
+    },
+    "white_yellow_mug_1": {
+      "position": [
+        -0.11516817141728937,
+        0.003584679169686884,
+        0.8852270012643118
+      ],
+      "quaternion": [
+        -0.7071065751537245,
+        -8.931891979041692e-07,
+        -3.67073092961161e-08,
+        0.7071069872187453
+      ]
+    },
+    "desk_caddy_1": {
+      "position": [
+        -0.39072674478997943,
+        -0.14233116962348447,
+        0.887
+      ],
+      "quaternion": [
+        6.123233995736766e-17,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "contacts": [
+    {
+      "geom1": null,
+      "geom2": "white_yellow_mug_1_g23",
+      "distance": -1.709005424416904e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "white_yellow_mug_1_g23",
+      "distance": -6.479522468208209e-09
+    },
+    {
+      "geom1": null,
+      "geom2": "white_yellow_mug_1_g24",
+      "distance": -1.1549224939247371e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "white_yellow_mug_1_g25",
+      "distance": -8.197850774951942e-10
+    },
+    {
+      "geom1": null,
+      "geom2": "white_yellow_mug_1_g26",
+      "distance": -1.2097814524724554e-07
+    },
+    {
+      "geom1": null,
+      "geom2": "white_yellow_mug_1_g28",
+      "distance": -2.771283040547967e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "white_yellow_mug_1_g30",
+      "distance": -1.4802143429373804e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "white_yellow_mug_1_g31",
+      "distance": -3.170790710896321e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "white_yellow_mug_1_g32",
+      "distance": -3.600239790752663e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "white_yellow_mug_1_g33",
+      "distance": -3.218801406922739e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "white_yellow_mug_1_g34",
+      "distance": -1.383715513437328e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "white_yellow_mug_1_g34",
+      "distance": -7.528222626154711e-10
+    },
+    {
+      "geom1": "black_book_1_g1",
+      "geom2": "desk_caddy_1_g1",
+      "distance": -1.531723433922938e-07
+    },
+    {
+      "geom1": "black_book_1_g1",
+      "geom2": "desk_caddy_1_g1",
+      "distance": -1.460300925033084e-07
+    },
+    {
+      "geom1": "black_book_1_g1",
+      "geom2": "desk_caddy_1_g11",
+      "distance": -4.3571925700442355e-08
+    }
+  ],
+  "joints": {
+    "robot0_joint1": [
+      -0.8633456341481175
+    ],
+    "robot0_joint2": [
+      -0.1783974098864513
+    ],
+    "robot0_joint3": [
+      0.46066195882794797
+    ],
+    "robot0_joint4": [
+      -1.9059158086919734
+    ],
+    "robot0_joint5": [
+      0.07976722152793571
+    ],
+    "robot0_joint6": [
+      1.7443434014306154
+    ],
+    "robot0_joint7": [
+      1.9290696052589587
+    ],
+    "gripper0_finger_joint1": [
+      0.03999787831908215
+    ],
+    "gripper0_finger_joint2": [
+      -0.039999068018210154
+    ],
+    "black_book_1_joint0": [
+      -0.37757628729240184,
+      -0.29249619565716645,
+      0.9058748396702417,
+      -0.7055892303504125,
+      0.16668504086930352,
+      0.17667494423794292,
+      0.6656920453501238
+    ],
+    "white_yellow_mug_1_joint0": [
+      -0.11516817141728937,
+      0.003584679169686884,
+      0.8852270012643118,
+      -0.7071065751537245,
+      -8.931891979041692e-07,
+      -3.67073092961161e-08,
+      0.7071069872187453
+    ]
+  }
+}

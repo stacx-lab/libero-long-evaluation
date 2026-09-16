@@ -1,0 +1,143 @@
+{
+  "id": "long-t02-s00",
+  "task_id": 2,
+  "instruction": "turn on the stove and put the moka pot on it",
+  "native_success": true,
+  "valid": true,
+  "action_frames": 1597,
+  "action_limit": null,
+  "model_loop_limit": null,
+  "timeout_s": 1200,
+  "model_turns": 49,
+  "provider_requests": 49,
+  "successful_image_requests": 45,
+  "tool_calls": 48,
+  "tool_errors": 3,
+  "reset_requests": 0,
+  "execution_passed": true,
+  "execution_error": null,
+  "trial_exception": null,
+  "trial": "long-t02-s00__Ygmibk7",
+  "native_initialization": {
+    "bddl_sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+    "control_frequency_hz": 20,
+    "controller": "JOINT_POSITION/set_qpos",
+    "init_state_index": 0,
+    "init_state_sha256": "02a8401f8d59f5447fc8c5a16f4c158dd8c426c3eaed6779927a2a53e9abf3c5",
+    "initialization_frames": 5,
+    "loaded_state_sha256": "9ae67aa7e7dd9987ecd1f2930e2b061fb66a414dd94e4b575417356a556cbd90",
+    "max_steps": null,
+    "realtime": false,
+    "seed": 0,
+    "suite": "libero_10",
+    "task_id": 2,
+    "task_order_index": 0
+  },
+  "tokens": {
+    "input": 1284806,
+    "output": 4929
+  },
+  "recording": {
+    "id": "rec_00mu4g0xf30000yq",
+    "kind": "stream",
+    "name": "turn-on-the-stove-and",
+    "task": "turn on the stove and put the moka pot on it\n\nThe simulation service is already running. In Python, use `env = roboenv.connect(os.environ['ROBOENV_ENDPOINT'])`, then inspect `env.task`, `env.devices()`, and `env.device(name).profile`. Read sensors and command devices through their declared basic interfaces. Physics pauses between actions. Each write advances one native control interval and then pauses again; reads and stop do not advance time. There is no simulation horizon. Reads and IK/FK do not request extra steps. Camera reads return client-accessible image files. Live profiles and thin drivers are in /run/roboenv/robot/devices. Build perception and control tools in /app. The verifier checks final state and budget after you finish.\n\n\nLIBERO gripper writes select a persistent direction: +1 closes, -1 opens, and 0\nretains the accumulated actuator target. Gripper stop instead resets that target\nto the measured finger positions; it can reduce gripping force and is not a\ngrasp-preserving cleanup operation. Arm stop affects only the arm. A write being\naccepted does not establish arrival or a grasp: check measured motion and finger\naperture, then use a small lift and fresh images to check that the object follows.\n\nBefore contact, check the measured tool pose and finger-pad geometry, allowing\nclearance for the whole gripper and arm around articulated fixtures. If motion\nstalls, re-observe and revise the approach before closing the fingers. After an\nobject or fixture moves, refresh its observed location. For wrist-camera geometry,\nhold the arm still while reading the image and pose; do not pair an old image\nwith a later arm pose.\n\n\nBefore ending the task or claiming success, define concrete, task-specific checks\nfor every requested outcome and verify all of them using fresh public sensor\nobservations, including the object's final relation to its target and any required\ndrawer, door, or switch state. Use multiple views or measured feedback when one\nview is ambiguous. Tool acceptance, a completed todo, and absence of errors do not\nprove task completion. If a check fails or remains uncertain and time is available,\ndiagnose it and attempt a safe correction; do not end solely because one grasp or\nmotion failed. If further progress is blocked or the run limit is reached, report\nthe task as incomplete and state which checks failed. Do not access private\nverifier state or change the benchmark success rules.\n\nEvaluation execution policy: You have 20 minutes of wall-clock execution time. There is no action-step or model-loop limit. This is one episode: do not reset, restore, checkpoint, or request a new initial state. The agent cameras have native 256 x 256 resolution. Complete all requested subgoals and verify them before ending.\n",
+    "robotID": "libero-panda-kitchen",
+    "sessionID": "ses_00mu4g0wmv00003k",
+    "started": "2026-09-16T18:37:42.073Z",
+    "status": "stopped",
+    "sampling": {
+      "devices": {
+        "camera": {
+          "rate": 10,
+          "source": "harness"
+        },
+        "camera_wrist": {
+          "rate": 10,
+          "source": "harness"
+        }
+      }
+    },
+    "wallMs": 438191,
+    "devices": {
+      "camera": {
+        "type": "rgb",
+        "events": 4314,
+        "frames": 0,
+        "bytes": 0,
+        "skipped": 66,
+        "samples": 4314,
+        "readErrors": 0,
+        "effectiveHz": 9.8,
+        "stream": {
+          "status": "stopped",
+          "bytes": 2650635,
+          "fps": 15,
+          "frames": 6568,
+          "samples": 4314,
+          "repeated": 2270,
+          "transport_dropped": 0,
+          "capture_samples": 0,
+          "capture_missed": 0,
+          "capture_errors": 0,
+          "rows": 0,
+          "dropped": 16,
+          "video": "devices/camera/stream/video.mp4",
+          "timestamps": "devices/camera/stream/frames.jsonl",
+          "started_ns": 1789583862356000000,
+          "ended_ns": 1789584300179995400
+        },
+        "warning": "camera: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+      },
+      "camera_wrist": {
+        "type": "rgb",
+        "events": 4305,
+        "frames": 0,
+        "bytes": 0,
+        "skipped": 74,
+        "samples": 4305,
+        "readErrors": 0,
+        "effectiveHz": 9.8,
+        "stream": {
+          "status": "stopped",
+          "bytes": 3595221,
+          "fps": 15,
+          "frames": 6567,
+          "samples": 4305,
+          "repeated": 2273,
+          "transport_dropped": 0,
+          "capture_samples": 0,
+          "capture_missed": 0,
+          "capture_errors": 0,
+          "rows": 0,
+          "dropped": 10,
+          "video": "devices/camera_wrist/stream/video.mp4",
+          "timestamps": "devices/camera_wrist/stream/frames.jsonl",
+          "started_ns": 1789583862384000000,
+          "ended_ns": 1789584300180043500
+        },
+        "warning": "camera_wrist: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+      }
+    },
+    "passive": {
+      "arm": {
+        "type": "joint",
+        "events": 3,
+        "frames": 0,
+        "bytes": 0,
+        "skipped": 0,
+        "samples": 0,
+        "readErrors": 0
+      }
+    },
+    "bytes": 8541700,
+    "messageRange": {
+      "first": "msg_00mu4g0xly0000il",
+      "last": "msg_00mu4ga7pe0000h8"
+    },
+    "notes": 0,
+    "ended": "2026-09-16T18:45:00.264Z",
+    "endedBy": "stop"
+  },
+  "final_agent_text": "The stove is on, and the moka pot is resting upright on the burner.\n\nVerified with fresh front and overhead camera views: the burner is glowing red, the pot remains in place after release, and the gripper is clear."
+}

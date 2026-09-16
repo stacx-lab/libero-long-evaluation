@@ -1,0 +1,229 @@
+{
+  "native_success_latched": false,
+  "final_predicates_all": false,
+  "predicates": [
+    {
+      "goal": [
+        "in",
+        "white_yellow_mug_1",
+        "microwave_1_heating_region"
+      ],
+      "satisfied": false
+    },
+    {
+      "goal": [
+        "close",
+        "microwave_1"
+      ],
+      "satisfied": false
+    }
+  ],
+  "objects": {
+    "porcelain_mug_1": {
+      "position": [
+        -0.11690958205687273,
+        -0.23672078133656504,
+        0.897602754245232
+      ],
+      "quaternion": [
+        -0.707107473962714,
+        3.9640133443668855e-05,
+        2.3454396637962606e-05,
+        0.7071060869096109
+      ]
+    },
+    "white_yellow_mug_1": {
+      "position": [
+        0.1444035071237112,
+        0.09067000281264252,
+        0.9322135751121624
+      ],
+      "quaternion": [
+        -0.7454633483584998,
+        0.5653754300183663,
+        -0.34124527929231263,
+        0.09048026716578361
+      ]
+    },
+    "microwave_1": {
+      "position": [
+        -0.009595632051193485,
+        0.35665239691095874,
+        0.9199999999999999
+      ],
+      "quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "contacts": [
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g5",
+      "distance": -3.987864906974099e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g5",
+      "distance": -2.3282033194669454e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g5",
+      "distance": -3.5621076333969224e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g5",
+      "distance": -1.902446045889769e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g19",
+      "distance": -3.397695026774528e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g19",
+      "distance": -3.3230730530183204e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g19",
+      "distance": -2.0110745391470256e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g19",
+      "distance": -1.9364525653908182e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g20",
+      "distance": -2.296992187321982e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g20",
+      "distance": -1.9757673639337713e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g20",
+      "distance": -1.9209065956617555e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g20",
+      "distance": -1.5996817722735447e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g21",
+      "distance": -4.157134129466882e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g21",
+      "distance": -3.835909306078671e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g21",
+      "distance": -3.7810485378066554e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g21",
+      "distance": -3.4598237144184446e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g22",
+      "distance": -3.8873158914044195e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g22",
+      "distance": -3.812693917648212e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g22",
+      "distance": -2.5006954037769172e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "porcelain_mug_1_g22",
+      "distance": -2.42607343002071e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "white_yellow_mug_1_g1",
+      "distance": -3.2442435882469155e-06
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "white_yellow_mug_1_g8",
+      "distance": -3.517200509770436e-05
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "white_yellow_mug_1_g8",
+      "distance": -1.9631827124314558e-05
+    }
+  ],
+  "joints": {
+    "robot0_joint1": [
+      0.01907350133472588
+    ],
+    "robot0_joint2": [
+      0.8034532416151319
+    ],
+    "robot0_joint3": [
+      0.14411886539196236
+    ],
+    "robot0_joint4": [
+      -1.0411083468547684
+    ],
+    "robot0_joint5": [
+      -0.10622748521325256
+    ],
+    "robot0_joint6": [
+      1.8399246774015594
+    ],
+    "robot0_joint7": [
+      -0.6283888695722026
+    ],
+    "gripper0_finger_joint1": [
+      0.03986695356523431
+    ],
+    "gripper0_finger_joint2": [
+      -0.0400001533343791
+    ],
+    "porcelain_mug_1_joint0": [
+      -0.11690958205687273,
+      -0.23672078133656504,
+      0.897602754245232,
+      -0.707107473962714,
+      3.9640133443668855e-05,
+      2.3454396637962606e-05,
+      0.7071060869096109
+    ],
+    "white_yellow_mug_1_joint0": [
+      0.1444035071237112,
+      0.09067000281264252,
+      0.9322135751121624,
+      -0.7454633483584998,
+      0.5653754300183663,
+      -0.34124527929231263,
+      0.09048026716578361
+    ],
+    "microwave_1_microjoint": [
+      -1.6346480874604445
+    ]
+  }
+}

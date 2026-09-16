@@ -1,0 +1,43 @@
+{
+  "suite": "libero_10",
+  "display_name": "LIBERO Long",
+  "task_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "initial_state_index": 0,
+  "seed": 0,
+  "attempts_per_task": 1,
+  "resets_after_initialization": 0,
+  "model": "openai/gpt-6-astra",
+  "effort": "medium",
+  "action_steps": null,
+  "model_loops": null,
+  "agent_execution_wall_time_s": 1200,
+  "realtime": false,
+  "camera_size": [
+    256,
+    256
+  ],
+  "recording_hz": 10,
+  "review_native_render_size": [
+    768,
+    768
+  ],
+  "native_success_predicates": "unchanged",
+  "official_osc_comparable": false,
+  "agent_initial_workspace": "fresh per task; no historical controllers",
+  "concurrency": 2,
+  "gpu_devices": [
+    2,
+    3
+  ]
+}

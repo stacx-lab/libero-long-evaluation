@@ -1,0 +1,11 @@
+{
+  "time": "2026-09-16T19:33:05.109973+00:00",
+  "reason": "Kinex raises RuntimeError on the execution deadline; Harbor only continues verification for its own timeout/nonzero exception types.",
+  "execution_error": "Execution deadline exceeded",
+  "verifier_returncode": 0,
+  "verifier_script": "tasks/long-t09-s00/tests/verify.py",
+  "new_episode": false,
+  "reset": false,
+  "additional_policy_actions": false,
+  "stderr": ""
+}

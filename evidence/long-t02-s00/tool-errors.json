@@ -1,0 +1,30 @@
+[
+  {
+    "message": 28,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport sys;sys.path.insert(0,'/app');from control import *\nr=flange()[:3,:3];move([.032,-.077,.996],r,150);grip(1,20);snap('handle_closed');move([.032,-.077,1.06],r,200);snap('pot_lift')\nPY",
+      "timeout": 20000
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 2, in <module>\n  File \"/app/control.py\", line 40, in move\n    if stall>15:a.stop();raise RuntimeError(('stalled',tcp().tolist(),err))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: ('stalled', [0.03464709230549258, -0.0798040204734215, 1.0026487636914267], np.float64(0.007628810244833639))\n\nexit code: 1"
+  },
+  {
+    "message": 37,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport sys;sys.path.insert(0,'/app');from control import *\nr=flange()[:3,:3];move([-.037,.126,1.055],r,200);snap('lower_pot')\nPY",
+      "timeout": 20000
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 2, in <module>\n  File \"/app/control.py\", line 40, in move\n    if stall>15:a.stop();raise RuntimeError(('stalled',tcp().tolist(),err))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: ('stalled', [-0.0367006928945005, 0.1209231309769725, 1.0560818710978377], np.float64(0.008717669003649231))\n\nexit code: 1"
+  },
+  {
+    "message": 48,
+    "name": "record",
+    "input": {
+      "action": "stop",
+      "outcome": "success",
+      "summary": "Turned stove control until burner visibly glowed red. Grasped moka-pot handle, verified following during lift, transported and released on stove. Fresh fixed and overhead wrist camera images show pot upright supported over glowing burner, control remains rotated, and gripper withdrawn."
+    },
+    "output": "Error: Permission unavailable in develop: record"
+  }
+]

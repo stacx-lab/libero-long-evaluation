@@ -1,0 +1,21 @@
+[
+  {
+    "message": 17,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport sys;sys.path.insert(0,'/app');from control import *\nmove([.035,.265,.68]);move([.035,.265,.55]);hand(-1);move([.035,.265,.74]);snap('soup_placed')\nPY",
+      "timeout": 60000
+    },
+    "output": "tcp [0.03348167 0.26472245 0.67982896] error 0.001552932199738615\ntcp [0.05625292 0.26697169 0.58332307] error 0.03957273513115135\n\nstderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 2, in <module>\n  File \"/app/control.py\", line 39, in move\n    arm.stop();raise RuntimeError('motion stalled')\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: motion stalled\n\nexit code: 1"
+  },
+  {
+    "message": 39,
+    "name": "record",
+    "input": {
+      "action": "stop",
+      "outcome": "success",
+      "summary": "Placed alphabet soup can and cream cheese box in basket. Verified both inside basket in fresh wrist overhead and fixed camera views after release and additional settling actions; gripper open and clear. Soup descent encountered rim, arm stopped, lifted and released above opening instead."
+    },
+    "output": "Error: Permission unavailable in develop: record"
+  }
+]

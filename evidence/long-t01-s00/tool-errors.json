@@ -1,0 +1,37 @@
+[
+  {
+    "message": 4,
+    "name": "shell",
+    "input": {
+      "command": "cat /run/roboenv/robot/devices/arm/driver.py | head -100; uv run python - <<'PY'\nimport roboenv,os\n e=0\nPY"
+    },
+    "output": "\"\"\"Portable device driver: stdlib transport and Kinex's local kinematics.\"\"\"\n\nimport sys\nfrom functools import cache\n\n# Importing the support file must not modify the copied catalog.\nsys.dont_write_bytecode = True\nfrom _roboenv import Transport, WireError, main  # noqa: E402\n\ntransport = Transport(__file__)\nsettings = transport.settings\nremote = transport.remote\n\n\n@cache\ndef model():\n    from kinex.joints import JointDevice\n\n    return JointDevice(settings(), transport.directory)\n\n\ndef handle(action, args):\n    try:\n        profile = settings()\n        if action in {\"read\", \"stop\", \"load\", \"unload\", \"status\"} and args:\n            raise ValueError(f\"{action} takes no arguments\")\n        if action == \"unload\":\n            result = handle(\"stop\", {})\n            if not result[\"ok\"]:\n                return result\n        if action in {\"load\", \"unload\", \"status\"}:\n            return {\"ok\": True, **remote(action, args)}\n        if action == \"stop\":\n            result = remote(action, args)\n            expected = {\"stopped\": True, **profile[\"intrinsics\"][\"stop\"]}\n            if any(result.get(key) != value for key, value in expected.items()):\n                raise ValueError(\"Remote stop result differs from profile scope/behavior\")\n            return {\"ok\": True, **result}\n        joint = model()\n        if action == \"fk\":\n            if set(args) != {\"joints\"}:\n                raise ValueError(\"fk requires only joints\")\n            return {\"ok\": True, **joint.fk(args[\"joints\"])}\n        if action == \"ik\":\n            if set(args) - {\"pose\", \"seed\"} or \"pose\" not in args:\n                raise ValueError(\"ik requires pose and optional seed\")\n            seed = args.get(\"seed\")\n            if seed is None:\n                seed = joint.project(remote(\"read\", {})[\"positions\"])\n            return {\"ok\": True, **joint.ik(args[\"pose\"], seed)}\n        if action == \"write\":\n            value = joint.command(args)\n            data = remote(action, value)\n            if data.get(\"accepted\") is not True:\n                raise ValueError(\"write did not acknowledge acceptance\")\n            return {\"ok\": True, **data}\n        if action == \"read\":\n            data = remote(action, args)\n            return {\n                \"ok\": True,\n                **joint.reading({**data, \"frame_poses\": data.get(\"frame_poses\", {})}),\n            }\n        raise ValueError(f\"Unsupported joint action: {action}\")\n    except WireError as exc:\n        return {\"ok\": False, \"error\": str(exc), \"code\": exc.code, \"request_id\": exc.request_id}\n    except Exception as exc:\n        return {\"ok\": False, \"error\": str(exc)}\n\n\nif __name__ == \"__main__\":\n    main(handle, transport)\n\nstderr:\nFile \"<stdin>\", line 2\n    e=0\nIndentationError: unexpected indent\n\nexit code: 1"
+  },
+  {
+    "message": 10,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/manip.py \"stereo((152,187),(91,92));print('cheese',plane('camera',47,202,.44));print('basket',plane('camera',228,160,.46));state();print(model.ik([.55,0,.3,1,0,0,0],a.read()['positions']))\""
+    },
+    "output": "stderr:\nFile \"/app/manip.py\", line 31\n    for f in np.linspace(0,1,max(2,int(np.max(np.abs(q-start))/.035)))):\n                                                                      ^\nSyntaxError: unmatched ')'\n\nexit code: 1"
+  },
+  {
+    "message": 19,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/manip.py \"print('basketfloor',plane('camera_wrist',130,137,.45));move(-.065,.27,.56);grip(-1);move(-.065,.27,.72);snap('butter_placed')\"",
+      "timeout": 60000
+    },
+    "output": "basketfloor [-0.00228755  0.26487177  0.45      ]\nmove 99 error 0.03795284001649055\ntcp [-0.05194351  0.27500007  0.58658178] gripper {'aperture_m': 0.03790130998618902, 'faults': [], 'force_n': None, 'frame_poses': {'left_pad': [-0.022323288797798747, 4.716279450311944e-18, -0.003599999999999991, 0.49999999999999933, 0.5000000000000011, 0.4999999999999994, 0.5000000000000002], 'right_pad': [0.015578021188390068, -1.328147661294743e-18, -0.003599999999999934, 0.4999999999999994, -0.5000000000000002, -0.49999999999999933, 0.5000000000000011]}, 'object_detected': None, 'positions': [0.022823288797798907, -0.016078021188390114], 'pressure_pa': None, 'sample_time_s': 18.900000000000404, 'velocities': [-0.00018604293018401635, -0.0001845075414674198]}\n\nstderr:\nTraceback (most recent call last):\n  File \"/app/manip.py\", line 47, in <module>\n    exec(sys.argv[1])\n  File \"<string>\", line 1, in <module>\n  File \"/app/manip.py\", line 37, in move\n    if err>.02: raise RuntimeError('Motion stalled; arm stopped. Reobserve before further actions.')\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Motion stalled; arm stopped. Reobserve before further actions.\n\nexit code: 1"
+  },
+  {
+    "message": 54,
+    "name": "record",
+    "input": {
+      "action": "stop",
+      "outcome": "success",
+      "summary": "Placed butter and cream cheese into basket. Cream cheese slipped on first high lift; reobserved, localized and grasped deeper successfully. Final fresh wrist images at multiple positions show both packages side by side inside basket below rim, with gripper open and withdrawn. Arm stopped."
+    },
+    "output": "Error: Permission unavailable in develop: record"
+  }
+]

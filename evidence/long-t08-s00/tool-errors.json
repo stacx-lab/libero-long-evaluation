@@ -1,0 +1,48 @@
+[
+  {
+    "message": 14,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/moka.py \"move([.042,.044,1.19],[.70710678,.70710678,0,0]);move([.042,.044,1.014],[.70710678,.70710678,0,0]);snap('pregrasp')\"",
+      "timeout": 20000
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"/app/moka.py\", line 36, in <module>\n    if __name__=='__main__':exec(sys.argv[1])\n                            ^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 1, in <module>\n  File \"/app/moka.py\", line 26, in move\n    a.stop();raise RuntimeError('motion stalled '+str(tcp()))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: motion stalled [-0.03480378  0.01436996  1.30908529]\n\nexit code: 1"
+  },
+  {
+    "message": 18,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/moka.py \"move([.042,.044,1.19],[.70710678,.70710678,0,0]);move([.042,.044,1.014],[.70710678,.70710678,0,0]);snap('pregrasp')\"",
+      "timeout": 20000
+    },
+    "output": "tcp [0.03981559 0.04364284 1.19248233]\n\nstderr:\nTraceback (most recent call last):\n  File \"/app/moka.py\", line 36, in <module>\n    if __name__=='__main__':exec(sys.argv[1])\n                            ^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 1, in <module>\n  File \"/app/moka.py\", line 26, in move\n    a.stop();raise RuntimeError('motion stalled '+str(tcp()))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: motion stalled [0.04371313 0.04457475 1.04195085]\n\nexit code: 1"
+  },
+  {
+    "message": 22,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/moka.py \"move([.042,.044,1.15],[.70710678,.70710678,0,0]);move([.042,.044,1.15],[.92387953,.38268343,0,0]);move([.042,.044,1.027],[.92387953,.38268343,0,0]);snap('angled')\"",
+      "timeout": 20000
+    },
+    "output": "tcp [0.04221714 0.04375942 1.14654248]\ntcp [0.04205618 0.04474034 1.14960221]\n\nstderr:\nTraceback (most recent call last):\n  File \"/app/moka.py\", line 36, in <module>\n    if __name__=='__main__':exec(sys.argv[1])\n                            ^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 1, in <module>\n  File \"/app/moka.py\", line 26, in move\n    a.stop();raise RuntimeError('motion stalled '+str(tcp()))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: motion stalled [0.04949277 0.04156883 1.0408679 ]\n\nexit code: 1"
+  },
+  {
+    "message": 27,
+    "name": "shell",
+    "input": {
+      "command": "uv run python /app/moka.py \"move([-.083,-.264,1.20],[.70710678,.70710678,0,0]);move([-.083,-.264,1.047],[.70710678,.70710678,0,0]);grip(-1);move([-.083,-.264,1.25],[.70710678,.70710678,0,0]);snap('placed1')\"",
+      "timeout": 20000
+    },
+    "output": "exit code: 143"
+  },
+  {
+    "message": 44,
+    "name": "record",
+    "input": {
+      "action": "stop",
+      "outcome": "success",
+      "summary": "Placed both moka pots on the stove using handle grasps. Verified object following on lifts, open gripper after releases, and both pots upright and stationary on the stovetop in fresh front and overhead images after settling."
+    },
+    "output": "Error: Permission unavailable in develop: record"
+  }
+]

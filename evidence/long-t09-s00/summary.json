@@ -1,0 +1,148 @@
+{
+  "id": "long-t09-s00",
+  "task_id": 9,
+  "instruction": "put the yellow and white mug in the microwave and close it",
+  "native_success": false,
+  "valid": true,
+  "action_frames": 7594,
+  "action_limit": null,
+  "model_loop_limit": null,
+  "timeout_s": 1200,
+  "model_turns": 108,
+  "provider_requests": 108,
+  "successful_image_requests": 103,
+  "tool_calls": 107,
+  "tool_errors": 18,
+  "reset_requests": 0,
+  "execution_passed": false,
+  "execution_error": "Execution deadline exceeded",
+  "trial_exception": {
+    "exception_type": "RuntimeError",
+    "exception_message": "Kinex command exited 1: None\nNone",
+    "exception_traceback": "Traceback (most recent call last):\n  File \"<python-environment>/lib/python3.12/site-packages/harbor/trial/trial.py\", line 409, in run\n    await self._run()\n  File \"<python-environment>/lib/python3.12/site-packages/harbor/trial/single_step.py\", line 41, in _run\n    await self._run_agent()\n  File \"<python-environment>/lib/python3.12/site-packages/harbor/trial/single_step.py\", line 77, in _run_agent\n    await self._run_agent_phase(\n  File \"<python-environment>/lib/python3.12/site-packages/harbor/trial/trial.py\", line 545, in _run_agent_phase\n    await asyncio.wait_for(\n  File \"/usr/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"<evaluation>/scripts/eval_agent.py\", line 47, in run\n    return await super().run(instruction,environment,context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<evaluation>/source/RoboEnv/src/roboenv/harbor/kinex.py\", line 225, in run\n    await self.checked(\n  File \"<evaluation>/source/RoboEnv/src/roboenv/harbor/kinex.py\", line 136, in checked\n    raise RuntimeError(\nRuntimeError: Kinex command exited 1: None\nNone\n",
+    "occurred_at": "2026-09-16T19:33:04.760946Z"
+  },
+  "trial": "long-t09-s00__U2ZX9Cm",
+  "native_initialization": {
+    "bddl_sha256": "456d145f92be049f445fc77673dc583d9d17ea7afe92f6ffcb2fd1fa5565d420",
+    "control_frequency_hz": 20,
+    "controller": "JOINT_POSITION/set_qpos",
+    "init_state_index": 0,
+    "init_state_sha256": "6b75c8d4d1e1c40b5d99c78ceea380d99ccffb0a484a4cb2d3153488a0afbbe2",
+    "initialization_frames": 5,
+    "loaded_state_sha256": "ea7db2b727794199cfa1e42f8d924c5841e4af18716a392adf30d5517114c87f",
+    "max_steps": null,
+    "realtime": false,
+    "seed": 0,
+    "suite": "libero_10",
+    "task_id": 9,
+    "task_order_index": 0
+  },
+  "tokens": {
+    "input": 3281893,
+    "output": 10274
+  },
+  "recording": {
+    "id": "rec_00mu4haef10000fa",
+    "kind": "stream",
+    "name": "put-the-yellow-and-white",
+    "task": "put the yellow and white mug in the microwave and close it\n\nThe simulation service is already running. In Python, use `env = roboenv.connect(os.environ['ROBOENV_ENDPOINT'])`, then inspect `env.task`, `env.devices()`, and `env.device(name).profile`. Read sensors and command devices through their declared basic interfaces. Physics pauses between actions. Each write advances one native control interval and then pauses again; reads and stop do not advance time. There is no simulation horizon. Reads and IK/FK do not request extra steps. Camera reads return client-accessible image files. Live profiles and thin drivers are in /run/roboenv/robot/devices. Build perception and control tools in /app. The verifier checks final state and budget after you finish.\n\n\nLIBERO gripper writes select a persistent direction: +1 closes, -1 opens, and 0\nretains the accumulated actuator target. Gripper stop instead resets that target\nto the measured finger positions; it can reduce gripping force and is not a\ngrasp-preserving cleanup operation. Arm stop affects only the arm. A write being\naccepted does not establish arrival or a grasp: check measured motion and finger\naperture, then use a small lift and fresh images to check that the object follows.\n\nBefore contact, check the measured tool pose and finger-pad geometry, allowing\nclearance for the whole gripper and arm around articulated fixtures. If motion\nstalls, re-observe and revise the approach before closing the fingers. After an\nobject or fixture moves, refresh its observed location. For wrist-camera geometry,\nhold the arm still while reading the image and pose; do not pair an old image\nwith a later arm pose.\n\n\nBefore ending the task or claiming success, define concrete, task-specific checks\nfor every requested outcome and verify all of them using fresh public sensor\nobservations, including the object's final relation to its target and any required\ndrawer, door, or switch state. Use multiple views or measured feedback when one\nview is ambiguous. Tool acceptance, a completed todo, and absence of errors do not\nprove task completion. If a check fails or remains uncertain and time is available,\ndiagnose it and attempt a safe correction; do not end solely because one grasp or\nmotion failed. If further progress is blocked or the run limit is reached, report\nthe task as incomplete and state which checks failed. Do not access private\nverifier state or change the benchmark success rules.\n\nEvaluation execution policy: You have 20 minutes of wall-clock execution time. There is no action-step or model-loop limit. This is one episode: do not reset, restore, checkpoint, or request a new initial state. The agent cameras have native 256 x 256 resolution. Complete all requested subgoals and verify them before ending.\n",
+    "robotID": "libero-panda-kitchen",
+    "sessionID": "ses_00mu4hadld000017",
+    "started": "2026-09-16T19:13:03.623Z",
+    "status": "stopped",
+    "sampling": {
+      "devices": {
+        "camera": {
+          "rate": 10,
+          "source": "harness"
+        },
+        "camera_wrist": {
+          "rate": 10,
+          "source": "harness"
+        }
+      }
+    },
+    "wallMs": 1199021,
+    "devices": {
+      "camera": {
+        "type": "rgb",
+        "events": 11843,
+        "frames": 0,
+        "bytes": 0,
+        "skipped": 145,
+        "samples": 11843,
+        "readErrors": 0,
+        "effectiveHz": 9.9,
+        "stream": {
+          "status": "stopped",
+          "bytes": 10099660,
+          "fps": 15,
+          "frames": 17981,
+          "samples": 11843,
+          "repeated": 6140,
+          "transport_dropped": 0,
+          "capture_samples": 0,
+          "capture_missed": 0,
+          "capture_errors": 0,
+          "rows": 0,
+          "dropped": 2,
+          "timestamps": "devices/camera/stream/frames.jsonl",
+          "started_ns": 1789585983876000000,
+          "video": "devices/camera/stream/video.mp4",
+          "ended_ns": 1789587182559700500
+        },
+        "warning": "camera: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+      },
+      "camera_wrist": {
+        "type": "rgb",
+        "events": 11886,
+        "frames": 0,
+        "bytes": 0,
+        "skipped": 101,
+        "samples": 11886,
+        "readErrors": 0,
+        "effectiveHz": 9.9,
+        "stream": {
+          "status": "stopped",
+          "bytes": 10116872,
+          "fps": 15,
+          "frames": 17980,
+          "samples": 11886,
+          "repeated": 6122,
+          "transport_dropped": 0,
+          "capture_samples": 0,
+          "capture_missed": 0,
+          "capture_errors": 0,
+          "rows": 0,
+          "dropped": 28,
+          "video": "devices/camera_wrist/stream/video.mp4",
+          "timestamps": "devices/camera_wrist/stream/frames.jsonl",
+          "started_ns": 1789585983942000000,
+          "ended_ns": 1789587182559459600
+        },
+        "warning": "camera_wrist: recording shortfall; inspect missed capture slots, read errors and encoding losses. Available data is still being recorded."
+      }
+    },
+    "passive": {
+      "arm": {
+        "type": "joint",
+        "events": 2,
+        "frames": 0,
+        "bytes": 0,
+        "skipped": 0,
+        "samples": 0,
+        "readErrors": 0
+      }
+    },
+    "bytes": 26639126,
+    "messageRange": {
+      "first": "msg_00mu4haen10000th",
+      "last": "msg_00mu4i02lo0000g7"
+    },
+    "notes": 0,
+    "ended": "2026-09-16T19:33:02.644Z",
+    "endedBy": "error"
+  },
+  "final_agent_text": ""
+}

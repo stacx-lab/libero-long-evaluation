@@ -1,0 +1,188 @@
+{
+  "native_success_latched": true,
+  "final_predicates_all": true,
+  "predicates": [
+    {
+      "goal": [
+        "close",
+        "white_cabinet_1_bottom_region"
+      ],
+      "satisfied": true
+    },
+    {
+      "goal": [
+        "in",
+        "akita_black_bowl_1",
+        "white_cabinet_1_bottom_region"
+      ],
+      "satisfied": true
+    }
+  ],
+  "objects": {
+    "akita_black_bowl_1": {
+      "position": [
+        -0.055293177595544536,
+        0.30680908349287767,
+        0.9242881044652941
+      ],
+      "quaternion": [
+        0.7644414905229872,
+        0.0007517843156537165,
+        0.0006381870601511074,
+        0.6446923569460186
+      ]
+    },
+    "wine_bottle_1": {
+      "position": [
+        -0.15083611678264744,
+        0.05955971469265752,
+        0.8988609548408878
+      ],
+      "quaternion": [
+        1.1111742166349458e-08,
+        -1.2452378421678281e-05,
+        7.784437494242363e-07,
+        0.9999999999221666
+      ]
+    },
+    "white_cabinet_1": {
+      "position": [
+        -0.009595632051193485,
+        0.30665239691095875,
+        0.905
+      ],
+      "quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "wine_rack_1": {
+      "position": [
+        -0.09259975703506362,
+        -0.2904276331553447,
+        0.9199999999999999
+      ],
+      "quaternion": [
+        6.123233995736766e-17,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "contacts": [
+    {
+      "geom1": "table_collision",
+      "geom2": "wine_bottle_1_g3",
+      "distance": -1.4721438984160312e-05
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "wine_bottle_1_g3",
+      "distance": -1.4347120488573783e-05
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "wine_bottle_1_g3",
+      "distance": -1.4698038969213772e-05
+    },
+    {
+      "geom1": "table_collision",
+      "geom2": "wine_bottle_1_g3",
+      "distance": -1.4323720473627242e-05
+    },
+    {
+      "geom1": "gripper0_finger1_pad_collision",
+      "geom2": "gripper0_finger2_pad_collision",
+      "distance": -2.1010063143206155e-07
+    },
+    {
+      "geom1": "gripper0_finger1_pad_collision",
+      "geom2": "gripper0_finger2_pad_collision",
+      "distance": -2.1010063143180905e-07
+    },
+    {
+      "geom1": "gripper0_finger1_pad_collision",
+      "geom2": "gripper0_finger2_pad_collision",
+      "distance": -2.1010063143206155e-07
+    },
+    {
+      "geom1": "gripper0_finger1_pad_collision",
+      "geom2": "gripper0_finger2_pad_collision",
+      "distance": -2.101006314320598e-07
+    },
+    {
+      "geom1": "akita_black_bowl_1_g17",
+      "geom2": "white_cabinet_1_g37",
+      "distance": -7.100299045980155e-08
+    },
+    {
+      "geom1": "akita_black_bowl_1_g37",
+      "geom2": "white_cabinet_1_g38",
+      "distance": -1.807423484415144e-07
+    },
+    {
+      "geom1": "akita_black_bowl_1_g37",
+      "geom2": "white_cabinet_1_g38",
+      "distance": -7.76726624411464e-08
+    }
+  ],
+  "joints": {
+    "robot0_joint1": [
+      0.555994824583402
+    ],
+    "robot0_joint2": [
+      0.41127658697357117
+    ],
+    "robot0_joint3": [
+      -0.4469321365168656
+    ],
+    "robot0_joint4": [
+      -1.515985788584403
+    ],
+    "robot0_joint5": [
+      0.18151189809030602
+    ],
+    "robot0_joint6": [
+      1.886948498924908
+    ],
+    "robot0_joint7": [
+      -0.7015231561290275
+    ],
+    "gripper0_finger_joint1": [
+      0.0004985715420193221
+    ],
+    "gripper0_finger_joint2": [
+      -0.0005010082567178187
+    ],
+    "akita_black_bowl_1_joint0": [
+      -0.055293177595544536,
+      0.30680908349287767,
+      0.9242881044652941,
+      0.7644414905229872,
+      0.0007517843156537165,
+      0.0006381870601511074,
+      0.6446923569460186
+    ],
+    "wine_bottle_1_joint0": [
+      -0.15083611678264744,
+      0.05955971469265752,
+      0.8988609548408878,
+      1.1111742166349458e-08,
+      -1.2452378421678281e-05,
+      7.784437494242363e-07,
+      0.9999999999221666
+    ],
+    "white_cabinet_1_top_level": [
+      0.001619930870925216
+    ],
+    "white_cabinet_1_middle_level": [
+      0.0016597338217281998
+    ],
+    "white_cabinet_1_bottom_level": [
+      0.0016598410020573085
+    ]
+  }
+}

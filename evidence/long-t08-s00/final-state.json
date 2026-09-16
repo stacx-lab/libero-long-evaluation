@@ -1,0 +1,397 @@
+{
+  "native_success_latched": true,
+  "final_predicates_all": true,
+  "predicates": [
+    {
+      "goal": [
+        "on",
+        "moka_pot_1",
+        "flat_stove_1_cook_region"
+      ],
+      "satisfied": true
+    },
+    {
+      "goal": [
+        "on",
+        "moka_pot_2",
+        "flat_stove_1_cook_region"
+      ],
+      "satisfied": true
+    },
+    {
+      "goal": [
+        "turnon",
+        "flat_stove_1"
+      ],
+      "satisfied": true
+    }
+  ],
+  "objects": {
+    "moka_pot_1": {
+      "position": [
+        0.022031900096181105,
+        -0.21019617095342194,
+        0.9966061097242932
+      ],
+      "quaternion": [
+        0.000719556863772038,
+        -2.4610734006688177e-06,
+        -7.730065156745512e-06,
+        0.9999997410860207
+      ]
+    },
+    "moka_pot_2": {
+      "position": [
+        -0.08385409654303927,
+        -0.20354547901496506,
+        0.9966058538799801
+      ],
+      "quaternion": [
+        -0.0011688966927726513,
+        2.1234825540658282e-07,
+        -4.609404616921389e-06,
+        0.9999993168293806
+      ]
+    },
+    "flat_stove_1": {
+      "position": [
+        -0.19416549923834672,
+        -0.19942210160494192,
+        0.905
+      ],
+      "quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "contacts": [
+    {
+      "geom1": "moka_pot_1_g2",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.1998171171669356e-06
+    },
+    {
+      "geom1": "moka_pot_1_g2",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.0770415900658573e-06
+    },
+    {
+      "geom1": "moka_pot_1_g2",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.8132254152878716e-06
+    },
+    {
+      "geom1": "moka_pot_1_g2",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.6904498881867933e-06
+    },
+    {
+      "geom1": "moka_pot_1_g3",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.845003253141131e-06
+    },
+    {
+      "geom1": "moka_pot_1_g3",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.7669117293615599e-06
+    },
+    {
+      "geom1": "moka_pot_1_g3",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.7222277260400524e-06
+    },
+    {
+      "geom1": "moka_pot_1_g3",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.6441362022604814e-06
+    },
+    {
+      "geom1": "moka_pot_1_g4",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.274042723925118e-06
+    },
+    {
+      "geom1": "moka_pot_1_g4",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.195951200145547e-06
+    },
+    {
+      "geom1": "moka_pot_1_g4",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.15126719682404e-06
+    },
+    {
+      "geom1": "moka_pot_1_g4",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.073175673044469e-06
+    },
+    {
+      "geom1": "moka_pot_1_g5",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.244946431612105e-06
+    },
+    {
+      "geom1": "moka_pot_1_g5",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.201181757678702e-06
+    },
+    {
+      "geom1": "moka_pot_1_g5",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.031165151397647e-06
+    },
+    {
+      "geom1": "moka_pot_1_g5",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.987400477464244e-06
+    },
+    {
+      "geom1": "moka_pot_1_g6",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -3.339513316633968e-06
+    },
+    {
+      "geom1": "moka_pot_1_g6",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -3.6822964801626873e-06
+    },
+    {
+      "geom1": "moka_pot_1_g6",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -3.2716764312865835e-06
+    },
+    {
+      "geom1": "moka_pot_1_g7",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.052233504037937e-06
+    },
+    {
+      "geom1": "moka_pot_1_g7",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.0427084069571393e-06
+    },
+    {
+      "geom1": "moka_pot_1_g7",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.776067779823345e-06
+    },
+    {
+      "geom1": "moka_pot_1_g7",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.7665426827425474e-06
+    },
+    {
+      "geom1": "moka_pot_1_g8",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.0740567801608872e-06
+    },
+    {
+      "geom1": "moka_pot_1_g8",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.924557455007964e-06
+    },
+    {
+      "geom1": "moka_pot_1_g8",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.1326076096311875e-06
+    },
+    {
+      "geom1": "moka_pot_1_g8",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.12308251255039e-06
+    },
+    {
+      "geom1": "moka_pot_2_g2",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.1934738491588557e-06
+    },
+    {
+      "geom1": "moka_pot_2_g2",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.1831258395326496e-06
+    },
+    {
+      "geom1": "moka_pot_2_g2",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.9629913651046035e-06
+    },
+    {
+      "geom1": "moka_pot_2_g2",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.9526433554783974e-06
+    },
+    {
+      "geom1": "moka_pot_2_g3",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.9819370252888158e-06
+    },
+    {
+      "geom1": "moka_pot_2_g3",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.935379563509857e-06
+    },
+    {
+      "geom1": "moka_pot_2_g3",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.9715890156626097e-06
+    },
+    {
+      "geom1": "moka_pot_2_g3",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.925031553883651e-06
+    },
+    {
+      "geom1": "moka_pot_2_g4",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.2377264860679036e-06
+    },
+    {
+      "geom1": "moka_pot_2_g4",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.1911690242889447e-06
+    },
+    {
+      "geom1": "moka_pot_2_g4",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.2273784764416975e-06
+    },
+    {
+      "geom1": "moka_pot_2_g4",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.1808210146627386e-06
+    },
+    {
+      "geom1": "moka_pot_2_g5",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.205819390227459e-06
+    },
+    {
+      "geom1": "moka_pot_2_g5",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.1927095200862284e-06
+    },
+    {
+      "geom1": "moka_pot_2_g5",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.056529720436358e-06
+    },
+    {
+      "geom1": "moka_pot_2_g5",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.043419850295127e-06
+    },
+    {
+      "geom1": "moka_pot_2_g6",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.095657199309431e-06
+    },
+    {
+      "geom1": "moka_pot_2_g6",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.0825473291682e-06
+    },
+    {
+      "geom1": "moka_pot_2_g6",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.9463675295183295e-06
+    },
+    {
+      "geom1": "moka_pot_2_g6",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.9332576593770987e-06
+    },
+    {
+      "geom1": "moka_pot_2_g7",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.081308999583864e-06
+    },
+    {
+      "geom1": "moka_pot_2_g7",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.062978127626484e-06
+    },
+    {
+      "geom1": "moka_pot_2_g7",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.94153198518644e-06
+    },
+    {
+      "geom1": "moka_pot_2_g7",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -1.9232011132290603e-06
+    },
+    {
+      "geom1": "moka_pot_2_g8",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.227744371245677e-06
+    },
+    {
+      "geom1": "moka_pot_2_g8",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.209413499288297e-06
+    },
+    {
+      "geom1": "moka_pot_2_g8",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.0879673568482526e-06
+    },
+    {
+      "geom1": "moka_pot_2_g8",
+      "geom2": "flat_stove_1_collision_burner",
+      "distance": -2.069636484890873e-06
+    }
+  ],
+  "joints": {
+    "robot0_joint1": [
+      -0.13134453238207203
+    ],
+    "robot0_joint2": [
+      0.05309038804797099
+    ],
+    "robot0_joint3": [
+      -0.11975864118216208
+    ],
+    "robot0_joint4": [
+      -1.7148206275540823
+    ],
+    "robot0_joint5": [
+      0.007759619792686974
+    ],
+    "robot0_joint6": [
+      1.7686762464949344
+    ],
+    "robot0_joint7": [
+      0.5320889789694199
+    ],
+    "gripper0_finger_joint1": [
+      0.0400000313914749
+    ],
+    "gripper0_finger_joint2": [
+      -0.03999912493901735
+    ],
+    "moka_pot_1_joint0": [
+      0.022031900096181105,
+      -0.21019617095342194,
+      0.9966061097242932,
+      0.000719556863772038,
+      -2.4610734006688177e-06,
+      -7.730065156745512e-06,
+      0.9999997410860207
+    ],
+    "moka_pot_2_joint0": [
+      -0.08385409654303927,
+      -0.20354547901496506,
+      0.9966058538799801,
+      -0.0011688966927726513,
+      2.1234825540658282e-07,
+      -4.609404616921389e-06,
+      0.9999993168293806
+    ],
+    "flat_stove_1_button": [
+      1.4382913917406646
+    ]
+  }
+}

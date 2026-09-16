@@ -1,0 +1,57 @@
+{
+  "regions": [
+    {
+      "goal": [
+        "on",
+        "chocolate_pudding_1",
+        "living_room_table_plate_right_region"
+      ],
+      "satisfied": false,
+      "site_center_world_m": [
+        0.15,
+        0.1,
+        0.41
+      ],
+      "site_rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "site_half_size_m": [
+        0.05000000000000001,
+        0.05000000000000001,
+        0.007
+      ],
+      "object_center_world_m": [
+        0.14729903157926136,
+        0.20023357160412794,
+        0.44983990786403777
+      ],
+      "delta_in_native_test": [
+        -0.0027009684207386364,
+        0.10023357160412794,
+        0.039839907864037793
+      ],
+      "inside_xy_axes": [
+        true,
+        false
+      ],
+      "xy_excess_m": [
+        0.0,
+        0.050233571604127926
+      ]
+    }
+  ]
+}

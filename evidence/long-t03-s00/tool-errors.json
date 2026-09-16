@@ -1,0 +1,111 @@
+[
+  {
+    "message": 11,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport sys;sys.path.insert(0,'/app');from control import *\nd=json.load(open('/app/above.json')); t,v=ray('camera_wrist',[124,143],d)\nfor z in [.93,.94]:print(t+(z-t[2])/v[2]*v)\nmove([.035,-.109,1.04],[1,0,0,0]);move([.035,-.109,.931],step=.008);snap('pregrasp')\nPY",
+      "timeout": 60000
+    },
+    "output": "[ 0.04545498 -0.05790531  0.93      ]\n[ 0.04634431 -0.05813012  0.94      ]\nTCP [ 0.03419999 -0.10788609  1.04297314] aperture 0.07899829994245203\n\nstderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\n  File \"/app/control.py\", line 21, in move\n    a.stop(); raise RuntimeError(f'stall wanted {x} actual {actual}')\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: stall wanted [ 0.0346923  -0.10857157  0.97406659] actual [ 0.03548449 -0.1086411   0.9942136 ]\n\nexit code: 1"
+  },
+  {
+    "message": 36,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport sys;sys.path.insert(0,'/app');from control import *\nd=json.load(open('/app/released.json'));p,v=ray('camera',[150,157],d);s,w=ray('camera_wrist',[108,109],d);ab=np.linalg.lstsq(np.array([v,-w]).T,s-p,rcond=None)[0];print('handle',p+ab[0]*v,s+ab[1]*w)\ngrip(1);move([-.02,-.04,1.10],R.from_euler('x',-90,degrees=True).as_quat());move([-.02,.015,.95],step=.009);snap('pushready')\nPY",
+      "timeout": 60000
+    },
+    "output": "handle [-0.01567282  0.06676181  0.95271914] [-0.0157102   0.06991579  0.95307766]\ngripper {'aperture_m': 0.0029556100516250575, 'faults': [], 'force_n': None, 'frame_poses': {'left_pad': [-0.0014639062720234173, 1.1418004128987969e-18, -0.0036000000000001413, 0.49999999999999956, 0.5000000000000001, 0.4999999999999991, 0.5000000000000013], 'right_pad': [0.0014917037796016175, -4.4265941823509736e-18, -0.0036000000000002337, -0.5000000000000001, 0.49999999999999956, 0.5000000000000013, -0.4999999999999991]}, 'object_detected': None, 'positions': [0.0019639062720234264, -0.001991703779601631], 'pressure_pa': None, 'sample_time_s': 84.79999999998377, 'velocities': [-0.01150366390666965, 0.011503605385740353]}\n\nstderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\n  File \"/app/control.py\", line 21, in move\n    a.stop(); raise RuntimeError(f'stall wanted {x} actual {actual}')\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: stall wanted [ 0.01334816 -0.02300844  1.16660907] actual [ 0.02679831 -0.02865013  1.20735988]\n\nexit code: 1"
+  },
+  {
+    "message": 39,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport sys;sys.path.insert(0,'/app');from control import *\nmove([.08,-.03,1.23],R.from_euler('x',-90,degrees=True).as_quat(),step=.008);move([.08,.018,1.04],step=.008);snap('pushapproach')\nPY",
+      "timeout": 60000
+    },
+    "output": "TCP [ 0.07962992 -0.03016964  1.22960953] aperture 3.737728944315185e-05\n\nstderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 2, in <module>\n  File \"/app/control.py\", line 21, in move\n    a.stop(); raise RuntimeError(f'stall wanted {x} actual {actual}')\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: stall wanted [ 0.07973786 -0.01612016  1.17430675] actual [ 0.0840765  -0.02036403  1.19618993]\n\nexit code: 1"
+  },
+  {
+    "message": 44,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport sys;sys.path.insert(0,'/app');from control import *\nmove([-.02,.185,.951],step=.005);snap('push2')\nPY",
+      "timeout": 60000
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 2, in <module>\n  File \"/app/control.py\", line 21, in move\n    a.stop(); raise RuntimeError(f'stall wanted {x} actual {actual}')\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: stall wanted [-0.02025622  0.11695255  0.95256244] actual [-0.02053653  0.09499899  0.95504668]\n\nexit code: 1"
+  },
+  {
+    "message": 50,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport sys;sys.path.insert(0,'/app');from control import *\nmove([-.02,.19,.947],step=.003);snap('push3')\nPY",
+      "timeout": 60000
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 2, in <module>\n  File \"/app/control.py\", line 21, in move\n    a.stop(); raise RuntimeError(f'stall wanted {x} actual {actual}')\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: stall wanted [-0.01998957  0.18685798  0.94707072] actual [-0.01922941  0.16596595  0.94855653]\n\nexit code: 1"
+  },
+  {
+    "message": 51,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport sys;sys.path.insert(0,'/app');from control import *\nmove([-.02,.09,.98],step=.005);move([-.02,.05,1.04],R.from_euler('x',-110,degrees=True).as_quat(),step=.006);move([-.02,.135,.946],step=.005);snap('moretilt')\nPY",
+      "timeout": 60000
+    },
+    "output": "TCP [-0.01943009  0.09344181  0.97877166] aperture 0.0\nTCP [-0.01941505  0.05258369  1.0366459 ] aperture 2.604056630048975e-07\n\nstderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 2, in <module>\n  File \"/app/control.py\", line 21, in move\n    a.stop(); raise RuntimeError(f'stall wanted {x} actual {actual}')\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: stall wanted [-0.01987813  0.11782994  0.96488456] actual [-0.01860822  0.10370947  0.98044665]\n\nexit code: 1"
+  },
+  {
+    "message": 54,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport sys;sys.path.insert(0,'/app');from control import *\nmove([-.02,.015,1.06],step=.005);move([-.02,-.05,1.22],[1,0,0,0],step=.008);snap('verifyclosed')\nPY",
+      "timeout": 60000
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 2, in <module>\n  File \"/app/control.py\", line 21, in move\n    a.stop(); raise RuntimeError(f'stall wanted {x} actual {actual}')\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: stall wanted [-0.01969744  0.03428467  1.04270579] actual [-0.02636215  0.05328134  1.03574023]\n\nexit code: 1"
+  },
+  {
+    "message": 58,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport sys;sys.path.insert(0,'/app');from control import *\nd=json.load(open('/app/verifyclosed.json'))\nt,v=ray('camera',[195,158],d);print(t+(.95-t[2])/v[2]*v)\nmove([.055,.04,1.16],R.from_euler('x',-110,degrees=True).as_quat(),step=.008);move([.055,.14,.953],step=.006);snap('finalapproach')\nPY",
+      "timeout": 60000
+    },
+    "output": "[-0.01413117  0.2034307   0.95      ]\nTCP [0.05329153 0.03910033 1.15990829] aperture 0.0\n\nstderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\n  File \"/app/control.py\", line 21, in move\n    a.stop(); raise RuntimeError(f'stall wanted {x} actual {actual}')\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: stall wanted [0.05491008 0.13468949 0.96388991] actual [0.05555991 0.12605205 0.98107041]\n\nexit code: 1"
+  },
+  {
+    "message": 60,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport sys;sys.path.insert(0,'/app');from control import *\nmove([-.02,.213,.94],step=.003);snap('lastpush')\nPY",
+      "timeout": 60000
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 2, in <module>\n  File \"/app/control.py\", line 21, in move\n    a.stop(); raise RuntimeError(f'stall wanted {x} actual {actual}')\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: stall wanted [-0.01940464  0.18801933  0.95088298] actual [-0.01687523  0.16993496  0.95746282]\n\nexit code: 1"
+  },
+  {
+    "message": 64,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport sys;sys.path.insert(0,'/app');from control import *\nq=(R.from_euler('x',-90,degrees=True)*R.from_euler('z',90,degrees=True)).as_quat()\nmove([-.02,.07,1.14],q,step=.008);move([-.02,.15,.952],step=.006);snap('horizontal')\nPY",
+      "timeout": 60000
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\n  File \"/app/control.py\", line 15, in move\n    q=model.ik(target.tolist(),state['positions'])['joints']\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/joints.py\", line 65, in ik\n    result = self.solver.ik(target, seed)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/kinematics.py\", line 90, in ik\n    return solve_tasks(self.joints, self.options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.roboenv-agent/kinex/python/kinex/kinematics.py\", line 129, in solve_tasks\n    raise ValueError(\"No IK solution found within limits from the supplied seed\")\nValueError: No IK solution found within limits from the supplied seed\n\nexit code: 1"
+  },
+  {
+    "message": 66,
+    "name": "shell",
+    "input": {
+      "command": "uv run python - <<'PY'\nimport sys;sys.path.insert(0,'/app');from control import *\nmove([-.02,.22,.952],step=.003);snap('closedpush')\nPY",
+      "timeout": 60000
+    },
+    "output": "stderr:\nTraceback (most recent call last):\n  File \"<stdin>\", line 2, in <module>\n  File \"/app/control.py\", line 21, in move\n    a.stop(); raise RuntimeError(f'stall wanted {x} actual {actual}')\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: stall wanted [-0.02010442  0.20758938  0.95248612] actual [-0.01758917  0.18943243  0.95398719]\n\nexit code: 1"
+  },
+  {
+    "message": 72,
+    "name": "record",
+    "input": {
+      "action": "stop",
+      "outcome": "success",
+      "summary": "Bowl rim grasp verified by measured aperture and fresh lift images. Released bowl inside already-open bottom drawer; fixed and wrist views showed bowl supported within drawer edges. Closed drawer through incremental pushes, revising hand orientation after obstructions and stopping arm on stalls. Final fixed and wrist images show bottom drawer flush with cabinet, no exposed drawer interior. Arm withdrawn and stopped."
+    },
+    "output": "Error: Permission unavailable in develop: record"
+  }
+]

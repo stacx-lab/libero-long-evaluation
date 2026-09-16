@@ -1,0 +1,273 @@
+{
+  "native_success_latched": false,
+  "final_predicates_all": false,
+  "predicates": [
+    {
+      "goal": [
+        "on",
+        "porcelain_mug_1",
+        "plate_1"
+      ],
+      "satisfied": true
+    },
+    {
+      "goal": [
+        "on",
+        "chocolate_pudding_1",
+        "living_room_table_plate_right_region"
+      ],
+      "satisfied": false
+    }
+  ],
+  "objects": {
+    "porcelain_mug_1": {
+      "position": [
+        0.17380239314637774,
+        0.008930833824616704,
+        0.44460278389691094
+      ],
+      "quaternion": [
+        -0.6811163216644939,
+        0.004890924877269184,
+        0.04954306195349283,
+        0.7304807459668913
+      ]
+    },
+    "red_coffee_mug_1": {
+      "position": [
+        -0.22064940220425291,
+        0.020668161814757544,
+        0.4385990213862531
+      ],
+      "quaternion": [
+        -0.7071070833759007,
+        -5.101358841551086e-07,
+        6.141475732821759e-07,
+        0.7071064789966134
+      ]
+    },
+    "plate_1": {
+      "position": [
+        0.14882580854716812,
+        0.0060679150204309895,
+        0.4392727195771188
+      ],
+      "quaternion": [
+        0.7168398572091476,
+        1.4645397802236212e-06,
+        2.2768897719365938e-07,
+        0.6972378497429487
+      ]
+    },
+    "chocolate_pudding_1": {
+      "position": [
+        0.14729903157926136,
+        0.20023357160412794,
+        0.44983990786403777
+      ],
+      "quaternion": [
+        -0.0006475458190330893,
+        -7.707209944324246e-07,
+        -1.6635844933725013e-10,
+        0.999999790341887
+      ]
+    }
+  },
+  "contacts": [
+    {
+      "geom1": null,
+      "geom2": "red_coffee_mug_1_g2",
+      "distance": -1.2049511553119396e-07
+    },
+    {
+      "geom1": null,
+      "geom2": "red_coffee_mug_1_g4",
+      "distance": -3.239298843743521e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "red_coffee_mug_1_g5",
+      "distance": -6.365349723008729e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "red_coffee_mug_1_g6",
+      "distance": -6.209723565214764e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "red_coffee_mug_1_g7",
+      "distance": -3.0892380986635715e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "red_coffee_mug_1_g8",
+      "distance": -4.3887827677613345e-09
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g2",
+      "distance": -3.394812911724143e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g3",
+      "distance": -3.394812911724143e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g4",
+      "distance": -6.212285003277286e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g6",
+      "distance": -1.950433855701277e-07
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g7",
+      "distance": -2.6820748511664425e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g8",
+      "distance": -9.554458413823337e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g9",
+      "distance": -1.229196990553804e-07
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g10",
+      "distance": -9.656370369818829e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "plate_1_g8",
+      "distance": -9.554458413823337e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "chocolate_pudding_1_g1",
+      "distance": -7.659622843302233e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "chocolate_pudding_1_g1",
+      "distance": -7.658081690083814e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "chocolate_pudding_1_g1",
+      "distance": -1.4784408992767262e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "chocolate_pudding_1_g1",
+      "distance": -1.476899746058308e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "chocolate_pudding_1_g1",
+      "distance": -3.607219104752038e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "chocolate_pudding_1_g1",
+      "distance": -3.6010545042906806e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "chocolate_pudding_1_g1",
+      "distance": -2.95379949219594e-08
+    },
+    {
+      "geom1": null,
+      "geom2": "chocolate_pudding_1_g1",
+      "distance": -2.9568817984811508e-08
+    },
+    {
+      "geom1": "porcelain_mug_1_g20",
+      "geom2": "plate_1_g8",
+      "distance": -2.096522016918883e-07
+    },
+    {
+      "geom1": "porcelain_mug_1_g21",
+      "geom2": "plate_1_g1",
+      "distance": -4.497820417932166e-07
+    },
+    {
+      "geom1": "porcelain_mug_1_g22",
+      "geom2": "plate_1_g7",
+      "distance": -1.0184838240823429e-07
+    }
+  ],
+  "joints": {
+    "robot0_joint1": [
+      0.14387514080873273
+    ],
+    "robot0_joint2": [
+      -0.3570782291281617
+    ],
+    "robot0_joint3": [
+      -0.08991801475679446
+    ],
+    "robot0_joint4": [
+      -2.432524601525068
+    ],
+    "robot0_joint5": [
+      -0.03603369609365013
+    ],
+    "robot0_joint6": [
+      2.075334584179051
+    ],
+    "robot0_joint7": [
+      0.8646991553835766
+    ],
+    "gripper0_finger_joint1": [
+      0.03995504453515903
+    ],
+    "gripper0_finger_joint2": [
+      -0.03999880295314021
+    ],
+    "porcelain_mug_1_joint0": [
+      0.17380239314637774,
+      0.008930833824616704,
+      0.44460278389691094,
+      -0.6811163216644939,
+      0.004890924877269184,
+      0.04954306195349283,
+      0.7304807459668913
+    ],
+    "red_coffee_mug_1_joint0": [
+      -0.22064940220425291,
+      0.020668161814757544,
+      0.4385990213862531,
+      -0.7071070833759007,
+      -5.101358841551086e-07,
+      6.141475732821759e-07,
+      0.7071064789966134
+    ],
+    "plate_1_joint0": [
+      0.14882580854716812,
+      0.0060679150204309895,
+      0.4392727195771188,
+      0.7168398572091476,
+      1.4645397802236212e-06,
+      2.2768897719365938e-07,
+      0.6972378497429487
+    ],
+    "chocolate_pudding_1_joint0": [
+      0.14729903157926136,
+      0.20023357160412794,
+      0.44983990786403777,
+      -0.0006475458190330893,
+      -7.707209944324246e-07,
+      -1.6635844933725013e-10,
+      0.999999790341887
+    ]
+  }
+}

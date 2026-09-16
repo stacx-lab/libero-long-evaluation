@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LIBERO Long · Astra Medium</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#142035;--line:#26364e;--ink:#e8eef7;--muted:#a7b8cf;--green:#69deb0;--red:#ff9e8e;--blue:#88bdff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,sans-serif}header,main,footer{max-width:1500px;margin:auto;padding:28px 30px}header{padding-top:44px}h1{font-size:clamp(28px,4vw,46px);margin:0 0 8px;letter-spacing:-1px}h2{font-size:22px;margin:0 0 12px}h3{font-size:18px;margin:0 0 6px}p{margin:8px 0}.muted{color:var(--muted)}.tag{display:inline-block;padding:3px 12px;border-radius:20px;background:#233550;font-size:13px;margin:3px 5px 3px 0}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:25px}.stat{padding:17px 22px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}.stat b{display:block;font-size:30px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 22px}button,input,select{font:inherit;border:1px solid var(--line);color:var(--ink);background:var(--panel);padding:9px 14px;border-radius:9px}button{cursor:pointer}button.active{border-color:var(--blue);color:var(--blue)}input{min-width:260px;flex:1}article{border:1px solid var(--line);border-radius:15px;background:var(--panel);margin-bottom:25px;overflow:hidden;scroll-margin-top:16px}.task-head{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;gap:14px;justify-content:space-between;align-items:start}.task-body{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(330px,1fr)}.media{padding:20px}.analysis{padding:20px 24px;border-left:1px solid var(--line)}video{display:block;width:100%;background:#05080e;border-radius:8px;max-height:650px}.badge{border:1px solid currentColor;border-radius:7px;padding:4px 10px;white-space:nowrap;font-weight:650}.success{color:var(--green)}.failure{color:var(--red)}.pending{color:var(--muted)}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.links{display:flex;gap:15px;flex-wrap:wrap;font-size:14px;margin-top:12px}.metricline{color:var(--muted);font-size:14px;margin:12px 0}.cause{background:#0f192b;border-left:3px solid var(--blue);padding:12px 15px;border-radius:4px;margin:14px 0}.analysis ul{padding-left:22px}.analysis li{margin-bottom:7px}.empty{padding:55px 20px;text-align:center;color:var(--muted);background:#0e192b;border-radius:8px}details{margin:14px 0;font-size:14px}summary{cursor:pointer;color:var(--blue)}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0c1524;padding:12px;border-radius:6px}table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:14px}td,th{overflow-wrap:anywhere;text-align:left;padding:9px;border-bottom:1px solid var(--line)}.protocol{padding:20px 24px;border:1px solid var(--line);border-radius:12px;background:var(--panel);margin-bottom:25px}#updated{font-size:13px}footer{font-size:13px;color:var(--muted);padding-bottom:50px}@media(max-width:980px){.task-body{grid-template-columns:1fr}.analysis{border-left:0;border-top:1px solid var(--line)}.stats{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){header,main,footer{padding:20px 14px}.task-head{padding:16px}.media,.analysis{padding:14px}.stat{padding:12px}.badge{font-size:13px}}
+</style></head>
+<body>
+<header>
+<div class="muted">ROBOENV × KINEX · 2026-09-16</div>
+<h1>LIBERO Long <span style="color:var(--blue)">/ Astra Medium</span></h1>
+<p class="muted">10 个任务，各一次独立 episode。原生成功判定、双视角高清回放与逐任务失败分析。</p>
+<div><span class="tag">GPT-6 Astra · Medium</span><span class="tag">20 分钟 / task</span><span class="tag">Action / model loops 无上限</span><span class="tag">Agent 相机 256 × 256</span><span class="tag">初态 0 · seed 0 · 无 reset</span></div>
+<div class="stats"><div class="stat"><b id="completed">—</b>已完成 / 10</div><div class="stat"><b id="success">—</b>原生成功</div><div class="stat"><b id="failure">—</b>原生失败</div><div class="stat"><b id="rendered">—</b>高清剪辑已完成</div></div>
+<p id="updated" class="muted"></p>
+</header>
+<main>
+<div class="protocol">
+<strong>怎样阅读视频和结果</strong>
+<p class="muted">评测采用同步仿真：模型思考期间物理状态暂停。高清剪辑在评测后按原始命令与物理时序重新渲染，每路相机原生 768 × 768，完整保留所有实际动作和尝试，移除模型思考的静止等待，并加入任务标题与最终状态停留。每段回放都校验最终物理状态与原 episode 一致。Agent 在执行时只能看到 256 × 256 相机。</p>
+<p class="muted">控制帧计数包含原生初始化的 5 帧。成功以 LIBERO 原生 predicate 为准；agent 声称完成不等于成功。结束原因与失败机制分别列出。本轮使用 RoboEnv joint-device 接口，未宣称与官方 OSC 策略分数直接可比。</p>
+<div class="links"><a href="protocol.json">完整实验配置</a><a href="data.json">结构化结果</a></div>
+</div>
+<div class="toolbar"><button class="active" data-filter="all">全部任务</button><button data-filter="success">成功</button><button data-filter="failure">失败</button><button data-filter="pending">未完成</button><input id="search" placeholder="搜索任务、物体或失败原因" aria-label="搜索任务"></div>
+<div id="tasks"></div>
+</main><footer>审阅依据：独立 verifier、原生 action journal、完整 Kinex session、实际录像与经过状态一致性校验的原生高清回放。待分析内容会明确标注，不从 agent 的自述推断成功。</footer>
+<script>
+let data={tasks:[]},filter="all";
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function render(){
+ const q=document.querySelector("#search").value.toLowerCase();
+ document.querySelector("#tasks").innerHTML=data.tasks.filter(t=>(filter==="all"||(filter==="pending"?!t.completed:t.completed&&(filter==="success"===t.native_success)))&&JSON.stringify(t).toLowerCase().includes(q)).map(t=>{
+ const state=!t.completed?"pending":t.native_success?"success":"failure",label=!t.completed?"执行中 / 待执行":t.native_success?"原生成功":"原生失败";
+ const a=t.analysis||{},ev=(a.evidence||[]).map(e=>"<li>"+esc(e)+"</li>").join("");
+ return '<article id="'+t.id+'"><div class="task-head"><div><div class="muted">TASK '+String(t.task_id).padStart(2,"0")+'</div><h2>'+esc(t.title_zh)+'</h2><div class="muted">'+esc(t.instruction)+'</div></div><span class="badge '+state+'">'+label+'</span></div><div class="task-body"><div class="media">'+
+ (t.edited?'<video controls preload="none" poster="edited/'+t.id+'.jpg" src="edited/'+t.id+'.mp4"></video>':'<div class="empty">'+(t.completed?"高清回放制作中":"等待 episode 完成后生成高清回放")+'</div>')+
+ (t.edited?'<div class="links"><label>播放速度 <select data-rate-for="'+t.id+'" aria-label="播放速度"><option value="1">1×</option><option value="1.5">1.5×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>':'')+
+ '<div class="metricline">'+(t.completed?esc(t.action_frames)+' 原生控制帧 · '+esc(t.model_turns)+' model turns · '+esc(t.wall_minutes)+' 分钟执行录像':'每个任务只运行一次；不重试、不 reset')+'</div>'+
+ (t.completed?'<div class="links"><a href="raw/'+t.id+'/camera.mp4">原始外部相机</a><a href="raw/'+t.id+'/camera_wrist.mp4">原始腕部相机</a><a href="evidence/'+t.id+'/session.txt">完整 session 文本</a><a href="evidence/'+t.id+'/summary.json">判定与执行记录</a>'+(t.edited?'<a href="edited/'+t.id+'.json">回放校验 / 帧映射</a>':'')+'</div>':'')+
+ '</div><div class="analysis"><h3>'+(t.native_success?"完成情况":"失败机制与证据")+'</h3><div class="cause">'+esc(a.root_cause||(t.completed?"正在结合完整 session 和实际视频审阅，尚未给出根因结论。":"Episode 尚未完成。"))+'</div>'+
+ (ev?'<ul>'+ev+'</ul>':'')+
+ (a.chapters?'<div class="links">'+a.chapters.map(c=>'<button data-seek="'+c.time+'" data-task="'+t.id+'">'+esc(c.label)+'</button>').join("")+'</div>':'')+
+ (a.verification_note?'<p><strong>判定收集：</strong>'+esc(a.verification_note)+'</p><div class="links"><a href="'+esc(a.verification_receipt)+'">超时后原生判定收集记录</a></div>':'')+
+ (a.contact_audit?'<div class="links"><a href="'+esc(a.contact_audit)+'">查看独立接触回放证据</a></div>':'')+
+ (a.diagnostic_image?'<figure style="margin:18px 0"><a href="'+esc(a.diagnostic_image)+'"><img style="width:100%;border-radius:8px" src="'+esc(a.diagnostic_image)+'" alt="原生目标区域与最终物体位置的诊断图"></a><figcaption class="muted" style="font-size:13px">'+esc(a.diagnostic_caption)+'</figcaption></figure>':'')+
+ (a.diagnostic_plot?'<div class="links"><a href="'+esc(a.diagnostic_plot)+'">查看水平坐标关系图</a></div>':'')+
+ (a.diagnostic_evidence?'<div class="links"><a href="'+esc(a.diagnostic_evidence)+'">查看原生区域诊断数据</a></div>':'')+
+ (a.termination?'<p><strong>结束原因：</strong>'+esc(a.termination)+'</p>':'')+
+ (a.confidence?'<p class="muted"><strong>证据强度：</strong>'+esc(a.confidence)+'</p>':'')+
+ (t.predicates?'<details><summary>最终原生子目标检查</summary><table><tr><th>Predicate</th><th>最终状态</th></tr>'+t.predicates.map(p=>'<tr><td>'+esc(p.goal.join(" "))+'</td><td>'+ (p.satisfied===true?"✓ 满足":p.satisfied===false?"✗ 未满足":"未获取")+'</td></tr>').join("")+'</table></details>':'')+
+ (t.final_agent_text?'<details><summary>Agent 最后陈述（不作为成功判据）</summary><pre>'+esc(t.final_agent_text)+'</pre></details>':'')+'</div></div></article>';
+ }).join("");
+}
+async function load(){
+ const response=await fetch("data.json",{cache:"no-store"});data=await response.json();
+ const done=data.tasks.filter(t=>t.completed);
+ document.querySelector("#completed").textContent=done.length;
+ document.querySelector("#success").textContent=done.filter(t=>t.native_success).length;
+ document.querySelector("#failure").textContent=done.filter(t=>!t.native_success).length;
+ document.querySelector("#rendered").textContent=data.tasks.filter(t=>t.edited).length+" / 10";
+ document.querySelector("#updated").textContent="更新于 "+new Date(data.updated_at).toLocaleString()+" · "+(data.final?"全部评测与审阅已完成":"正在评测与制作审阅内容；当前数量不是最终结果");
+ render();
+ if(location.hash)document.getElementById(location.hash.slice(1))?.scrollIntoView();
+}
+document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll("[data-filter]").forEach(x=>x.classList.toggle("active",x===b));render()});
+document.querySelector("#search").oninput=render;
+document.addEventListener("change",event=>{
+ const id=event.target.dataset.rateFor;
+ if(id)document.getElementById(id).querySelector("video").playbackRate=Number(event.target.value);
+});
+document.addEventListener("click",async event=>{
+ const button=event.target.closest("[data-seek]");
+ if(!button)return;
+ const video=document.getElementById(button.dataset.task).querySelector("video");
+ if(!video)return;
+ await video.play();video.currentTime=Number(button.dataset.seek);
+});
+load().catch(e=>document.querySelector("#tasks").textContent="结果文件加载失败："+e);
+</script></body></html>
+
